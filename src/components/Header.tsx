@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { IconMenu2, IconMessage } from "@tabler/icons-react";
 import { FaGithub } from "react-icons/fa6";
 
@@ -7,8 +7,25 @@ interface Props {
 }
 
 const Header: React.FC<Props> = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+
+      setIsScrolled(scrollPosition >= (windowHeight - 40));
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="fixed top-0 m-3 w-full z-10 text-white">
+    <div className={`fixed top-0 m-3 w-full z-10 ${isScrolled ? 'text-gray-600' : 'text-white'}`}>
       <div className="navbar">
         <div className="navbar-start">
           <div className="tooltip tooltip-bottom" data-tip="Linki Linki">
