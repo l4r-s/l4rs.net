@@ -5,6 +5,7 @@ const Footer = lazy(() => import("./components/Footer"));
 const Header = lazy(() => import("./components/Header"));
 const NotFound = lazy(() => import("./components/NotFound"));
 const Home = lazy(() => import("./components/Home"));
+const Posts = lazy(() => import("./components/Posts"));
 
 const App: React.FC = () => {
   const titleSuffix = " - There is no place like 127.0.0.1 🏠";
@@ -31,6 +32,7 @@ const App: React.FC = () => {
               <div>
                 <Header theme={theme} />
                 <Home title={"Hi! 👋" + titleSuffix} theme={theme} />
+                <Posts />
                 <Footer />
               </div>
             }

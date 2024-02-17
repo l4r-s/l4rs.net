@@ -6,6 +6,14 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      width: {
+        '120': '30rem',
+        '150': '37.5rem',
+      },
+      height: {
+        '120': '30rem',
+        '150': '37.5rem',
+      },
       keyframes: {
         fadeOut: {
           from: { opacity: 1 },
