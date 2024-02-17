@@ -6,7 +6,7 @@ interface Props {
   theme?: string;
 }
 
-const Header: React.FC<Props> = (props) => {
+const Header: React.FC<Props> = () => {
   return (
     <div className="fixed top-0 m-3 w-full z-10 text-white">
       <div className="navbar">
