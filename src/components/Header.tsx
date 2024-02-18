@@ -74,8 +74,8 @@ const Header: React.FC<Props> = () => {
             className="drawer-overlay"
           ></label>
 
-          <div className="min-h-full w-80 gap-2 bg-base-100 p-4 text-base-content">
-            <div className="flex-grow">
+          <div className="min-h-screen w-80 gap-2 bg-base-100 text-base-content p-4">
+            <div className="pt-12">
               <div className="font-bold text-center text-xl self-center">
                 <a href="/">
                   <Avatar />
@@ -99,9 +99,10 @@ const Header: React.FC<Props> = () => {
                 </p>
               </div>
             </div>
+            <div className="min-h-10"></div>
 
-            <div className="fixed bottom-2">
-              <ul className="menu">
+            <div className="flex flex-col">
+              <ul className="menu menu-lg">
                 <li className="font-medium">
                   <a href="#">
                     <IconStars />
@@ -124,37 +125,38 @@ const Header: React.FC<Props> = () => {
                     </span>
                   </a>
                 </li>
-                <div className="divider divide-gray-400"></div>
+              </ul>
 
-                <div className="flex self-center">
-                  <div className="tooltip tooltip-top" data-tip="Github">
-                    <div className="btn mx-2">
-                      <a href="https://github.com/l4r-s" target="_blank">
-                        <FaGithub color="black" size={25} />
-                      </a>
-                    </div>
-                  </div>
+              <div className="flex justify-center items-center mt-16">
+                <div className="divider divide-gray-400 w-2/6"></div>
+              </div>
 
-                  <div className="tooltip tooltip-top" data-tip="Twitter / X">
-                    <div className="btn mx-2">
-                      <a href="https://twitter.com/_l4rs" target="_blank">
-                        <FaTwitter color="black" size={25} />
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="tooltip tooltip-top" data-tip="Matrix chat">
-                    <div className="btn mx-2">
-                      <a
-                        href="https://matrix.to/#/@me:l4rs.net"
-                        target="_blank"
-                      >
-                        <IconBrandMatrix color="black" size={25} />
-                      </a>
-                    </div>
+              <div className="flex justify-center items-center">
+                <div className="tooltip tooltip-top" data-tip="Github">
+                  <div className="btn mx-2">
+                    <a href="https://github.com/l4r-s" target="_blank">
+                      <FaGithub color="black" size={25} />
+                    </a>
                   </div>
                 </div>
-              </ul>
+
+                <div className="tooltip tooltip-top" data-tip="Twitter / X">
+                  <div className="btn mx-2">
+                    <a href="https://twitter.com/_l4rs" target="_blank">
+                      <FaTwitter color="black" size={25} />
+                    </a>
+                  </div>
+                </div>
+
+                <div className="tooltip tooltip-top" data-tip="Matrix chat">
+                  <div className="btn mx-2">
+                    <a href="https://matrix.to/#/@me:l4rs.net" target="_blank">
+                      <IconBrandMatrix color="black" size={25} />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
