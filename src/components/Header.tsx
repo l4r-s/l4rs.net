@@ -6,7 +6,7 @@ import {
   IconSticker2,
   IconAddressBook,
 } from "@tabler/icons-react";
-import { FaGithub } from "react-icons/fa6";
+import { FaGithub, FaTwitter } from "react-icons/fa6";
 
 const Avatar = lazy(() => import("./Avatar"));
 
@@ -114,14 +114,6 @@ const Header: React.FC<Props> = () => {
               </a>
             </li>
             <li className="font-medium">
-              <a href="https://github.com/l4r-s" target="_blank">
-                <FaGithub color="black" size={20} />
-                <span className="underline decoration-primary">
-                  Github
-                </span>
-              </a>
-            </li>
-            <li className="font-medium">
               <a href="#features">
                 <IconAddressBook />
                 <span className="underline decoration-primary">
@@ -129,6 +121,30 @@ const Header: React.FC<Props> = () => {
                 </span>
               </a>
             </li>
+        <div className="divider divide-gray-400"></div>
+
+<div className="flex self-center -mt-4">
+
+            <div className="tooltip tooltip-top" data-tip="Github">
+            <div className="btn mx-2">
+            <a href="https://github.com/l4r-s" target="_blank">
+              <FaGithub color="black" size={25} />
+            </a>
+          </div>
+            </div>
+
+            <div className="tooltip tooltip-top" data-tip="Twitter / X">
+            <div className="btn mx-2">
+            <a href="https://twitter.com/_l4rs" target="_blank">
+              <FaTwitter color="black" size={25} />
+            </a>
+          </div>
+            </div>
+
+</div>
+
+
+
           </ul>
         </div>
       </div>
