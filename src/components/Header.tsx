@@ -1,6 +1,14 @@
-import React, { useEffect, useState } from "react";
-import { IconMenu2, IconMessage } from "@tabler/icons-react";
+import React, { lazy, useEffect, useState } from "react";
+import {
+  IconMenu2,
+  IconMessage,
+  IconStars,
+  IconSticker2,
+  IconAddressBook,
+} from "@tabler/icons-react";
 import { FaGithub } from "react-icons/fa6";
+
+const Avatar = lazy(() => import("./Avatar"));
 
 interface Props {
   theme?: string;
@@ -14,29 +22,31 @@ const Header: React.FC<Props> = () => {
       const scrollPosition = window.scrollY;
       const windowHeight = window.innerHeight;
 
-      setIsScrolled(scrollPosition >= (windowHeight - 40));
+      setIsScrolled(scrollPosition >= windowHeight - 40);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
-    <div className={`fixed top-0 m-3 w-full z-10 ${isScrolled ? 'text-gray-600' : 'text-white'}`}>
+    <div
+      className={`fixed top-0 m-3 w-full z-10 ${
+        isScrolled ? "text-gray-600" : "text-white"
+      }`}
+    >
       <div className="navbar">
         <div className="navbar-start">
-          <div className="tooltip tooltip-bottom" data-tip="Linki Linki">
-            <label
-              htmlFor="drawer"
-              aria-label="open sidebar"
-              className="btn btn-square btn-ghost"
-            >
-              <IconMenu2 />
-            </label>
-          </div>
+          <label
+            htmlFor="drawer"
+            aria-label="open sidebar"
+            className="btn btn-square btn-ghost"
+          >
+            <IconMenu2 />
+          </label>
         </div>
         <div className="navbar-center"></div>
         <div className="navbar-end">
@@ -64,18 +74,51 @@ const Header: React.FC<Props> = () => {
           ></label>
 
           <ul className="menu min-h-full w-80 gap-2 bg-base-100 p-4 text-base-content">
-            <li className="font-bold text-center text-xl">l4rs.net</li>
+            <li className="font-bold text-center text-xl flex items-center">
+              <a href="/">
+                <Avatar />
+              </a>
+            </li>
+            <div className="text-center mt-3">
+              <p>
+                <b>Hi!</b>, my name is Lars.
+              </p>
+              <p>
+                I am a Software and Systems Engineer located in Switzerland.
+              </p>
+              <p className="mt-3 font-thin">
+                <b className="text-primary">#</b>opensource{" "}
+                <b className="text-primary">#</b>observability{" "}
+                <b className="text-primary">#</b>ansible{" "}
+                <b className="text-primary">#</b>python{" "}
+                <b className="text-primary">#</b>prometheus{" "}
+                <b className="text-primary">#</b>elk
+              </p>
+            </div>
+            <div className="flex-grow"></div>
 
             <li className="font-medium">
-              <a href="#">Blog posts</a>
+              <a href="#">
+                <IconStars />
+                <span>Projects</span>
+              </a>
             </li>
             <li className="font-medium">
-              <a href="#features">Contact</a>
+              <a href="#">
+                <IconSticker2 />
+                <span>Posts</span>
+              </a>
             </li>
-            <li className="font-medium mt-20">
+            <li className="font-medium">
               <a href="https://github.com/l4r-s" target="_blank">
                 <FaGithub color="black" size={20} />
-                <span>l4r-s</span>
+                <span>Github</span>
+              </a>
+            </li>
+            <li className="font-medium">
+              <a href="#features">
+                <IconAddressBook />
+                <span>Contact</span>
               </a>
             </li>
           </ul>
