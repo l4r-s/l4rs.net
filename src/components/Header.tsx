@@ -79,14 +79,14 @@ const Header: React.FC<Props> = () => {
                 <Avatar />
               </a>
             </li>
-            <div className="text-center mt-3">
+            <div className="text-center mt-3 prose prose-sm">
               <p>
-                <b>Hi!</b>, my name is Lars.
+                <b className="text-primary prose-2xl">Hi!</b>, my name is Lars.
               </p>
               <p>
                 I am a Software and Systems Engineer located in Switzerland.
               </p>
-              <p className="mt-3 font-thin">
+              <p className="mt-3 font-thin italic">
                 <b className="text-primary">#</b>opensource{" "}
                 <b className="text-primary">#</b>observability{" "}
                 <b className="text-primary">#</b>ansible{" "}
@@ -100,25 +100,33 @@ const Header: React.FC<Props> = () => {
             <li className="font-medium">
               <a href="#">
                 <IconStars />
-                <span>Projects</span>
+                <span className="underline decoration-primary">
+                  Projects
+                </span>
               </a>
             </li>
             <li className="font-medium">
               <a href="#">
                 <IconSticker2 />
-                <span>Posts</span>
+                <span className="underline decoration-primary">
+                  Posts
+                </span>
               </a>
             </li>
             <li className="font-medium">
               <a href="https://github.com/l4r-s" target="_blank">
                 <FaGithub color="black" size={20} />
-                <span>Github</span>
+                <span className="underline decoration-primary">
+                  Github
+                </span>
               </a>
             </li>
             <li className="font-medium">
               <a href="#features">
                 <IconAddressBook />
-                <span>Contact</span>
+                <span className="underline decoration-primary">
+                  Contact
+                </span>
               </a>
             </li>
           </ul>

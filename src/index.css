@@ -3,15 +3,6 @@
 @tailwind utilities;
 
 
-@font-face {
-    font-family: 'chunkfive';
-    src: url('/chunkfive-regular.woff2') format('woff2'),
-         url('/chunkfive-regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
 @layer base {
   .font-outline-white-1 {
         -webkit-text-stroke: 1px white;

@@ -37,23 +37,27 @@ const Home: React.FC<Props> = (props) => {
           <div
             className={`bg-[url('/bg1.webp')] bg-center bg-cover w-full h-full flex items-center justify-center`}
           >
+            <div className="relative">
             <h1 className="text-white text-6xl md:text-7xl lg:text-9xl">
-              <p className="underline pb-5">Hi!</p>
+                <span className="pb-5 font-bold text-white underline">
+                  Hi!
+              </span>
             </h1>
+            </div>
           </div>
         </div>
 
         <div
-          className="absolute bottom-20 lg:bottom-10 text-white animate-pulse cursor-pointer"
+          className="absolute bottom-3 lg:bottom-5 text-white animate-pulse cursor-pointer"
           onClick={scrollToSection}
         >
-          <IconArrowDown size={120} className="hidden lg:flex" />
+          <IconArrowDown size={80} className="hidden lg:flex" />
           <IconArrowDown
-            size={96}
+            size={60}
             className="hidden md:flex lg:hidden"
           />
           <IconArrowDown
-            size={70}
+            size={50}
             className="flex md:hidden lg:hidden"
           />
         </div>

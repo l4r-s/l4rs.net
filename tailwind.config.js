@@ -59,5 +59,8 @@ export default {
       },
     ],
   },
-  plugins: [require("daisyui")], // If necessary, adjust this for ESM compatibility
+  plugins: [
+    require('@tailwindcss/typography'),
+    require("daisyui")
+  ],
 };
