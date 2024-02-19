@@ -9,32 +9,38 @@ import { FaGithub, FaTwitter } from "react-icons/fa6";
 
 const Welcome = lazy(() => import("./Welcome"));
 
-const Sidebar: React.FC = () => {
+interface Props {
+  showMenu: boolean;
+}
+
+const Sidebar: React.FC<Props> = (props) => {
   return (
     <div className="min-h-screen gap-2 bg-base-100 text-base-content p-4">
       <Welcome />
 
       <div className="flex flex-col mt-16">
-        <ul className="menu menu-lg">
-          <li className="font-medium">
-            <a href="#">
-              <IconStars />
-              <span className="underline decoration-primary">Projects</span>
-            </a>
-          </li>
-          <li className="font-medium">
-            <a href="#">
-              <IconSticker2 />
-              <span className="underline decoration-primary">Posts</span>
-            </a>
-          </li>
-          <li className="font-medium">
-            <a href="#features">
-              <IconAddressBook />
-              <span className="underline decoration-primary">Contact</span>
-            </a>
-          </li>
-        </ul>
+        {props.showMenu && (
+          <ul className="menu menu-lg">
+            <li className="font-medium">
+              <a href="#">
+                <IconStars />
+                <span className="underline decoration-primary">Projects</span>
+              </a>
+            </li>
+            <li className="font-medium">
+              <a href="#">
+                <IconSticker2 />
+                <span className="underline decoration-primary">Posts</span>
+              </a>
+            </li>
+            <li className="font-medium">
+              <a href="#features">
+                <IconAddressBook />
+                <span className="underline decoration-primary">Contact</span>
+              </a>
+            </li>
+          </ul>
+        )}
 
         <div className="flex justify-center items-center mt-16">
           <div className="divider divide-gray-400 w-2/6"></div>

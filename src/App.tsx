@@ -34,7 +34,7 @@ const App: React.FC = () => {
                 <div className="flex">
                   <Header />
                   <div className="hidden md:flex lg:flex w-96 sticky top-0 h-screen max-h-screen shadow-lg">
-                    <Sidebar />
+                    <Sidebar showMenu={false} />
                   </div>
                   <div className="w-full">
                     <Home title={"Hi! 👋" + titleSuffix} />
