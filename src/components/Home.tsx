@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { IconArrowDown } from "@tabler/icons-react";
+import { IconSquareRoundedArrowDownFilled } from "@tabler/icons-react";
 
 interface Props {
   title?: string;
@@ -38,32 +38,36 @@ const Home: React.FC<Props> = (props) => {
             className={`bg-[url('/bg1.webp')] bg-center bg-cover w-full h-full flex items-center justify-center`}
           >
             <div className="relative">
-            <h1 className="text-white text-6xl md:text-7xl lg:text-9xl">
-                <span className="pb-5 font-bold text-white underline">
-                  Hi!
-              </span>
-            </h1>
+              <h1
+                className="text-white text-6xl md:text-7xl lg:text-9xl cursor-pointer"
+                onClick={scrollToSection}
+              >
+                <div className="text-white opacity-70 hover:opacity-100 hidden md:flex lg:flex">
+                  <IconSquareRoundedArrowDownFilled
+                    size={140}
+                    className="hidden lg:flex"
+                  />
+                  <IconSquareRoundedArrowDownFilled
+                    size={100}
+                    className="hidden md:flex lg:hidden"
+                  />
+                  <IconSquareRoundedArrowDownFilled
+                    size={70}
+                    className="flex md:hidden lg:hidden"
+                  />
+                </div>
+                <div className="lg:hidden md:hidden text-white underline font-bold text-center flex flex-col items-center">
+                  <div>Hi!</div>
+                  <div className="self-center items-center mt-4">
+                    <IconSquareRoundedArrowDownFilled size={40} />
+                  </div>
+                </div>
+              </h1>
             </div>
           </div>
         </div>
-
-        <div
-          className="absolute bottom-3 lg:bottom-5 text-white animate-pulse cursor-pointer"
-          onClick={scrollToSection}
-        >
-          <IconArrowDown size={80} className="hidden lg:flex" />
-          <IconArrowDown
-            size={60}
-            className="hidden md:flex lg:hidden"
-          />
-          <IconArrowDown
-            size={50}
-            className="flex md:hidden lg:hidden"
-          />
-        </div>
       </div>
       <div className="" ref={scrollToSectionRef}></div>
-
     </div>
   );
 };
