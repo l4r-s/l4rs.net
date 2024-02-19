@@ -6,6 +6,7 @@ const Header = lazy(() => import("./components/Header"));
 const NotFound = lazy(() => import("./components/NotFound"));
 const Home = lazy(() => import("./components/Home"));
 const Sidebar = lazy(() => import("./components/Sidebar"));
+const Social = lazy(() => import("./components/Social"));
 const Welcome = lazy(() => import("./components/Welcome"));
 const Posts = lazy(() => import("./components/Posts"));
 
@@ -38,8 +39,13 @@ const App: React.FC = () => {
                   </div>
                   <div className="w-full">
                     <Home title={"Hi! 👋" + titleSuffix} />
-                    <div className="md:hidden lg:hidden flex items-center justify-center min-h-screen hero">
-                      <Welcome />
+                    <div className="md:hidden lg:hidden items-center justify-center min-h-screen hero">
+                      <div>
+                        <Welcome />
+                        <div className="mt-16">
+                          <Social />
+                        </div>
+                      </div>
                     </div>
                     <Posts />
                   </div>

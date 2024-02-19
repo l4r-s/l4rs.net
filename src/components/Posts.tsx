@@ -45,8 +45,6 @@ const Posts: React.FC<Props> = () => {
             <div className="card-actions text-gray-300 mt-5">Feb 17 2024</div>
           </div>
         </div>
-
-
       </div>
     </div>
   );
