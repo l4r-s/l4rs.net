@@ -13,7 +13,7 @@ const Home: React.FC<Props> = (props) => {
   };
 
   useEffect(() => {
-    document.title = props.title || "l4rs.net";
+    document.title = props.title || "hilars.dev";
   }, [props.title]);
 
   const [isBounce, setIsBounce] = useState(false);

@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://www.l4rs.net/sitemap.xml
+Sitemap: https://hilars.dev/sitemap.xml
