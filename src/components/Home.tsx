@@ -42,24 +42,21 @@ const Home: React.FC<Props> = (props) => {
                 className="text-white text-6xl md:text-7xl lg:text-9xl cursor-pointer"
                 onClick={scrollToSection}
               >
-                <div className="text-white opacity-70 hover:opacity-100 hidden md:flex lg:flex">
-                  <IconSquareRoundedArrowDownFilled
-                    size={140}
-                    className="hidden lg:flex"
-                  />
-                  <IconSquareRoundedArrowDownFilled
-                    size={100}
-                    className="hidden md:flex lg:hidden"
-                  />
-                  <IconSquareRoundedArrowDownFilled
-                    size={70}
-                    className="flex md:hidden lg:hidden"
-                  />
-                </div>
-                <div className="lg:hidden md:hidden text-white underline font-bold text-center flex flex-col items-center">
+                <div className="text-white underline font-bold text-center flex flex-col items-center">
                   <div>Hi!</div>
                   <div className="self-center items-center mt-4">
-                    <IconSquareRoundedArrowDownFilled size={40} />
+                    <IconSquareRoundedArrowDownFilled
+                      size={100}
+                      className="hidden lg:flex opacity-70 hover:opacity-100"
+                    />
+                    <IconSquareRoundedArrowDownFilled
+                      size={70}
+                      className="hidden lg:hidden md:flex opacity-70 hover:opacity-100"
+                    />
+                    <IconSquareRoundedArrowDownFilled
+                      size={60}
+                      className="flex md:hidden lg:hidden opacity-70 hover:opacity-100"
+                    />
                   </div>
                 </div>
               </h1>
