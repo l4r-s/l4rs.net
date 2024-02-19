@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  IconMenu2,
-  IconMessage,
-} from "@tabler/icons-react";
+import { IconMessage } from "@tabler/icons-react";
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,8 +26,7 @@ const Header: React.FC = () => {
       }`}
     >
       <div className="navbar">
-        <div className="navbar-start">
-        </div>
+        <div className="navbar-start"></div>
         <div className="navbar-center"></div>
         <div className="navbar-end">
           <div className="dropdown dropdown-end mr-4">
@@ -46,7 +42,6 @@ const Header: React.FC = () => {
           </div>
         </div>
       </div>
-
     </div>
   );
 };
