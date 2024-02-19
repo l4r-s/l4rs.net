@@ -7,35 +7,14 @@ import {
 } from "@tabler/icons-react";
 import { FaGithub, FaTwitter } from "react-icons/fa6";
 
-const Avatar = lazy(() => import("./Avatar"));
+const Welcome = lazy(() => import("./Welcome"));
 
 const Sidebar: React.FC = () => {
   return (
     <div className="min-h-screen gap-2 bg-base-100 text-base-content p-4">
-      <div className="pt-12">
-        <div className="font-bold text-center text-xl self-center">
-          <a href="/">
-            <Avatar />
-          </a>
-        </div>
-        <div className="text-center mt-3 prose prose-sm">
-          <p>
-            <b className="text-primary prose-2xl">Hi!</b>, my name is Lars.
-          </p>
-          <p>I am a Software and Systems Engineer located in Switzerland.</p>
-          <p className="mt-3 font-thin italic">
-            <b className="text-primary">#</b>opensource{" "}
-            <b className="text-primary">#</b>observability{" "}
-            <b className="text-primary">#</b>ansible{" "}
-            <b className="text-primary">#</b>python{" "}
-            <b className="text-primary">#</b>prometheus{" "}
-            <b className="text-primary">#</b>elk
-          </p>
-        </div>
-      </div>
-      <div className="min-h-10"></div>
+      <Welcome />
 
-      <div className="flex flex-col">
+      <div className="flex flex-col mt-16">
         <ul className="menu menu-lg">
           <li className="font-medium">
             <a href="#">
