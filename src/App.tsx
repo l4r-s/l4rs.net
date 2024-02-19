@@ -1,25 +1,25 @@
-import React, { useState, lazy } from "react";
+import React, { lazy } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 const Footer = lazy(() => import("./components/Footer"));
 const Header = lazy(() => import("./components/Header"));
 const NotFound = lazy(() => import("./components/NotFound"));
 const Home = lazy(() => import("./components/Home"));
+const Sidebar = lazy(() => import("./components/Sidebar"));
 const Posts = lazy(() => import("./components/Posts"));
 
 const App: React.FC = () => {
   const titleSuffix = " - There is no place like 127.0.0.1 🏠";
-  const [theme] = useState("default");
 
   return (
-    <div data-theme={theme} className="font-sans min-h-screen">
+    <div className="font-sans min-h-screen">
       <Router>
         <Routes>
           <Route
             path="*"
             element={
               <div>
-                <Header theme={theme} />
+                <Header />
                 <NotFound title="Not Found" />
                 <Footer />
               </div>
@@ -30,9 +30,19 @@ const App: React.FC = () => {
             path="/"
             element={
               <div>
-                <Header theme={theme} />
-                <Home title={"Hi! 👋" + titleSuffix} theme={theme} />
-                <Posts />
+                <div className="flex">
+                  <Header />
+                  <div className="hidden md:flex lg:flex w-96 sticky top-0 h-screen max-h-screen shadow-lg">
+                    <Sidebar />
+                  </div>
+                  <div className="w-full">
+                    <Home title={"Hi! 👋" + titleSuffix} />
+                    <div className="md:hidden lg:hidden flex items-center justify-center">
+                      <Sidebar />
+                    </div>
+                    <Posts />
+                  </div>
+                </div>
                 <Footer />
               </div>
             }

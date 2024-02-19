@@ -11,7 +11,7 @@ const Avatar = lazy(() => import("./Avatar"));
 
 const Sidebar: React.FC = () => {
   return (
-    <div className="min-h-screen w-80 gap-2 bg-base-100 text-base-content p-4">
+    <div className="min-h-screen gap-2 bg-base-100 text-base-content p-4">
       <div className="pt-12">
         <div className="font-bold text-center text-xl self-center">
           <a href="/">
