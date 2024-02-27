@@ -1,6 +1,6 @@
 import React from "react";
-import { IconBrandMatrix } from "@tabler/icons-react";
-import { FaGithub, FaTwitter } from "react-icons/fa6";
+import { IconBrandMatrix, IconMail } from "@tabler/icons-react";
+import { FaGithub } from "react-icons/fa6";
 
 const Social: React.FC = () => {
   return (
@@ -17,10 +17,10 @@ const Social: React.FC = () => {
           </div>
         </div>
 
-        <div className="tooltip tooltip-top" data-tip="Twitter / X">
+        <div className="tooltip tooltip-top" data-tip="E-Mail">
           <div className="btn mx-2">
-            <a href="https://twitter.com/_l4rs" target="_blank">
-              <FaTwitter color="black" size={25} />
+            <a href="mailto:contact@hilars.dev" target="_blank">
+              <IconMail color="black" size={25} />
             </a>
           </div>
         </div>

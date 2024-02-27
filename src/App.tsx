@@ -8,7 +8,7 @@ const Home = lazy(() => import("./components/Home"));
 const Sidebar = lazy(() => import("./components/Sidebar"));
 const Social = lazy(() => import("./components/Social"));
 const Welcome = lazy(() => import("./components/Welcome"));
-const Posts = lazy(() => import("./components/Posts"));
+// const Posts = lazy(() => import("./components/Posts"));
 
 const App: React.FC = () => {
   const titleSuffix = " - There is no place like 127.0.0.1 🏠";
@@ -47,7 +47,7 @@ const App: React.FC = () => {
                         </div>
                       </div>
                     </div>
-                    <Posts />
+                    {/* <Posts /> */}
                   </div>
                 </div>
                 <Footer />

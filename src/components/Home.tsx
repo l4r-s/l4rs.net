@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { IconSquareRoundedArrowDownFilled } from "@tabler/icons-react";
+// import { IconSquareRoundedArrowDownFilled } from "@tabler/icons-react";
 
 interface Props {
   title?: string;
@@ -44,7 +44,7 @@ const Home: React.FC<Props> = (props) => {
               >
                 <div className="text-white underline font-bold text-center flex flex-col items-center">
                   <div>Hi!</div>
-                  <div className="self-center items-center mt-4">
+                  {/* <div className="self-center items-center mt-4">
                     <IconSquareRoundedArrowDownFilled
                       size={100}
                       className="hidden lg:flex opacity-70 hover:opacity-100"
@@ -57,7 +57,7 @@ const Home: React.FC<Props> = (props) => {
                       size={60}
                       className="flex md:hidden lg:hidden opacity-70 hover:opacity-100"
                     />
-                  </div>
+                  </div> */}
                 </div>
               </h1>
             </div>
