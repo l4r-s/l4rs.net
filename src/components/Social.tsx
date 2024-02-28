@@ -11,7 +11,7 @@ const Social: React.FC = () => {
       <div className="flex justify-center items-center">
         <div className="tooltip tooltip-top" data-tip="Github">
           <div className="btn mx-2">
-            <a href="https://github.com/l4r-s" target="_blank">
+            <a href="https://github.com/l4r-s" target="_blank" aria-label="Open Lars' Github page">
               <FaGithub color="black" size={25} />
             </a>
           </div>
@@ -19,7 +19,7 @@ const Social: React.FC = () => {
 
         <div className="tooltip tooltip-top" data-tip="E-Mail">
           <div className="btn mx-2">
-            <a href="mailto:contact@hilars.dev" target="_blank">
+            <a href="mailto:contact@hilars.dev" target="_blank" aria-label="Send an e-mail to Lars">
               <IconMail color="black" size={25} />
             </a>
           </div>
@@ -27,7 +27,7 @@ const Social: React.FC = () => {
 
         <div className="tooltip tooltip-top" data-tip="Matrix chat">
           <div className="btn mx-2">
-            <a href="https://matrix.to/#/@me:l4rs.net" target="_blank">
+            <a href="https://matrix.to/#/@me:l4rs.net" target="_blank" aria-label="Chat with lars over matrix">
               <IconBrandMatrix color="black" size={25} />
             </a>
           </div>

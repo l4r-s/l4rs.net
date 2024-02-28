@@ -56,6 +56,7 @@ const Header: React.FC = () => {
                   role="button"
                   className="btn btn-ghost btn-circle avatar"
                   onClick={openModal}
+                  aria-label="Say hi!"
                 >
                   <IconMessage className="w-10 rounded-full" />
                 </div>

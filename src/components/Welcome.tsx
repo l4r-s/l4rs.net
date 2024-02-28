@@ -5,7 +5,7 @@ const Welcome: React.FC = () => {
   return (
     <div className="pt-12">
       <div className="font-bold text-center text-xl self-center">
-        <a href="/">
+        <a href="/" aria-label="Go to hilars.dev">
           <Avatar />
         </a>
       </div>
