@@ -32,12 +32,12 @@ const App: React.FC = () => {
             path="/"
             element={
               <div>
-                <div className="flex">
+                <div className="flex min-h-screen">
                   <Header />
-                  <div className="hidden md:flex lg:flex w-96 sticky top-0 h-screen max-h-screen shadow-lg">
+                  <div className="hidden md:flex lg:flex w-96 sticky top-0 shadow-lg overflow-visible">
                     <Sidebar showMenu={false} />
                   </div>
-                  <div className="w-full">
+                  <div className="flex-grow">
                     <Home title={"Hi! 👋" + titleSuffix} />
                     <div className="md:hidden lg:hidden items-center justify-center min-h-screen hero">
                       <div>

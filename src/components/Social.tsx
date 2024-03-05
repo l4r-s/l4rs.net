@@ -8,7 +8,7 @@ const Social: React.FC = () => {
       <div className="flex justify-center items-center mt-16">
         <div className="divider divide-gray-400 w-2/6"></div>
       </div>
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center mb-4">
         <div className="tooltip tooltip-top" data-tip="Github">
           <div className="btn mx-2">
             <a href="https://github.com/l4r-s" target="_blank" aria-label="Open Lars' Github page">

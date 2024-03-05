@@ -10,7 +10,7 @@ interface Props {
 
 const Sidebar: React.FC<Props> = (props) => {
   return (
-    <div className="min-h-screen gap-2 bg-base-100 text-base-content p-4">
+    <div className="min-h-screen gap-2 bg-base-100 text-base-content p-4 overflow-visible">
       <Welcome />
 
       <div className="flex flex-col mt-16">
