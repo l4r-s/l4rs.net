@@ -1,12 +1,16 @@
 import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
 import "./index.css";
 
 const rootElement = document.getElementById("root")!;
 const startElement = document.getElementById("start");
 
-ReactDOM.createRoot(rootElement).render(<App />);
+async function bootstrap() {
+  const { default: App } = await import('./App');
+  ReactDOM.createRoot(rootElement).render(<App />);
 
-if (startElement) {
-  startElement.remove();
+  if (startElement) {
+    startElement.remove();
+  }
 }
+
+bootstrap();

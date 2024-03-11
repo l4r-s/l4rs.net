@@ -1,8 +1,8 @@
-import React, { lazy } from "react";
+import React from "react";
 import { IconStars, IconSticker2, IconAddressBook } from "@tabler/icons-react";
 
-const Welcome = lazy(() => import("./Welcome"));
-const Social = lazy(() => import("./Social"));
+import Welcome from "./Welcome";
+import Social from "./Social";
 
 interface Props {
   showMenu: boolean;
