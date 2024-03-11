@@ -1,13 +1,13 @@
-import React, { lazy } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-const Footer = lazy(() => import("./components/Footer"));
-const Header = lazy(() => import("./components/Header"));
-const NotFound = lazy(() => import("./components/NotFound"));
-const Home = lazy(() => import("./components/Home"));
-const Sidebar = lazy(() => import("./components/Sidebar"));
-const Social = lazy(() => import("./components/Social"));
-const Welcome = lazy(() => import("./components/Welcome"));
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import NotFound from "./components/NotFound";
+import Home from "./components/Home";
+import Sidebar from "./components/Sidebar";
+import Social from "./components/Social";
+import Welcome from "./components/Welcome";
 // const Posts = lazy(() => import("./components/Posts"));
 
 const App: React.FC = () => {
