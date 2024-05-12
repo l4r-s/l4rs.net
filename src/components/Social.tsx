@@ -24,14 +24,6 @@ const Social: React.FC = () => {
             </a>
           </div>
         </div>
-
-        <div className="tooltip tooltip-top" data-tip="Matrix chat">
-          <div className="btn mx-2">
-            <a href="https://matrix.to/#/@me:l4rs.net" target="_blank" aria-label="Chat with lars over matrix">
-              <IconBrandMatrix color="black" size={25} />
-            </a>
-          </div>
-        </div>
       </div>
     </>
   );
