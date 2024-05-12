@@ -1,5 +1,5 @@
 import React from "react";
-import { IconBrandMatrix, IconMail } from "@tabler/icons-react";
+import { IconMail } from "@tabler/icons-react";
 import { FaGithub } from "react-icons/fa6";
 
 const Social: React.FC = () => {
