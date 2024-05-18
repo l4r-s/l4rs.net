@@ -25,6 +25,7 @@ const Home: React.FC<Props> = (props) => {
   useEffect(() => {
     let rotateIndex = 0;
     let intervalMs = 2500;
+    setBgBlur(true);
 
     // first rotation
     setRotate(rotateStates[rotateIndex]);
