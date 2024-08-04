@@ -1,0 +1,26 @@
+name: hilars-v2
+location: westeurope
+type: Microsoft.App/containerApps
+properties:
+  configuration:
+    ingress:
+      external: true
+      targetPort: 3000
+    registries:
+    - server: registry.l4rs.net
+      username: azure
+      passwordSecretRef: registry-l4rs-net-password
+  template:
+    containers:
+    - image: registry.l4rs.net/hilars-dev:5f5b9a9661c048dea6e75f0cc82e92587b05f781@sha256:d661fa981ab3c8947c82212b3d13b3fbb3f2eaa1e8bf59321f8914729c04dcc8
+      name: nextjs
+      resources:
+        cpu: 0.25
+        memory: 0.5Gi
+    scale:
+      rules:
+      - name: http
+        custom:
+          type: http
+          metadata:
+            concurrentRequests: "100"
