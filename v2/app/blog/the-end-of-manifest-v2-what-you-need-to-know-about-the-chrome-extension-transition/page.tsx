@@ -1,6 +1,16 @@
 import React from "react";
 import Image from "next/image";
 
+export const metadata = {
+  title: "The End of Manifest V2: What You Need to Know About the Chrome Extension Transition",
+  description: "Learn about the transition from Manifest V2 to Manifest V3 for Chrome extensions, the reasons behind it, and what it means for developers.",
+  author: "Lars",
+  date: "2024-08-17",
+  url: "https://hilars.dev/blog/the-end-of-manifest-v2-what-you-need-to-know-about-the-chrome-extension-transition",
+  image: "/chrome_web_store.png",
+  tags: ["Chrome Extensions", "Manifest V3", "Web Development", "Google Chrome"]
+};
+
 const BlogPost: React.FC = () => {
   return (
     <div className="min-h-screen container my-20 lg:my-28">
