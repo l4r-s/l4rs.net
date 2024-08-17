@@ -40,7 +40,7 @@ const Home: React.FC<Props> = (props) => {
     }, intervalMs);
 
     return () => clearInterval(interval);
-  });
+  }, []);
 
   return (
     <div>
