@@ -31,12 +31,12 @@ export default function RootLayout({
             <div className="flex-grow md:ml-60 lg:ml-96 overflow-y-auto flex justify-center items-start">
               <div className="block md:card bg-base-100 lg:m-10 md:m-5 md:shadow-xl w-full max-w-screen-lg">
                 {children}
+                <Analytics />
               </div>
             </div>
           </div>
         </div>
       </body>
-      <Analytics />
     </html>
   );
 }
