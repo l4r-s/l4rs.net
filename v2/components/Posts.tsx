@@ -24,7 +24,7 @@ const Posts: React.FC<Props> = () => {
             />
           </figure>
           <div className="card-body">
-            <a href="https://medium.com/@buildItN0w/the-end-of-manifest-v2-what-you-need-to-know-about-the-chrome-extension-transition-c2f1b8a75b05">
+            <a href="/blog/the-end-of-manifest-v2-what-you-need-to-know-about-the-chrome-extension-transition">
               <h2 className="card-title link link-hover">
                 The End of Manifest V2
               </h2>
@@ -34,7 +34,7 @@ const Posts: React.FC<Props> = () => {
             </p>
             <div className="card-actions text-gray-400 mt-5">Aug 17 2024</div>
             <div className="card-actions justify-end">
-              <a href="https://medium.com/@buildItN0w/the-end-of-manifest-v2-what-you-need-to-know-about-the-chrome-extension-transition-c2f1b8a75b05">
+              <a href="/blog/the-end-of-manifest-v2-what-you-need-to-know-about-the-chrome-extension-transition">
                 <button className="btn btn-primary">Read The End of Manifest V2</button>
               </a>
             </div>

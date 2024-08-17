@@ -27,5 +27,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
 
-  ]
+    {
+      url: 'https://hilars.dev/blog/the-end-of-manifest-v2-what-you-need-to-know-about-the-chrome-extension-transition',
+      lastModified: '2024-08-17',
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+   ]
 }
