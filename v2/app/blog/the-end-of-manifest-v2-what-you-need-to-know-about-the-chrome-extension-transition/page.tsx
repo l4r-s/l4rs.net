@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import BlogHeader from "@/components/BlogHeader";
 
 export const metadata = {
   title: "The End of Manifest V2: What You Need to Know About the Chrome Extension Transition",
@@ -7,21 +8,48 @@ export const metadata = {
   author: "Lars",
   date: "2024-08-17",
   url: "https://hilars.dev/blog/the-end-of-manifest-v2-what-you-need-to-know-about-the-chrome-extension-transition",
-  image: "/chrome_web_store.png",
-  tags: ["Chrome Extensions", "Manifest V3", "Web Development", "Google Chrome"]
+  image: "/api/og?title=The+End+of+Manifest+V2&subtitle=What+You+Need+to+Know+About+the+Chrome+Extension+Transition",
+  tags: ["Chrome Extensions", "Manifest V3", "Web Development", "Google Chrome"],
+  openGraph: {
+    type: "article",
+    title: "The End of Manifest V2: What You Need to Know About the Chrome Extension Transition",
+    description: "Learn about the transition from Manifest V2 to Manifest V3 for Chrome extensions, the reasons behind it, and what it means for developers.",
+    url: "https://hilars.dev/blog/the-end-of-manifest-v2-what-you-need-to-know-about-the-chrome-extension-transition",
+    images: [
+      {
+        url: "/api/og?title=The+End+of+Manifest+V2&subtitle=What+You+Need+to+Know+About+the+Chrome+Extension+Transition",
+        width: 1200,
+        height: 630,
+        alt: "The End of Manifest V2: What You Need to Know About the Chrome Extension Transition",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The End of Manifest V2: What You Need to Know About the Chrome Extension Transition",
+    description: "Learn about the transition from Manifest V2 to Manifest V3 for Chrome extensions, the reasons behind it, and what it means for developers.",
+    images: [
+      {
+        url: "/api/og?title=The+End+of+Manifest+V2&subtitle=What+You+Need+to+Know+About+the+Chrome+Extension+Transition",
+        width: 1200,
+        height: 630,
+        alt: "The End of Manifest V2: What You Need to Know About the Chrome Extension Transition",
+      },
+    ],
+  },
 };
 
 const BlogPost: React.FC = () => {
   return (
     <div className="min-h-screen container my-20 lg:my-28">
-      <h1 className="text-4xl text-left">The End of Manifest V2</h1>
-      <h2 className="text-2xl text-left">What You Need to Know About the Chrome Extension Transition</h2>
-      <div className="mt-5 flex flex-row text-sm">
-        <h3 className="text-gray-400 text-left">Aug 17 2024</h3>
-        <h3 className="text-gray-400 text-left ml-auto">Cross posted on{" "}
-          <a href="https://medium.com/@buildItN0w/the-end-of-manifest-v2-what-you-need-to-know-about-the-chrome-extension-transition-c2f1b8a75b05"
-            className="link link-hover link-primary" target="_blank">Medium</a></h3>
-      </div>
+      <BlogHeader
+        title="The End of Manifest V2"
+        subtitle="What You Need to Know About the Chrome Extension Transition"
+        date="Aug 17 2024"
+        crossPostUrl="https://medium.com/@buildItN0w/the-end-of-manifest-v2-what-you-need-to-know-about-the-chrome-extension-transition-c2f1b8a75b05"
+        crossPostText="Medium"
+      />
+
       <div className="divider divide-gray-400 mb-6 mt-0"></div>
 
       <div className="prose lg:prose-xl text-sm md:text-base text-left mx-auto">
