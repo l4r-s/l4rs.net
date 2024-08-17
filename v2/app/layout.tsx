@@ -1,4 +1,6 @@
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from '@vercel/speed-insights/next';
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -32,6 +34,7 @@ export default function RootLayout({
               <div className="block md:card bg-base-100 lg:m-10 md:m-5 md:shadow-xl w-full max-w-screen-lg">
                 {children}
                 <Analytics />
+                <SpeedInsights />
               </div>
             </div>
           </div>
