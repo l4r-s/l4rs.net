@@ -24,7 +24,7 @@ const Projects: React.FC = () => {
             </a>
             <p className="mt-2">
               <span className="block">As of June 3, 2024, Chrome officially deprecated Manifest V2—thousands of extensions are about to break!</span>
-              <span className="block">I've curated a list of 5,000+ obsolete V2 extensions complete with:</span>
+              <span className="block">I&apos;ve curated a list of 5,000+ obsolete V2 extensions complete with:</span>
             </p>
             <ul className="list-disc list-inside">
               <li>Install count ✅</li>
