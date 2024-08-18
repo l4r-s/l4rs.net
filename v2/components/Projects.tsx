@@ -11,6 +11,38 @@ const Projects: React.FC = () => {
         <div className="card bg-base-100 w-5/6 shadow-xl mx-auto my-5">
           <figure>
             <Image
+              src="/chrome_extension_list.png"
+              alt="chrome extension list"
+              width={2560}
+              height={1440}
+              priority
+            />
+          </figure>
+          <div className="card-body">
+            <a href="/v2e" target="_blank">
+              <h2 className="card-title link link-hover">5,000+ Opportunities Waiting for You!</h2>
+            </a>
+            <p className="mt-2">
+              <span className="block">As of June 3, 2024, Chrome officially deprecated Manifest V2—thousands of extensions are about to break!</span>
+              <span className="block">I've curated a list of 5,000+ obsolete V2 extensions complete with:</span>
+            </p>
+            <ul className="list-disc list-inside">
+              <li>Install count ✅</li>
+              <li>Ratings ✅</li>
+              <li>Last Updated Date ✅</li>
+            </ul>
+
+            <div className="card-actions justify-end">
+              <a href="/v2e" target="_blank">
+                <button className="btn btn-primary">Profit now!</button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="card bg-base-100 w-5/6 shadow-xl mx-auto my-5">
+          <figure>
+            <Image
               src="/xshot.png"
               alt="xshot preview"
               width={2560}
