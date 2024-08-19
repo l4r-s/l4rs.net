@@ -15,6 +15,6 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
     customReferrer = `https://${customReferrer}`;
   }
 
-  const url = `https://builditn0w.gumroad.com/l/chrome-manifest-v2-phaseout?referrer=${encodeURIComponent(customReferrer)}`;
+  const url = `https://builditn0w.gumroad.com/l/chrome-manifest-v2-phaseout/UNEED40?referrer=${encodeURIComponent(customReferrer)}`;
   redirect(url);
 }
