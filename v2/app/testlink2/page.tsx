@@ -4,42 +4,42 @@ import { redirect } from 'next/navigation';
 const title = "TEST LINK";
 const description = "TEST LINK";
 
-export const metadata = {
-  title,
-  description,
-  author: "Lars",
-  date: "2024-08-17",
-  url: "https://hilars.dev/v2e",
-  image: "/og.png",
-  tags: ["Chrome Extensions", "Manifest V3", "Web Development", "Google Chrome"],
-  openGraph: {
-    type: "article",
-    title,
-    description,
-    url: "https://hilars.dev/v2e",
-    images: [
-      {
-        url: "/og.png",
-        width: 1200,
-        height: 630,
-        alt: title,
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title,
-    description,
-    images: [
-      {
-        url: "/og.png",
-        width: 1200,
-        height: 630,
-        alt: title,
-      },
-    ],
-  },
-};
+// export const metadata = {
+//   title,
+//   description,
+//   author: "Lars",
+//   date: "2024-08-17",
+//   url: "https://hilars.dev/v2e",
+//   image: "/og.png",
+//   tags: ["Chrome Extensions", "Manifest V3", "Web Development", "Google Chrome"],
+//   openGraph: {
+//     type: "article",
+//     title,
+//     description,
+//     url: "https://hilars.dev/v2e",
+//     images: [
+//       {
+//         url: "/og.png",
+//         width: 1200,
+//         height: 630,
+//         alt: title,
+//       },
+//     ],
+//   },
+//   twitter: {
+//     card: "summary_large_image",
+//     title,
+//     description,
+//     images: [
+//       {
+//         url: "/og.png",
+//         width: 1200,
+//         height: 630,
+//         alt: title,
+//       },
+//     ],
+//   },
+// };
 
 export default function Page({ searchParams }: { searchParams: { [key: string]: string } }) {
   const reqHeaders = headers();
