@@ -16,6 +16,34 @@ const Posts: React.FC<Props> = () => {
         <div className="card card-side bg-base-100 shadow-xl hover:shadow-2xl cursor-pointer my-5">
           <figure>
             <Image
+              src="/blog-nextjs-shortlink.png"
+              alt="How to Create Custom Short Links with Referrer Tracking Using Next.js"
+              width={250}
+              height={250}
+              className="w-40 md:w-60 lg:w-80 overflow-hidden"
+            />
+          </figure>
+          <div className="card-body">
+            <a href="/blog/how-to-create-custom-short-links-with-referrer-tracking-using-next-js">
+              <h2 className="card-title link link-hover">
+                How to Create Custom Short Links with Referrer Tracking Using Next.js
+              </h2>
+            </a>
+            <p>
+              Learn how to create custom short links with referrer tracking using Next.js to maintain accurate marketing and traffic data.
+            </p>
+            <div className="card-actions text-gray-400 mt-5">Aug 18 2024</div>
+            <div className="card-actions justify-end">
+              <a href="/blog/how-to-create-custom-short-links-with-referrer-tracking-using-next-js">
+                <button className="btn btn-primary">Read</button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="card card-side bg-base-100 shadow-xl hover:shadow-2xl cursor-pointer my-5">
+          <figure>
+            <Image
               src="/chrome_web_store.png"
               alt="The End of Manifest V2: What You Need to Know About the Chrome Extension Transition"
               width={250}
@@ -40,6 +68,7 @@ const Posts: React.FC<Props> = () => {
             </div>
           </div>
         </div>
+
         {/* <div className="card card-side bg-base-100 shadow-xl hover:shadow-2xl cursor-pointer my-5">
           <figure>
             <img
