@@ -1,3 +1,4 @@
+import { headers } from 'next/headers';
 import { redirect } from 'next/navigation';
 
 const title = "Unlock Profitable Opportunities: 5,000+ Chrome V2 Extensions Ready for Rebuild!";
@@ -41,5 +42,8 @@ export const metadata = {
 };
 
 export default function Page() {
-  redirect('https://builditn0w.gumroad.com/l/chrome-manifest-v2-phaseout/BUILD');
+  const reqHeaders = headers();
+  const referrer = reqHeaders.get('referer') || '';
+  const url = `https://builditn0w.gumroad.com/l/chrome-manifest-v2-phaseout/BUILD?referrer=${encodeURIComponent(referrer)}`;
+  redirect(url);
 }
