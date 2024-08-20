@@ -8,6 +8,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 1,
     },
+     {
+      url: 'https://hilars.dev/v2e',
+      lastModified: '2024-08-21',
+      changeFrequency: 'monthly',
+      priority: 1,
+    },
     {
       url: 'https://hilars.dev/blog',
       lastModified: '2024-08-17',

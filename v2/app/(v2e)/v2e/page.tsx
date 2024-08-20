@@ -9,7 +9,7 @@ export const metadata = {
   title,
   description,
   author: "Lars",
-  date: "2024-08-20",
+  date: "2024-08-21",
   url: "https://hilars.dev/v2e",
   image: "/og_v2e_v2.png",
   tags: ["Chrome Extensions", "Manifest V3", "Web Development", "Google Chrome"],
