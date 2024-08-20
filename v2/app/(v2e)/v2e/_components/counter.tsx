@@ -30,116 +30,62 @@ const CategorySelector = ({ url }: { url: string }) => {
         ],
     };
 
-    const data = [
-        {
-            Art_and_Design: [
-                { name: 'Imagus', rating: 4.5, instals: "500,000", lastUpdated: '4/16/2020' }
-            ]
-        },
-
-        {
-            Entertainment: [
-                { name: 'Mapissimo', rating: 3, instals: "402", lastUpdated: '8/10/2024' },
-            ]
-        },
-
-        {
-            Games: [
-                { name: '2048 Game', rating: 4.9, instals: "1,000,000", lastUpdated: '7/26/2024' },
-            ]
-        },
-
-        {
-            Household: [
-                { name: 'Remix for Chrome - CSA Recipe Saver', rating: 5, instals: "0", lastUpdated: '9/5/2021' },
-            ]
-        },
-
-        {
-            Just_for_fun: [
-                { name: 'Super Mania Ball', rating: 2.3, instals: "3,000", lastUpdated: '6/5/2018' },
-            ]
-        },
-
-        {
-            News_and_Weather: [
-                { name: 'Feedly Notifier', rating: 4.5, instals: "30,000", lastUpdated: '7/24/2023' },
-            ]
-        },
-
-        {
-            Shopping: [
-                { name: 'Vivino Wine Ratings', rating: 1, instals: "115", lastUpdated: '7/25/2020' },
-            ]
-        },
-
-        {
-            Social_Networking: [
-                { name: 'QRify', rating: 5, instals: "43", lastUpdated: '8/12/2017' },
-            ]
-        },
-
-        {
-            Travel: [
-                { name: 'Tab with A view', rating: 4.9, instals: "2,000", lastUpdated: '5/16/2024' },
-            ]
-        },
-
-        {
-            Wellbeing: [
-                { name: 'PurposeTab: Your daily focus on each new tab', rating: 4.9, instals: "1,000", lastUpdated: '4/21/2024' },
-            ]
-        },
-
-        {
-            Communication: [
-                { name: 'dotalk', rating: 5, instals: "7", lastUpdated: '6-Aug-21' },
-            ]
-        },
-
-        {
-            Developer_Tools: [
-                { name: 'JSON Viewer', rating: 4.5, instals: "1,000,000", lastUpdated: '12/23/2020' },
-            ]
-        },
-
-        {
-            Education: [
-                { name: 'Pencil Explore for Chrome', rating: 5, instals: "898", lastUpdated: '6/2/2022' },
-            ]
-        },
-
-        {
-            Tools: [
-                { name: 'Glocal', rating: 4.1, instals: "8", lastUpdated: '2/4/2021' },
-            ]
-        },
-
-        {
-            Workflow_and_planning: [
-                { name: 'Unhook - Remove YouTube Recommended & Shorts', rating: 4.9, instals: "600,000", lastUpdated: '4/12/2024' },
-            ]
-        },
-
-        {
-            Privacy_and_Security: [
-                { name: 'uBlock Origin', rating: 47, instals: "34,000,000", lastUpdated: '8/5/2024' },
-            ]
-        },
-
-        {
-            Accessibility: [
-                { name: 'AutoHideDownloadsBar', rating: 4.9, instals: "1,000", lastUpdated: '7/7/2022' },
-            ]
-        },
-
-        {
-            Functionality_and_UI: [
-                { name: 'Free VPN Chrome extension - Best VPN by uVPN', rating: 4.6, instals: "1,000,000", lastUpdated: '6/29/2023' },
-            ]
-        },
-
-    ];
+    const data = {
+        Art_and_Design: [
+            { name: 'Imagus', rating: 4.5, instals: "500,000", lastUpdated: '4/16/2020' }
+        ],
+        Entertainment: [
+            { name: 'Mapissimo', rating: 3, instals: "402", lastUpdated: '8/10/2024' },
+        ],
+        Games: [
+            { name: '2048 Game', rating: 4.9, instals: "1,000,000", lastUpdated: '7/26/2024' },
+        ],
+        Household: [
+            { name: 'Remix for Chrome - CSA Recipe Saver', rating: 5, instals: "0", lastUpdated: '9/5/2021' },
+        ],
+        Just_for_fun: [
+            { name: 'Super Mania Ball', rating: 2.3, instals: "3,000", lastUpdated: '6/5/2018' },
+        ],
+        News_and_Weather: [
+            { name: 'Feedly Notifier', rating: 4.5, instals: "30,000", lastUpdated: '7/24/2023' },
+        ],
+        Shopping: [
+            { name: 'Vivino Wine Ratings', rating: 1, instals: "115", lastUpdated: '7/25/2020' },
+        ],
+        Social_Networking: [
+            { name: 'QRify', rating: 5, instals: "43", lastUpdated: '8/12/2017' },
+        ],
+        Travel: [
+            { name: 'Tab with A view', rating: 4.9, instals: "2,000", lastUpdated: '5/16/2024' },
+        ],
+        Wellbeing: [
+            { name: 'PurposeTab: Your daily focus on each new tab', rating: 4.9, instals: "1,000", lastUpdated: '4/21/2024' },
+        ],
+        Communication: [
+            { name: 'dotalk', rating: 5, instals: "7", lastUpdated: '6-Aug-21' },
+        ],
+        Developer_Tools: [
+            { name: 'JSON Viewer', rating: 4.5, instals: "1,000,000", lastUpdated: '12/23/2020' },
+        ],
+        Education: [
+            { name: 'Pencil Explore for Chrome', rating: 5, instals: "898", lastUpdated: '6/2/2022' },
+        ],
+        Tools: [
+            { name: 'Glocal', rating: 4.1, instals: "8", lastUpdated: '2/4/2021' },
+        ],
+        Workflow_and_planning: [
+            { name: 'Unhook - Remove YouTube Recommended & Shorts', rating: 4.9, instals: "600,000", lastUpdated: '4/12/2024' },
+        ],
+        Privacy_and_Security: [
+            { name: 'uBlock Origin', rating: 47, instals: "34,000,000", lastUpdated: '8/5/2024' },
+        ],
+        Accessibility: [
+            { name: 'AutoHideDownloadsBar', rating: 4.9, instals: "1,000", lastUpdated: '7/7/2022' },
+        ],
+        Functionality_and_UI: [
+            { name: 'Free VPN Chrome extension - Best VPN by uVPN', rating: 4.6, instals: "1,000,000", lastUpdated: '6/29/2023' },
+        ],
+    };
 
     const stats = {
         Art_and_Design: {
@@ -267,14 +213,9 @@ const CategorySelector = ({ url }: { url: string }) => {
 
     const getDataForSubcategory = (subcategory: string): any[] => {
         const formattedSubcategory = subcategory.replace(/ /g, '_');
-
         const subcategoryData = data[formattedSubcategory as keyof typeof data];
 
-        if (Array.isArray(subcategoryData)) {
-            return subcategoryData;
-        }
-
-        return [];
+        return subcategoryData;
     };
 
     const getStatsForSubcategory = (subcategory: string): any => {
