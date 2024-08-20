@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from 'react';
-const CategorySelector = () => {
+const CategorySelector = ({ url }: { url: string }) => {
     const categories = ['Lifestyle', 'Make_Chrome_Yours', 'Productivity'];
     const subcategories = {
         Lifestyle: [
@@ -380,10 +380,12 @@ const CategorySelector = () => {
                         </table>
                         {/* Button overlay */}
                         <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex justify-center items-center">
-                            <button className="btn-get-data px-4 py-2 bg-[#4988f5] text-white rounded hover:bg-blue-600 flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mx-auto my-auto mr-2 lucide lucide-lock"><rect width="18" height="11" x="3" y="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
-                                Unlock All Data
-                            </button>
+                            <a href={url} target="_blank">
+                                <button className="btn-get-data px-4 py-2 bg-[#4988f5] text-white rounded hover:bg-blue-600 flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mx-auto my-auto mr-2 lucide lucide-lock"><rect width="18" height="11" x="3" y="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
+                                    Unlock All Data
+                                </button>
+                            </a>
                         </div>
                     </div>
                 </div>

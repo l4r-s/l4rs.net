@@ -43,20 +43,20 @@ export const metadata = {
 };
 
 export default function V2ExtensionList({ searchParams }: { searchParams: { [key: string]: string } }) {
-// Get referrer from headers
-const reqHeaders = headers();
-const referrer = reqHeaders.get('referer') || 'https://hilars.dev/v2e';
+  // Get referrer from headers
+  const reqHeaders = headers();
+  const referrer = reqHeaders.get('referer') || 'https://hilars.dev/v2e';
 
-// Get referrer from search params
-let customReferrer = searchParams.r || referrer;
+  // Get referrer from search params
+  let customReferrer = searchParams.r || referrer;
 
-// Ensure the referrer starts with http:// or https://
-if (!customReferrer.startsWith('http://') && !customReferrer.startsWith('https://')) {
+  // Ensure the referrer starts with http:// or https://
+  if (!customReferrer.startsWith('http://') && !customReferrer.startsWith('https://')) {
     customReferrer = `https://${customReferrer}`;
-}
+  }
 
-// Example usage of customReferrer
-const url = `https://builditn0w.gumroad.com/l/chrome-manifest-v2-phaseout/BUILD?referrer=${encodeURIComponent(customReferrer)}`;
+  // Example usage of customReferrer
+  const url = `https://builditn0w.gumroad.com/l/chrome-manifest-v2-phaseout/BUILD?referrer=${encodeURIComponent(customReferrer)}`;
 
 
   return (
@@ -138,12 +138,15 @@ const url = `https://builditn0w.gumroad.com/l/chrome-manifest-v2-phaseout/BUILD?
               <h2 className="text-xl text-center text-gray-800 mb-4">
                 Check out the Data below and see what you get! 👇
               </h2>
-              <CategorySelector />
+              <CategorySelector url={url} />
             </div>
 
-            <button className="w-full bg-[#21a15f] text-white py-2 rounded-md hover:bg-[#1b834a] transition duration-300 my-12 font-bold text-xl p-8 hidden lg:block">
-              Don't miss out—unlock the full list now and start building profitable extensions today!
-            </button>
+            <a href={url} target="_blank">
+              <button className="w-full bg-[#21a15f] text-white py-2 rounded-md hover:bg-[#1b834a] transition duration-300 my-12 font-bold text-xl p-8 hidden lg:block">
+                <span className="font-bold block">Don't miss out</span>
+                <span className="font-normal block">Unlock the full list now and start building profitable extensions today! 🚀</span> 
+              </button>
+            </a>
 
           </div>
 
@@ -157,7 +160,8 @@ const url = `https://builditn0w.gumroad.com/l/chrome-manifest-v2-phaseout/BUILD?
             </a>
             <a href={url} target="_blank">
               <button className="w-full bg-[#21a15f] text-white py-2 rounded-md hover:bg-[#1b834a] transition duration-300 mb-12 font-bold text-xl p-8 lg:hidden">
-                Don't miss out—unlock the full list now and start building profitable extensions today!
+                <span className="font-bold block">Don't miss out</span>
+                <span className="font-normal block">Unlock the full list now and start building profitable extensions today! 🚀</span> 
               </button>
             </a>
 
