@@ -314,22 +314,22 @@ const CategorySelector = () => {
             {showTable && (
                 <div className="mt-12">
                     <div className="flex flex-wrap justify-center">
-                        <div className="p-2 border border-gray-300 bg-[#dc4e41] min-w-48 rounded-md shadow-md mx-2 my-2 lg:mb-0 md:mb-4 sm:mb-4">
+                        <div className="p-2 border border-gray-300 bg-[#dc4e41] min-w-36 rounded-md shadow-md mx-2 my-2 lg:mb-0 md:mb-4 sm:mb-4">
                             <p className='text-center text-xl font-bold'>{getStatsForSubcategory(subcategory).smallest_rating}</p>
                             <h3 className="text-md text-center">Smallest Rating</h3>
                         </div>
 
-                        <div className="p-2 border border-gray-300 bg-[#4988f5] min-w-48 rounded-md shadow-md mx-2 my-2 lg:mb-0 md:mb-4 sm:mb-4">
+                        <div className="p-2 border border-gray-300 bg-[#4988f5] min-w-36 rounded-md shadow-md mx-2 my-2 lg:mb-0 md:mb-4 sm:mb-4">
                             <p className='text-center text-xl font-bold'>{getStatsForSubcategory(subcategory).count}</p>
                             <h3 className="text-md text-center">Rows</h3>
                         </div>
 
-                        <div className="p-2 border border-gray-300 bg-[#ffce42] min-w-48 rounded-md shadow-md mx-2 my-2 lg:mb-0 md:mb-4 sm:mb-4">
+                        <div className="p-2 border border-gray-300 bg-[#ffce42] min-w-36 rounded-md shadow-md mx-2 my-2 lg:mb-0 md:mb-4 sm:mb-4">
                             <p className='text-center text-xl font-bold'>{getStatsForSubcategory(subcategory).oldest}</p>
                             <h3 className="text-md text-center">Oldest Update</h3>
                         </div>
 
-                        <div className="p-2 border border-gray-300 rounded-md bg-[#21a15f] min-w-48 shadow-md mx-2 my-2 lg:mb-0 md:mb-4 sm:mb-4">
+                        <div className="p-2 border border-gray-300 rounded-md bg-[#21a15f] min-w-36 shadow-md mx-2 my-2 lg:mb-0 md:mb-4 sm:mb-4">
                             <p className='text-center text-xl font-bold'>{getStatsForSubcategory(subcategory).biggest_installs}</p>
                             <h3 className="text-md text-center">Biggest Install</h3>
                         </div>

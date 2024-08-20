@@ -4,14 +4,14 @@ import Image from "next/image";
 import { headers } from 'next/headers';
 
 const title = "5,000+ Opportunities Waiting for You!";
-const description = "As of June 3, 2024, Chrome officially deprecated Extension Manifest V2, meaning thousands of extensions will soon stop working.";
+const description = "Capitalize on Chrome's Manifest V2 Deprecation Before the Market Shifts!";
 export const metadata = {
   title,
   description,
   author: "Lars",
   date: "2024-08-20",
   url: "https://hilars.dev/v2e",
-  image: "/og_v2e_v1.png",
+  image: "/og_v2e_v2.png",
   tags: ["Chrome Extensions", "Manifest V3", "Web Development", "Google Chrome"],
   openGraph: {
     type: "article",
@@ -20,7 +20,7 @@ export const metadata = {
     url: "https://hilars.dev/v2e",
     images: [
       {
-        url: "/og_v2e_v1.png",
+        url: "/og_v2e_v2.png",
         width: 1200,
         height: 630,
         alt: title,
@@ -33,7 +33,7 @@ export const metadata = {
     description,
     images: [
       {
-        url: "/og_v2e_v1.png",
+        url: "/og_v2e_v2.png",
         width: 1200,
         height: 630,
         alt: title,
