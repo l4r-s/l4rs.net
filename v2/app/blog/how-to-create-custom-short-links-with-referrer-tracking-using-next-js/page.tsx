@@ -1,12 +1,12 @@
 import React from "react";
 import BlogHeader from "@/components/BlogHeader";
-import EmbedGist from "@/components/embed-gist";
+// import EmbedGist from "@/components/embed-gist";
 
 export const metadata = {
   title: "How to Create Custom Short Links with Referrer Tracking Using Next.js",
   description: "Learn how to create custom short links with referrer tracking using Next.js to maintain accurate marketing and traffic data.",
   author: "Lars",
-  date: "2024-08-17",
+  date: "2024-08-18",
   url: "https://hilars.dev/blog/how-to-create-custom-short-links-with-referrer-tracking-using-next-js",
   image: "/api/og?title=How+to+Create+Custom+Short+Links+with+Referrer+Tracking+Using+Next.js",
   tags: ["Next.js", "Nextjs", "Nextjs Tutorials", "Web Development", "Refeeral Marketing", "Referrer Tracking", "Custom Short Links", "Gumroad"],
@@ -39,7 +39,7 @@ export const metadata = {
   },
 };
 
-const BlogPost: React.FC = () => {
+const BlogPostHowToCreateCustomShortLinksWithReferrerTrackingUsingNextJs: React.FC = () => {
   return (
     <div className="min-h-screen container my-20 lg:my-28">
       <BlogHeader
@@ -74,7 +74,8 @@ const BlogPost: React.FC = () => {
 
         <p>Place it in your Next.js app router directory, for example under <code>app/v2e/page.tsx</code>:</p>
 
-        <EmbedGist gistId="l4r-s/175a7233a68c1fd0e0024e8e89c73fb9" file="page.tsx" />
+        <div className="my-10">
+          {/* <EmbedGist gistId="l4r-s/175a7233a68c1fd0e0024e8e89c73fb9" file="page.tsx" /> */}
 
         <h2 className="text-xl">How It Works</h2>
 
@@ -102,4 +103,4 @@ const BlogPost: React.FC = () => {
   );
 };
 
-export default BlogPost;
+export default BlogPostHowToCreateCustomShortLinksWithReferrerTrackingUsingNextJs;

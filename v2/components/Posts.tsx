@@ -13,7 +13,7 @@ const Posts: React.FC<Props> = () => {
         <h1 className="text-4xl uppercase text-center">Latest Blog Posts</h1>
         <div className="divider divide-gray-400 mb-20"></div>
 
-        <div className="card card-side bg-base-100 shadow-xl hover:shadow-2xl cursor-pointer my-5">
+        {/* <div className="card card-side bg-base-100 shadow-xl hover:shadow-2xl cursor-pointer my-5">
           <figure>
             <Image
               src="/blog-nextjs-shortlink.png"
@@ -39,7 +39,7 @@ const Posts: React.FC<Props> = () => {
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className="card card-side bg-base-100 shadow-xl hover:shadow-2xl cursor-pointer my-5">
           <figure>
