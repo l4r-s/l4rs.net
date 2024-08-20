@@ -64,7 +64,7 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
       <a href='https://xshot.me' target='_blank'>
         <div className="bg-[#ffce42] p-2 mb-6">
           <p className="text-gray-800 text-sm text-center">
-          Coming Soon: <span className='font-semibold'>Transform Your X Post into Stunning Images Instantly</span> 🚀
+            Coming Soon: <span className='font-semibold'>Transform Your X Post into Stunning Images Instantly</span> 🚀
           </p>
         </div>
       </a>
@@ -99,6 +99,9 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
                         Buy Now
                       </button>
                     </a>
+                    <div className="flex my-4">
+                      <a href="https://www.producthunt.com/posts/v2-chrome-extension-list?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-v2-chrome-extension-list" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=481039&theme=light" alt="V2 Chrome Extension List - Discover outdated Chrome extensions that need to be rebuilt | Product Hunt" style={{ width: '250px', height: '54px' }} /></a>
+                    </div>
                   </div>
                 </div>
               </div>
