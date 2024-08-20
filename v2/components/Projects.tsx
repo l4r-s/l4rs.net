@@ -31,6 +31,10 @@ const Projects: React.FC = () => {
               <li>Ratings ✅</li>
               <li>Last Updated Date ✅</li>
             </ul>
+            <div className="my-4 mx-auto">
+              <a href="https://www.producthunt.com/posts/v2-chrome-extension-list?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-v2&#0045;chrome&#0045;extension&#0045;list" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=481039&theme=light" alt="V2&#0032;Chrome&#0032;Extension&#0032;List - 5&#0044;000&#0043;&#0032;Opportunities&#0032;Waiting&#0032;for&#0032;You&#0033; | Product Hunt" style={{ width: '250px', height: '54px' }} width="250" height="54" /></a>
+            </div>
+
 
             <div className="card-actions justify-end">
               <a href="/v2e" target="_blank">
@@ -74,10 +78,10 @@ const Projects: React.FC = () => {
             />
           </figure>
           <div className="card-body">
-              <a href="https://wecontextify.com" target="_blank">
-                <h2 className="card-title link link-hover">WeContextify.com</h2>
-              </a>
-              <p>Generate stunning, contextual aware Images</p>
+            <a href="https://wecontextify.com" target="_blank">
+              <h2 className="card-title link link-hover">WeContextify.com</h2>
+            </a>
+            <p>Generate stunning, contextual aware Images</p>
             <div className="card-actions justify-end">
               <div className="card-actions justify-end">
                 <a href="https://wecontextify.com" target="_blank">
@@ -86,7 +90,7 @@ const Projects: React.FC = () => {
               </div>
             </div>
           </div>
-          </div>
+        </div>
 
         <div className="card bg-base-100 w-5/6 shadow-xl mx-auto my-5">
           <figure>
@@ -99,18 +103,18 @@ const Projects: React.FC = () => {
             />
           </figure>
           <div className="card-body">
+            <a href="https://imagegenpro.com" target="_blank">
+              <h2 className="card-title link link-hover">ImageGenPro.com</h2>
+            </a>
+            <p>Image generation Tools.</p>
+            <div className="card-actions justify-end">
               <a href="https://imagegenpro.com" target="_blank">
-                <h2 className="card-title link link-hover">ImageGenPro.com</h2>
+                <button className="btn btn-primary">Check it out</button>
               </a>
-              <p>Image generation Tools.</p>
-              <div className="card-actions justify-end">
-                <a href="https://imagegenpro.com" target="_blank">
-                  <button className="btn btn-primary">Check it out</button>
-                </a>
-              </div>
+            </div>
           </div>
         </div>
-          {/* <div className="card lg:card-side bg-base-100 shadow-xl my-5">
+        {/* <div className="card lg:card-side bg-base-100 shadow-xl my-5">
           <figure>
           <Image
               src="/imagegenpro.png"
@@ -142,9 +146,9 @@ const Projects: React.FC = () => {
             <p>Image generation Tools.</p>
           </div>
         </div> */}
-        </div>
       </div>
-      );
+    </div>
+  );
 };
 
-      export default Projects;
+export default Projects;

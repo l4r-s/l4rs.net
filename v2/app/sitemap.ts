@@ -16,7 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: 'https://hilars.dev/projects',
-      lastModified: '2024-08-17',
+      lastModified: '2024-08-20',
       changeFrequency: 'yearly',
       priority: 0.7,
     },
