@@ -56,7 +56,7 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
   }
 
   // Example usage of customReferrer
-  const url = `https://builditn0w.gumroad.com/l/chrome-manifest-v2-phaseout/BUILD?referrer=${encodeURIComponent(customReferrer)}`;
+  const url = `https://builditn0w.gumroad.com/l/chrome-manifest-v2-phaseout/BUILD?referrer=${encodeURIComponent(customReferrer)}&wanted=true`;
 
 
   return (
