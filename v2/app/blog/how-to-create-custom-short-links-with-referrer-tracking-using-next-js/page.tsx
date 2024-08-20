@@ -74,7 +74,6 @@ const BlogPostHowToCreateCustomShortLinksWithReferrerTrackingUsingNextJs: React.
 
         <p>Place it in your Next.js app router directory, for example under <code>app/v2e/page.tsx</code>:</p>
 
-        <div className="my-10">
           {/* <EmbedGist gistId="l4r-s/175a7233a68c1fd0e0024e8e89c73fb9" file="page.tsx" /> */}
 
         <h2 className="text-xl">How It Works</h2>
