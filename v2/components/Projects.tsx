@@ -19,7 +19,7 @@ const Projects: React.FC = () => {
             />
           </figure>
           <div className="card-body">
-            <a href="/v2e" target="_blank">
+            <a href="/chrome-v2-extension-list" target="_blank">
               <h2 className="card-title link link-hover">5,000+ Opportunities Waiting for You!</h2>
             </a>
             <p className="mt-2">
@@ -37,7 +37,7 @@ const Projects: React.FC = () => {
 
 
             <div className="card-actions justify-end">
-              <a href="/v2e" target="_blank">
+              <a href="/chrome-v2-extension-list" target="_blank">
                 <button className="btn btn-primary">Profit now!</button>
               </a>
             </div>

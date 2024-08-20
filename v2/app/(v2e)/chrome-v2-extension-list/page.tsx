@@ -10,14 +10,15 @@ export const metadata = {
   description,
   author: "Lars",
   date: "2024-08-21",
-  url: "https://hilars.dev/v2e",
+  url: "https://hilars.dev/chrome-v2-extension-list",
+  canonicalUrl: "https://hilars.dev/chrome-v2-extension-list", // Added canonical URL
   image: "/og_v2e_v2.png",
   tags: ["Chrome Extensions", "Manifest V3", "Web Development", "Google Chrome"],
   openGraph: {
     type: "article",
     title,
     description,
-    url: "https://hilars.dev/v2e",
+    url: "https://hilars.dev/chrome-v2-extension-list",
     images: [
       {
         url: "/og_v2e_v2.png",
@@ -45,7 +46,7 @@ export const metadata = {
 export default function V2ExtensionList({ searchParams }: { searchParams: { [key: string]: string } }) {
   // Get referrer from headers
   const reqHeaders = headers();
-  const referrer = reqHeaders.get('referer') || 'https://hilars.dev/v2e';
+  const referrer = reqHeaders.get('referer') || 'https://hilars.dev/chrome-v2-extension-list';
 
   // Get referrer from search params
   let customReferrer = searchParams.r || referrer;
