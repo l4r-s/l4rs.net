@@ -279,13 +279,13 @@ const CategorySelector = ({ url }: { url: string }) => {
                         <table className="min-w-full max-w-full bg-white table-fixed border border-gray-300 overflow-hidden">
                             <thead>
                                 <tr className="bg-gray-200 text-left">
-                                    <th className="p-2 text-sm border">Name</th>
-                                    <th className="p-2 text-sm border">Rating</th>
-                                    <th className="p-2 text-sm border">Installs</th>
-                                    <th className="p-2 text-sm border">Last Updated</th>
-                                    <th className="p-2 text-sm border">Category</th>
-                                    <th className="p-2 text-sm border">Sub Category</th>
-                                    <th className="p-2 text-sm border">Link</th>
+                                    <th className="p-2 text-sm border brak-all">Name</th>
+                                    <th className="p-2 text-sm border brak-all">Rating</th>
+                                    <th className="p-2 text-sm border brak-all">Installs</th>
+                                    <th className="p-2 text-sm border brak-all">Last Updated</th>
+                                    <th className="p-2 text-sm border brak-all hidden md:block">Category</th>
+                                    <th className="p-2 text-sm border brak-all hidden md:block">Sub Category</th>
+                                    <th className="p-2 text-sm border brak-all">Link</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -294,13 +294,13 @@ const CategorySelector = ({ url }: { url: string }) => {
                                     const subcategoryData = getDataForSubcategory(subcategory);
                                     return (
                                         <tr key={i} className="hover:bg-gray-100 text-sm">
-                                            <td className="p-2 border">{subcategoryData[i] ? subcategoryData[i].name : 'N/A'}</td>
-                                            <td className="p-2 border">{subcategoryData[i] ? subcategoryData[i].rating : 'N/A'}</td>
-                                            <td className="p-2 border">{subcategoryData[i] ? subcategoryData[i].instals : 'N/A'}</td>
-                                            <td className="p-2 border">{subcategoryData[i] ? subcategoryData[i].lastUpdated : 'N/A'}</td>
-                                            <td className="p-2 border">{category.replace(/_/g, ' ')}</td>
-                                            <td className="p-2 border">{subcategory ? subcategory.replace(/_/g, ' ') : 'N/A'}</td>
-                                            <td className="p-2 border break-all">https://chromewebsto...</td>
+                                            <td className="p-2 break-all border">{subcategoryData[i] ? subcategoryData[i].name : 'N/A'}</td>
+                                            <td className="p-2 break-all border">{subcategoryData[i] ? subcategoryData[i].rating : 'N/A'}</td>
+                                            <td className="p-2 break-all border">{subcategoryData[i] ? subcategoryData[i].instals : 'N/A'}</td>
+                                            <td className="p-2 break-all border">{subcategoryData[i] ? subcategoryData[i].lastUpdated : 'N/A'}</td>
+                                            <td className="p-2 break-all border hidden md:block">{category.replace(/_/g, ' ')}</td>
+                                            <td className="p-2 break-all border hidden md:block">{subcategory ? subcategory.replace(/_/g, ' ') : 'N/A'}</td>
+                                            <td className="p-2 break-all border">https://chromewebsto...</td>
                                         </tr>
                                     );
                                 })}
@@ -308,13 +308,13 @@ const CategorySelector = ({ url }: { url: string }) => {
                                 {/* Remaining rows - blurred */}
                                 {[4, 5].map((i) => (
                                     <tr key={i} className="blurred-row hover:bg-gray-100">
-                                        <td className="p-2 border">Lorem Ipsum</td>
-                                        <td className="p-2 border">Row {i} - Col 2</td>
-                                        <td className="p-2 border">Row {i} - Col 3</td>
-                                        <td className="p-2 border">Row {i} - Col 3</td>
-                                        <td className="p-2 border">{category.replace(/_/g, ' ')}</td>
-                                        <td className="p-2 border">{subcategory.replace(/_/g, ' ')}</td>
-                                        <td className="p-2 border break-all">https://chromewebsto...</td>
+                                        <td className="p-2 break-all border">Lorem Ipsum</td>
+                                        <td className="p-2 break-all border">Row {i} - Col 2</td>
+                                        <td className="p-2 break-all border">Row {i} - Col 3</td>
+                                        <td className="p-2 break-all border">Row {i} - Col 3</td>
+                                        <td className="p-2 break-all border hidden md:block">{category.replace(/_/g, ' ')}</td>
+                                        <td className="p-2 break-all border hidden md:block">{subcategory.replace(/_/g, ' ')}</td>
+                                        <td className="p-2 break-all border">https://chromewebsto...</td>
                                     </tr>
                                 ))}
                             </tbody>
