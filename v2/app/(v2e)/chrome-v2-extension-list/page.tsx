@@ -59,6 +59,8 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
     'AGENCY70': { price: '$9', discount: '70% OFF' },
   }
 
+  const price = priceTable[discountCode as keyof typeof priceTable]?.price || '$19.99';
+  const discount = priceTable[discountCode as keyof typeof priceTable]?.discount || '50% OFF';
 
   // Ensure the referrer starts with http:// or https://
   if (!customReferrer.startsWith('http://') && !customReferrer.startsWith('https://')) {
@@ -95,7 +97,7 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
                   Turn Obsolete Extensions into Profitable Goldmines — <span className="font-bold">5,000+</span> Opportunities Waiting for You!
                 </h1>
                 <div className='lg:hidden my-4'>
-                  <BuySection price={priceTable[discountCode as keyof typeof priceTable].price} discount={priceTable[discountCode as keyof typeof priceTable].discount} showPH={true} url={url} />
+                  <BuySection price={price} discount={discount} showPH={true} url={url} />
                 </div>
               </div>
 
@@ -155,11 +157,11 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
             {/* Right Column */}
             <div className="w-full lg:w-1/3 mt-4 lg:mt-0 bg-white lg:max-w-md p-6 shadow-md rounded-lg">
               <div className='hidden lg:block mb-4'>
-                <BuySection showPH={true} url={url} price={priceTable[discountCode as keyof typeof priceTable].price} discount={priceTable[discountCode as keyof typeof priceTable].discount} />
+                <BuySection showPH={true} url={url} price={price} discount={discount} />
               </div>
 
               <div className='lg:hidden mb-4'>
-                <BuySection showPH={false} url={url} price={priceTable[discountCode as keyof typeof priceTable].price} discount={priceTable[discountCode as keyof typeof priceTable].discount} />
+                <BuySection showPH={false} url={url} price={price} discount={discount} />
               </div>
 
               {/* <a href={url} target="_blank">
