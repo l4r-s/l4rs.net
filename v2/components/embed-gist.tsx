@@ -1,4 +1,5 @@
 "use client";
+
 import ReactEmbedGist from 'react-embed-gist';
 
 export default function EmbedGist({ gistId, file }: { gistId: `${string}/${string}`, file: string }) {

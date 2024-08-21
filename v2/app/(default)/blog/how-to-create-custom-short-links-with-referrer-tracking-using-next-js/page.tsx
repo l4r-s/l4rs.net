@@ -1,6 +1,8 @@
 import React from "react";
 import BlogHeader from "@/components/BlogHeader";
-// import EmbedGist from "@/components/embed-gist";
+import dynamic from 'next/dynamic';
+
+const EmbedGist = dynamic(() => import('@/components/embed-gist'), { ssr: false });
 
 export const metadata = {
   title: "How to Create Custom Short Links with Referrer Tracking Using Next.js",
@@ -74,7 +76,7 @@ const BlogPostHowToCreateCustomShortLinksWithReferrerTrackingUsingNextJs: React.
 
         <p>Place it in your Next.js app router directory, for example under <code>app/v2e/page.tsx</code>:</p>
 
-          {/* <EmbedGist gistId="l4r-s/175a7233a68c1fd0e0024e8e89c73fb9" file="page.tsx" /> */}
+          <EmbedGist gistId="l4r-s/175a7233a68c1fd0e0024e8e89c73fb9" file="page.tsx" />
 
         <h2 className="text-xl">How It Works</h2>
 
