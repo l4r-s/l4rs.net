@@ -51,6 +51,13 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
 
   // Get referrer from search params
   let customReferrer = searchParams.r || referrer;
+  let discountCode = searchParams.d || 'BUILD';
+
+  const priceTable = {
+    'BUILD': '$19.99',
+    'BUILD70': '$9',
+  }
+
 
   // Ensure the referrer starts with http:// or https://
   if (!customReferrer.startsWith('http://') && !customReferrer.startsWith('https://')) {
@@ -58,7 +65,7 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
   }
 
   // Example usage of customReferrer
-  const url = `https://builditn0w.gumroad.com/l/chrome-manifest-v2-phaseout/BUILD?referrer=${encodeURIComponent(customReferrer)}&wanted=true`;
+  const url = `https://builditn0w.gumroad.com/l/chrome-manifest-v2-phaseout/${discountCode}?referrer=${encodeURIComponent(customReferrer)}&wanted=true`;
 
 
   return (
@@ -87,7 +94,7 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
                   Turn Obsolete Extensions into Profitable Goldmines — <span className="font-bold">5,000+</span> Opportunities Waiting for You!
                 </h1>
                 <div className='lg:hidden my-4'>
-                  <BuySection showPH={true} url={url} />
+                  <BuySection price={priceTable[discountCode as keyof typeof priceTable]} showPH={true} url={url} />
                 </div>
               </div>
 
@@ -147,11 +154,11 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
             {/* Right Column */}
             <div className="w-full lg:w-1/3 mt-4 lg:mt-0 bg-white lg:max-w-md p-6 shadow-md rounded-lg">
               <div className='hidden lg:block mb-4'>
-                <BuySection showPH={true} url={url} />
+                <BuySection showPH={true} url={url} price={priceTable[discountCode as keyof typeof priceTable]} />
               </div>
 
               <div className='lg:hidden mb-4'>
-                <BuySection showPH={false} url={url} />
+                <BuySection showPH={false} url={url} price={priceTable[discountCode as keyof typeof priceTable]} />
               </div>
 
               {/* <a href={url} target="_blank">

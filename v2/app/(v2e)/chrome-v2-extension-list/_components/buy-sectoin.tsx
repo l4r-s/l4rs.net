@@ -1,4 +1,4 @@
-const BuySection = ({ url, showPH }: { url: string, showPH: boolean }) => {
+const BuySection = ({ url, showPH, price }: { url: string, showPH: boolean, price: string }) => {
   return (
     <div className='max-w-48 justify-center items-center mx-auto block'>
       <div className="flex items-center space-x-2 mt-4 mx-auto justify-center">
@@ -6,7 +6,7 @@ const BuySection = ({ url, showPH }: { url: string, showPH: boolean }) => {
           $29.99
         </span>
         <span className="bg-[#ffce42] text-gray-800 text-2xl font-bold px-3 py-1 rounded-md shadow-lg">
-          $14.99
+          {price}
         </span>
       </div>
       <div className="mt-4 mx-auto justify-end">
