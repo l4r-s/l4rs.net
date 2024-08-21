@@ -147,7 +147,7 @@ const BlogPost: React.FC = () => {
         </p>
         <p className="block">
           💡 <span className="font-bold">Get the list now!</span><br />
-          👉 <a href="https://builditn0w.gumroad.com/l/chrome-manifest-v2-phaseout" className="link link-hover link-primary" target="_blank">https://builditn0w.gumroad.com/l/chrome-manifest-v2-phaseout</a>
+          👉 <a href="/chrome-v2-extension-list" className="link link-hover link-primary" target="_blank">https://hilars.dev/chrome-v2-extension-list</a>
         </p>
 
         <p>
