@@ -54,8 +54,8 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
   let discountCode = searchParams.d || 'BUILD';
 
   const priceTable = {
-    'BUILD': '$19.99',
-    'BUILD70': '$9',
+    'BUILD': { price: '$19.99', discount: '50% OFF' },
+    'BUILD70': { price: '$9', discount: '70% OFF' },
   }
 
 
@@ -94,7 +94,7 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
                   Turn Obsolete Extensions into Profitable Goldmines — <span className="font-bold">5,000+</span> Opportunities Waiting for You!
                 </h1>
                 <div className='lg:hidden my-4'>
-                  <BuySection price={priceTable[discountCode as keyof typeof priceTable]} showPH={true} url={url} />
+                  <BuySection price={priceTable[discountCode as keyof typeof priceTable].price} discount={priceTable[discountCode as keyof typeof priceTable].discount} showPH={true} url={url} />
                 </div>
               </div>
 
@@ -154,11 +154,11 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
             {/* Right Column */}
             <div className="w-full lg:w-1/3 mt-4 lg:mt-0 bg-white lg:max-w-md p-6 shadow-md rounded-lg">
               <div className='hidden lg:block mb-4'>
-                <BuySection showPH={true} url={url} price={priceTable[discountCode as keyof typeof priceTable]} />
+                <BuySection showPH={true} url={url} price={priceTable[discountCode as keyof typeof priceTable].price} discount={priceTable[discountCode as keyof typeof priceTable].discount} />
               </div>
 
               <div className='lg:hidden mb-4'>
-                <BuySection showPH={false} url={url} price={priceTable[discountCode as keyof typeof priceTable]} />
+                <BuySection showPH={false} url={url} price={priceTable[discountCode as keyof typeof priceTable].price} discount={priceTable[discountCode as keyof typeof priceTable].discount} />
               </div>
 
               {/* <a href={url} target="_blank">

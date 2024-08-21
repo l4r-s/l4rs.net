@@ -1,14 +1,25 @@
-const BuySection = ({ url, showPH, price }: { url: string, showPH: boolean, price: string }) => {
+const BuySection = ({ url, showPH, price, discount }: { url: string, showPH: boolean, price: string, discount: string }) => {
   return (
     <div className='max-w-48 justify-center items-center mx-auto block'>
-      <div className="flex items-center space-x-2 mt-4 mx-auto justify-center">
-        <span className="bg-gray-300 line-through text-sm font-semibold px-2 py-1 rounded-md text-gray-500">
-          $29.99
-        </span>
-        <span className="bg-[#ffce42] text-gray-800 text-2xl font-bold px-3 py-1 rounded-md shadow-lg">
-          {price}
-        </span>
+      <div className="flex items-start space-x-2 mt-4 mx-auto justify-center">
+        <div className="flex items-start space-x-2">
+          <div className="flex flex-col items-start">
+            <span className="bg-gray-300 line-through text-center text-sm font-semibold px-2 py-1 rounded-md text-gray-500">
+              $29.99
+            </span>
+            <span className="text-xs italic font-bold text-center px-2 py-1 rounded-md text-gray-500">
+              {discount}
+            </span>
+          </div>
+
+          <div className="flex flex-col items-start">
+            <span className="bg-[#ffce42] text-gray-800 text-2xl font-bold px-3 py-1 rounded-md shadow-lg">
+              {price}
+            </span>
+          </div>
+        </div>
       </div>
+      
       <div className="mt-4 mx-auto justify-end">
         <a href={url} target="_blank">
           <button className="w-full bg-[#4988f5] text-white py-2 rounded-md shadow-lg hover:bg-blue-600 transition duration-300 block">
