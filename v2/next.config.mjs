@@ -8,7 +8,7 @@ const nextConfig = {
           destination: '/chrome-v2-extension-list',  // The actual page
         },
          {
-          source: '/c2e',  // The alias URL
+          source: '/c2e',  // The alias URL used on twitter bio
           destination: '/chrome-v2-extension-list',  // The actual page
         },
       ]
