@@ -2,6 +2,7 @@ import CategorySelector from './_components/counter';
 import './style.css';
 import Image from "next/image";
 import { headers } from 'next/headers';
+import BuySection from './_components/buy-sectoin';
 
 const title = "5,000+ Opportunities Waiting for You!";
 const description = "Capitalize on Chrome's Manifest V2 Deprecation Before the Market Shifts!";
@@ -81,61 +82,50 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
           />
           <div className="flex flex-col lg:flex-row justify-center">
             <div className="lg:w-3/6 w-full mt-2 px-8 mx-2 bg-white shadow-lg rounded-lg">
-              <div className="flex mb-16">
-                <h1 className="text-3xl text-gray-800">
+              <div className="flex flex-col lg:flex-row mb-16">
+                <h1 className="text-3xl text-gray-800 text-center lg:text-left">
                   Turn Obsolete Extensions into Profitable Goldmines — <span className="font-bold">5,000+</span> Opportunities Waiting for You!
                 </h1>
-                <div>
-                  <div className="flex items-center space-x-2 ml-4">
-                    <span className="bg-gray-300 line-through text-sm font-semibold px-2 py-1 rounded-md text-gray-500">
-                      $29.99
-                    </span>
-                    <span className="bg-[#ffce42] text-gray-800 text-2xl font-bold px-3 py-1 rounded-md shadow-lg">
-                      $14.99
-                    </span>
-                  </div>
-                  <div className="mt-4 mx-auto justify-end">
-                    <a href={url} target="_blank">
-                      <button className="w-full bg-[#4988f5] text-white py-2 rounded-md hover:bg-blue-600 transition duration-300 block lg:hidden">
-                        Buy Now
-                      </button>
-                    </a>
-                    <div className="flex my-4">
-                      <a href="https://www.producthunt.com/posts/v2-chrome-extension-list?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-v2-chrome-extension-list" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=481039&theme=light" alt="V2 Chrome Extension List - Discover outdated Chrome extensions that need to be rebuilt | Product Hunt" style={{ width: '250px', height: '54px' }} /></a>
-                    </div>
-                  </div>
+                <div className='lg:hidden my-4'>
+                  <BuySection showPH={true} url={url} />
                 </div>
               </div>
 
-              <h2 className="text-xl font-bold text-gray-800 mb-4">
+              {/* <h2 className="text-xl font-bold text-gray-800 mb-4">
                 Capitalize on Chrome's Manifest V2 Deprecation Before the Market Shifts!
-              </h2>
+              </h2> */}
               <p className="text-lg text-gray-600">
                 As of June 3, 2024, Chrome officially deprecated Extension Manifest V2
               </p>
               <p className="text-lg text-gray-600 mb-6">
                 Thousands of extensions will soon stop working. Unlock a golden opportunity!
               </p>
-              <p className="text-lg text-gray-600 mb-6">
-                Access a curated list of over <span className="font-bold">5,000 extensions</span> still relying on the outdated V2 Manifest.
-                With ratings and install counts included, you can easily identify high-potential extensions
-                ripe for rebuilding, giving you a head start to create profitable solutions.
-              </p>
-              <p className="text-lg text-gray-600 font-bold">
+
+              <div className="my-8 text-left">
+                <div className="rounded-md mb-2">
+                  <p className="text-xl text-gray-800 font-semibold">
+                    Access a curated list of over <span className="font-bold">5,000 extensions</span> still relying on the outdated V2 Manifest!
+                  </p>
+                </div>
+                <p className="text-lg text-gray-600">
+                  With ratings and install counts included, you can easily identify high-potential extensions
+                  ripe for rebuilding, giving you a head start to create profitable solutions.
+                </p>
+              </div>
+
+              {/* <p className="text-lg text-white font-bold">
                 Don't miss out—capitalize on this transition and find your next big idea!
-              </p>
+              </p> */}
               <p className="text-lg text-gray-600 mb-6 font-bold">
                 Rebuild an extension and attract users with the latest V3 standards.
               </p>
 
-              <div className="bg-[#ffce42] p-6 rounded-md mb-6">
-                <p className="text-gray-800 text-lg font-semibold">
-                  Chrome extensions using Manifest V2 will soon become obsolete, creating a huge gap in the market.
-                </p>
-                <p className="text-gray-800 text-lg font-semibold">
-                  Be the first to capitalize on this transition and find your next big idea!
-                </p>
-              </div>
+              <p className="text-gray-800 text-lg">
+                Chrome extensions using Manifest V2 will soon become obsolete, creating a huge gap in the market.
+              </p>
+              <p className="text-gray-800 text-lg">
+                Be the first to capitalize on this transition and find your next big idea!
+              </p>
 
               <Image
                 src="/ph-2.1.png"
@@ -152,30 +142,24 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
                 </h2>
                 <CategorySelector url={url} />
               </div>
-
-              <a href={url} target="_blank">
-                <button className="w-full bg-[#21a15f] text-white py-2 rounded-md hover:bg-[#1b834a] transition duration-300 my-12 font-bold text-xl p-8 hidden lg:block">
-                  <span className="font-bold block">Don't miss out</span>
-                  <span className="font-normal block">Unlock the full list now and start building profitable extensions today! 🚀</span>
-                </button>
-              </a>
-
             </div>
 
             {/* Right Column */}
             <div className="w-full lg:w-1/3 mt-4 lg:mt-0 bg-white lg:max-w-md p-6 shadow-md rounded-lg">
-              {/* Button */}
-              <a href={url} target="_blank">
-                <button className="w-full bg-[#4988f5] text-white py-3 rounded-md text-center text-lg font-semibold mb-6 hover:bg-blue-700 hidden lg:block">
-                  I want it!
-                </button>
-              </a>
-              <a href={url} target="_blank">
-                <button className="w-full bg-[#21a15f] text-white py-2 rounded-md hover:bg-[#1b834a] transition duration-300 mb-12 font-bold text-xl p-8 lg:hidden">
+              <div className='hidden lg:block mb-4'>
+                <BuySection showPH={true} url={url} />
+              </div>
+
+              <div className='lg:hidden mb-4'>
+                <BuySection showPH={false} url={url} />
+              </div>
+
+              {/* <a href={url} target="_blank">
+                <button className="w-full bg-[#4988f5] text-white py-2 rounded-md hover:bg-blue-600 transition duration-300 mb-12 font-bold text-xl p-8 lg:hidden">
                   <span className="font-bold block">Don't miss out</span>
                   <span className="font-normal block">Unlock the full list now and start building profitable extensions today! 🚀</span>
                 </button>
-              </a>
+              </a> */}
 
               {/* Description */}
               <div className="bg-gray-100 p-4 rounded-md mb-6">
