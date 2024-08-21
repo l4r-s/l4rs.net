@@ -56,6 +56,7 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
   const priceTable = {
     'BUILD': { price: '$19.99', discount: '50% OFF' },
     'BUILD70': { price: '$9', discount: '70% OFF' },
+    'AGENCY70': { price: '$9', discount: '70% OFF' },
   }
 
 
