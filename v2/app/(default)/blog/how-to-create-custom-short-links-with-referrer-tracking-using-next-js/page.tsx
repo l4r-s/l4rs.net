@@ -19,7 +19,7 @@ export const metadata = {
     url: "https://hilars.dev/blog/how-to-create-custom-short-links-with-referrer-tracking-using-next-js",
     images: [
       {
-        url: "/api/og?title=How+to+Create+Custom+Short+Links+with+Referrer+Tracking+Using+Next.js"
+        url: "/api/og?title=How+to+Create+Custom+Short+Links+with+Referrer+Tracking+Using+Next.js",
         width: 1200,
         height: 630,
         alt: "How to Create Custom Short Links with Referrer Tracking Using Next.js",
