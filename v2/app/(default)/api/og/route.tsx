@@ -3,7 +3,7 @@ import { ImageResponse } from 'next/og';
 export async function GET(request: Request) {
     const { searchParams } = new URL(request.url);
     const title = searchParams.get('title') || '👋 Hello, World!';
-    const subTitle = searchParams.get('subtitle') || '👋 Hello, World!';
+    const subtitle = searchParams.get('subtitle') || '👋 Hello, World!';
     return new ImageResponse(
         (
             <div
@@ -20,7 +20,7 @@ export async function GET(request: Request) {
                 }}
             >
                 <h1 style={{ fontSize: 30, textAlign: 'left' }}>{title}</h1>
-                <h2 style={{ fontSize: 20, textAlign: 'left' }}>{subTitle}</h2>
+                {/* <h2 style={{ fontSize: 20, textAlign: 'left' }}>{subtitle}</h2> */}
             </div>
         ),
         {

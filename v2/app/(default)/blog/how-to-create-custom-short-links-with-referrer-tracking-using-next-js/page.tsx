@@ -19,7 +19,7 @@ export const metadata = {
     url: "https://hilars.dev/blog/how-to-create-custom-short-links-with-referrer-tracking-using-next-js",
     images: [
       {
-        url: "/api/og?title=How+to+Create+Custom+Short+Links+with+Referrer+Tracking+Using+Next.js",
+        url: "/api/og?title=How+to+Create+Custom+Short+Links+with+Referrer+Tracking+Using+Next.js?subtitle=Learn+how+to+create+custom+short+links+with+referrer+tracking+using+Next.js+to+maintain+accurate+marketing+and+traffic+data.",
         width: 1200,
         height: 630,
         alt: "How to Create Custom Short Links with Referrer Tracking Using Next.js",
@@ -32,7 +32,7 @@ export const metadata = {
     description: "Learn how to create custom short links with referrer tracking using Next.js to maintain accurate marketing and traffic data.",
     images: [
       {
-        url: "/api/og?title=How+to+Create+Custom+Short+Links+with+Referrer+Tracking+Using+Next.js",
+        url: "/api/og?title=How+to+Create+Custom+Short+Links+with+Referrer+Tracking+Using+Next.js?subtitle=Learn+how+to+create+custom+short+links+with+referrer+tracking+using+Next.js+to+maintain+accurate+marketing+and+traffic+data.",
         width: 1200,
         height: 630,
         alt: "How to Create Custom Short Links with Referrer Tracking Using Next.js",
