@@ -11,6 +11,10 @@ const nextConfig = {
           source: '/c2e',  // The alias URL used on twitter bio
           destination: '/chrome-v2-extension-list',  // The actual page
         },
+          {
+          source: '/blog/how-to-create-custom-short-links-with-referrer-tracking-using-next-js', 
+          destination: '/blog/how-to-create-custom-short-links-with-referrer-tracking-using-nextjs', 
+        },
       ]
     },
   }
