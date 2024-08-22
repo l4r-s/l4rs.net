@@ -80,7 +80,7 @@ const Projects: React.FC = () => {
       <h1 className="text-4xl uppercase text-center">Projects 🚀</h1>
       <div className="divider divide-gray-400 mb-20"></div>
       {projects.map((project, index) => (
-        <a key={index} href={project.link} target="_blank">
+        <a key={index} href={project.link}>
           <ProjectCard {...project} />
         </a>
       ))}

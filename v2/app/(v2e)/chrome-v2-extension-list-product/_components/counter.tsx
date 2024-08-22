@@ -225,12 +225,37 @@ const CategorySelector = ({ url }: { url: string }) => {
 
     return (
         <>
-            <div className="flex flex-col col-4 justify-center items-center">
+
+            <div className="mt-12 mb-8">
                 <div className="flex flex-wrap justify-center">
+                    <div className="p-2 border border-gray-300 bg-[#dc4e41] min-w-36 rounded-md shadow-md mx-2 my-2 lg:mb-0 md:mb-4 sm:mb-4">
+                        <p className='text-center text-xl font-bold'>{getStatsForSubcategory(subcategory).smallest_rating}</p>
+                        <h3 className="text-md text-center">Smallest Rating</h3>
+                    </div>
+
+                    <div className="p-2 border border-gray-300 bg-[#4988f5] min-w-36 rounded-md shadow-md mx-2 my-2 lg:mb-0 md:mb-4 sm:mb-4">
+                        <p className='text-center text-xl font-bold'>{getStatsForSubcategory(subcategory).count}</p>
+                        <h3 className="text-md text-center">Rows</h3>
+                    </div>
+
+                    <div className="p-2 border border-gray-300 bg-[#ffce42] min-w-36 rounded-md shadow-md mx-2 my-2 lg:mb-0 md:mb-4 sm:mb-4">
+                        <p className='text-center text-xl font-bold'>{getStatsForSubcategory(subcategory).oldest}</p>
+                        <h3 className="text-md text-center">Oldest Update</h3>
+                    </div>
+
+                    <div className="p-2 border border-gray-300 rounded-md bg-[#21a15f] min-w-36 shadow-md mx-2 my-2 lg:mb-0 md:mb-4 sm:mb-4">
+                        <p className='text-center text-xl font-bold'>{getStatsForSubcategory(subcategory).biggest_installs}</p>
+                        <h3 className="text-md text-center">Biggest Install</h3>
+                    </div>
+                </div>
+
+            </div>
+            <div className="flex flex-col col-4 justify-center items-center">
+                <div className="flex flex-wrap justify-center mb-4">
                     {categories.map((c) => (
                         <button
                             key={c}
-                            className={`p-2 border border-gray-300 mx-2 my-2 shadow-md rounded-md ${c === category ? 'bg-[#4988f5] text-white hover:bg-blue-600' : 'bg-white text-gray-700 hover:bg-gray-200'}`}
+                            className={`p-4 border border-gray-300 m-1 shadow-md font-semibold rounded-md ${c === category ? 'bg-[#4988f5] text-white hover:bg-blue-600' : 'bg-white text-gray-700 hover:bg-gray-200'}`}
                             onClick={() => handleCategoryChange(c)}
                         >
                             {c.replace(/_/g, ' ')}
@@ -238,11 +263,11 @@ const CategorySelector = ({ url }: { url: string }) => {
                     ))}
                 </div>
                 {category && (
-                    <div className="flex flex-wrap mt-4 justify-center">
+                    <div className="flex flex-wrap justify-center">
                         {subcategories[category as keyof typeof subcategories].map((sc) => (
                             <button
                                 key={sc}
-                                className={`p-2 border border-gray-300 rounded-md mx-2 my-2 ${sc === subcategory ? 'bg-[#4988f5] text-white hover:bg-blue-600' : 'bg-white text-gray-700 hover:bg-gray-200'}`}
+                                className={`p-2 text-sm border border-gray-300 rounded-md mx-1 my-1 ${sc === subcategory ? 'bg-[#4988f5] text-white hover:bg-blue-600' : 'bg-white text-gray-700 hover:bg-gray-200'}`}
                                 onClick={() => handleSubcategoryChange(sc)}
                             >
                                 {sc.replace(/_/g, ' ')}
@@ -251,89 +276,62 @@ const CategorySelector = ({ url }: { url: string }) => {
                     </div>
                 )}
             </div>
-
-            {showTable && (
-                <div className="mt-12">
-                    <div className="flex flex-wrap justify-center">
-                        <div className="p-2 border border-gray-300 bg-[#dc4e41] min-w-36 rounded-md shadow-md mx-2 my-2 lg:mb-0 md:mb-4 sm:mb-4">
-                            <p className='text-center text-xl font-bold'>{getStatsForSubcategory(subcategory).smallest_rating}</p>
-                            <h3 className="text-md text-center">Smallest Rating</h3>
-                        </div>
-
-                        <div className="p-2 border border-gray-300 bg-[#4988f5] min-w-36 rounded-md shadow-md mx-2 my-2 lg:mb-0 md:mb-4 sm:mb-4">
-                            <p className='text-center text-xl font-bold'>{getStatsForSubcategory(subcategory).count}</p>
-                            <h3 className="text-md text-center">Rows</h3>
-                        </div>
-
-                        <div className="p-2 border border-gray-300 bg-[#ffce42] min-w-36 rounded-md shadow-md mx-2 my-2 lg:mb-0 md:mb-4 sm:mb-4">
-                            <p className='text-center text-xl font-bold'>{getStatsForSubcategory(subcategory).oldest}</p>
-                            <h3 className="text-md text-center">Oldest Update</h3>
-                        </div>
-
-                        <div className="p-2 border border-gray-300 rounded-md bg-[#21a15f] min-w-36 shadow-md mx-2 my-2 lg:mb-0 md:mb-4 sm:mb-4">
-                            <p className='text-center text-xl font-bold'>{getStatsForSubcategory(subcategory).biggest_installs}</p>
-                            <h3 className="text-md text-center">Biggest Install</h3>
-                        </div>
-                    </div>
-                    <div className="relative mt-12">
-                        <div className="overflow-x-auto">
-                            <table className="min-w-full max-w-full bg-white table-fixed border border-gray-300 overflow-hidden">
-                                <thead>
-                                    <tr className="bg-gray-200 text-left">
-                                        <th className="p-2 text-sm border">Name</th>
-                                        <th className="p-2 text-sm border">Rating</th>
-                                        <th className="p-2 text-sm border">Installs</th>
-                                        <th className="p-2 text-sm border">Last Updated</th>
-                                        <th className="p-2 text-sm border">Category</th>
-                                        <th className="p-2 text-sm border">Sub Category</th>
-                                        <th className="p-2 text-sm border">Link</th>
+            <div className="relative mt-12">
+                <div className="overflow-x-auto">
+                    <table className="min-w-full max-w-full bg-white table-fixed border border-gray-300 overflow-hidden">
+                        <thead>
+                            <tr className="bg-gray-200 text-left">
+                                <th className="p-2 text-sm border">Name</th>
+                                <th className="p-2 text-sm border">Rating</th>
+                                <th className="p-2 text-sm border">Installs</th>
+                                <th className="p-2 text-sm border">Last Updated</th>
+                                <th className="p-2 text-sm border">Category</th>
+                                <th className="p-2 text-sm border">Sub Category</th>
+                                <th className="p-2 text-sm border">Link</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {/* First 3 rows - clear */}
+                            {[0].map((i) => {
+                                const subcategoryData = getDataForSubcategory(subcategory);
+                                return (
+                                    <tr key={i} className="hover:bg-gray-100 text-sm">
+                                        <td className="p-2 border">{subcategoryData[i] ? subcategoryData[i].name : 'N/A'}</td>
+                                        <td className="p-2 border">{subcategoryData[i] ? subcategoryData[i].rating : 'N/A'}</td>
+                                        <td className="p-2 border">{subcategoryData[i] ? subcategoryData[i].instals : 'N/A'}</td>
+                                        <td className="p-2 border">{subcategoryData[i] ? subcategoryData[i].lastUpdated : 'N/A'}</td>
+                                        <td className="p-2 border">{category.replace(/_/g, ' ')}</td>
+                                        <td className="p-2 border">{subcategory ? subcategory.replace(/_/g, ' ') : 'N/A'}</td>
+                                        <td className="p-2 border">https://chromewebsto...</td>
                                     </tr>
-                                </thead>
-                                <tbody>
-                                    {/* First 3 rows - clear */}
-                                    {[0].map((i) => {
-                                        const subcategoryData = getDataForSubcategory(subcategory);
-                                        return (
-                                            <tr key={i} className="hover:bg-gray-100 text-sm">
-                                                <td className="p-2 border">{subcategoryData[i] ? subcategoryData[i].name : 'N/A'}</td>
-                                                <td className="p-2 border">{subcategoryData[i] ? subcategoryData[i].rating : 'N/A'}</td>
-                                                <td className="p-2 border">{subcategoryData[i] ? subcategoryData[i].instals : 'N/A'}</td>
-                                                <td className="p-2 border">{subcategoryData[i] ? subcategoryData[i].lastUpdated : 'N/A'}</td>
-                                                <td className="p-2 border">{category.replace(/_/g, ' ')}</td>
-                                                <td className="p-2 border">{subcategory ? subcategory.replace(/_/g, ' ') : 'N/A'}</td>
-                                                <td className="p-2 border">https://chromewebsto...</td>
-                                            </tr>
-                                        );
-                                    })}
+                                );
+                            })}
 
-                                    {/* Remaining rows - blurred */}
-                                    {[4, 5].map((i) => (
-                                        <tr key={i} className="blurred-row hover:bg-gray-100">
-                                            <td className="p-2 border">Lorem Ipsum</td>
-                                            <td className="p-2 border">Row {i} - Col 2</td>
-                                            <td className="p-2 border">Row {i} - Col 3</td>
-                                            <td className="p-2 border">Row {i} - Col 3</td>
-                                            <td className="p-2 border">{category.replace(/_/g, ' ')}</td>
-                                            <td className="p-2 border">{subcategory.replace(/_/g, ' ')}</td>
-                                            <td className="p-2 border">https://chromewebsto...</td>
-                                        </tr>
-                                    ))}
-                                </tbody>
-                            </table>
-                        </div>
-                        {/* Button overlay */}
-                        <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex justify-center items-center">
-                            <a href={url} target="_blank">
-                                <button className="btn-get-data px-4 py-2 bg-[#4988f5] text-white rounded hover:bg-blue-600 flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mx-auto my-auto mr-2 lucide lucide-lock"><rect width="18" height="11" x="3" y="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
-                                    Unlock All Data
-                                </button>
-                            </a>
-                        </div>
-                    </div>
+                            {/* Remaining rows - blurred */}
+                            {[4, 5].map((i) => (
+                                <tr key={i} className="blurred-row hover:bg-gray-100">
+                                    <td className="p-2 border">Lorem Ipsum</td>
+                                    <td className="p-2 border">Row {i} - Col 2</td>
+                                    <td className="p-2 border">Row {i} - Col 3</td>
+                                    <td className="p-2 border">Row {i} - Col 3</td>
+                                    <td className="p-2 border">{category.replace(/_/g, ' ')}</td>
+                                    <td className="p-2 border">{subcategory.replace(/_/g, ' ')}</td>
+                                    <td className="p-2 border">https://chromewebsto...</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
                 </div>
-
-            )}
+                {/* Button overlay */}
+                <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex justify-center items-center">
+                    <a href={url} target="_blank">
+                        <button className="btn-get-data px-4 py-2 bg-[#4988f5] text-white rounded hover:bg-blue-600 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mx-auto my-auto mr-2 lucide lucide-lock"><rect width="18" height="11" x="3" y="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
+                            Unlock All Data
+                        </button>
+                    </a>
+                </div>
+            </div>
         </>
 
     );

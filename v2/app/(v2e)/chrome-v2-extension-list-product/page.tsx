@@ -92,9 +92,9 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
           />
           <div className="flex flex-col lg:flex-row justify-center">
             <div className="lg:w-3/6 w-full mt-2 px-8 mx-2 bg-white shadow-lg rounded-lg">
-              <div className="flex flex-col lg:flex-row mb-16">
+              <div className="flex flex-col lg:flex-row mb-8">
                 <h1 className="text-3xl text-gray-800 text-center lg:text-left">
-                  Turn Obsolete Extensions into Profitable Goldmines — <span className="font-bold">5,000+</span> Opportunities Waiting for You!
+                  <span className='font-bold'>Transform Obsolete Extensions into Profitable Goldmines</span> — Unlock <span className='font-bold'>5,000+</span> High-Potential Opportunities Now!
                 </h1>
                 <div className='lg:hidden my-4'>
                   <BuySection price={price} discount={discount} showPH={true} url={url} />
@@ -105,38 +105,31 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
                 Capitalize on Chrome's Manifest V2 Deprecation Before the Market Shifts!
               </h2> */}
               <p className="text-lg text-gray-600">
-                As of June 3, 2024, Chrome officially deprecated Extension Manifest V2
+              Chrome’s Manifest V2 is Deprecated—Thousands of Extensions Are Now at Risk of Becoming Obsolete. Seize This Rare Opportunity!
               </p>
-              <p className="text-lg text-gray-600 mb-6">
+              {/* <p className="text-lg text-gray-600 mb-6">
                 Thousands of extensions will soon stop working. Unlock a golden opportunity!
-              </p>
+              </p> */}
 
               <div className="my-8 text-left">
                 <div className="rounded-md mb-2">
                   <p className="text-xl text-gray-800 font-semibold">
-                    Access a curated list of over <span className="font-bold">5,000 extensions</span> still relying on the outdated V2 Manifest!
+                    Get Exclusive Access to a Curated List of 5,000+ V2 Extensions Ripe for Rebuilding and Monetizing.
+                  </p>
+                  <p className="text-xl text-gray-600">
+                    Each Extension Comes with Key Data like Ratings, Install Counts, and Last Updated Dates.
                   </p>
                 </div>
                 <p className="text-lg text-gray-600">
-                  With ratings and install counts included, you can easily identify high-potential extensions
-                  ripe for rebuilding, giving you a head start to create profitable solutions.
                 </p>
-              </div>
-
-              {/* <p className="text-lg text-white font-bold">
-                Don't miss out—capitalize on this transition and find your next big idea!
-              </p> */}
-              <p className="text-lg text-gray-600 mb-6 font-bold">
-                Rebuild an extension and attract users with the latest V3 standards.
-              </p>
-
               <p className="text-gray-800 text-lg">
                 Chrome extensions using Manifest V2 will soon become obsolete, creating a huge gap in the market.
               </p>
               <p className="text-gray-800 text-lg">
                 Be the first to capitalize on this transition and find your next big idea!
               </p>
-
+              </div>
+{/* 
               <Image
                 src="/ph-2.1.png"
                 alt="Turn Obsolete Extensions into Profitable Goldmines—5,000+ Opportunities Waiting for You!"
@@ -144,12 +137,36 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
                 height={1440}
                 className="mx-auto"
                 priority
-              />
+              /> */}
 
               <div className="my-4">
-                <h2 className="text-xl text-center text-gray-800 mb-4">
-                  Check out the Data below and see what you get! 👇
-                </h2>
+                  <h2 className="text-2xl text-gray-800 mb-1">
+                    <span className='font-bold'>Unlock Profitable Extension Opportunities</span>
+                  </h2>
+                  <h3 className="text-gray-600 text-xl mb-4">
+                    Leverage Key Metrics like Install Counts, Ratings, and last Update Date to Spot the Next Big Project!
+                  </h3>
+                <div className="my-4 mx-auto text-center justify-center flex flex-col items-center">
+                  <ul className="list-disc list-inside mx-auto text-left space-y-2">
+                    <li className='flex items-center space-x-2'>
+                      <svg xmlns="http://www.w3.org/2000/svg" className="text-[#dc4e41] my-auto" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="4" /><line x1="21.17" x2="12" y1="8" y2="8" /><line x1="3.95" x2="8.54" y1="6.06" y2="14" /><line x1="10.88" x2="15.46" y1="21.94" y2="14" /></svg>
+                      <span className='text-2xl font-semibold'>Install Count</span>
+                    </li>
+                    <li className='flex items-center space-x-2'>
+                      <svg xmlns="http://www.w3.org/2000/svg" className="text-[#ffce42] my-auto" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                      <span className='text-2xl font-semibold'>Rating</span>
+                    </li>
+                    <li className='flex items-center space-x-2'>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="text-[#4988f5] my-auto" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h5"/><path d="M17.5 17.5 16 16.3V14"/><circle cx="16" cy="16" r="6"/></svg>
+                      <span className='text-2xl font-semibold'>Last Update Date</span>
+                    </li>
+                    <li className='flex items-center space-x-2'>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="text-[#21a15f] my-auto" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3"/><path d="m16 16-1.9-1.9"/></svg>
+                      <span className='text-2xl font-semibold'>Focused on V2 Extensions</span>
+                    </li>
+                  </ul>
+                </div>
+
                 <CategorySelector url={url} />
               </div>
             </div>
@@ -177,6 +194,50 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
                   A curated list of 5,000+ Chrome extensions still using the deprecated V2 Manifest. Includes ratings, install counts, and last updated dates to help you easily identify high-potential extensions for rebuilding and monetizing.
                 </p>
               </div>
+
+              <div className="justify-center mt-2 mb-16">
+                <div className='mx-auto my-4'>
+                  <a href="https://x.com/ThePeterMick/status/1824865229282394529" target="_blank">
+                    <Image
+                      src="/testimonial_2.png"
+                      alt="Tweet @ThePeterMick: Super helpful 👌"
+                      width={350}
+                      height={100}
+                      className="mx-auto"
+                      priority
+                    />
+                  </a>
+                </div>
+
+                <div className='mx-auto my-4'>
+                  <a href="https://x.com/umairs02/status/1824907298772242575" target="_blank">
+                    <Image
+                      src="/testimonial_1.png"
+                      alt="Tweet @umairs02: That's an amazing offer for an amazing product!! Just checked it out."
+                      width={350}
+                      height={100}
+                      className="mx-auto"
+                      priority
+                    />
+                  </a>
+                </div>
+
+                <div className='mx-auto my-4'>
+                  <a href="https://x.com/shipixen/status/1825614236070085052" target="_blank">
+                    <Image
+                      src="/testimonial_3.png"
+                      alt="Tweet @shipixen: Legendary stuff 🔥"
+                      width={350}
+                      height={100}
+                      className="mx-auto"
+                      priority
+                    />
+                  </a>
+                </div>
+              </div>
+              <div className="border-t border-gray-300">
+              </div>
+
 
               {/* Info Sections */}
               <div className="border-t border-gray-300">
@@ -284,52 +345,11 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
                 </div>
               </div>
 
-              <div className="justify-center mt-16">
-                <h2 className="text-xl font-bold text-gray-800 mb-4 text-center">What people say</h2>
-                <div className='mx-auto my-4'>
-                  <a href="https://x.com/umairs02/status/1824907298772242575" target="_blank">
-                    <Image
-                      src="/testimonial_1.png"
-                      alt="Tweet @umairs02: That's an amazing offer for an amazing product!! Just checked it out."
-                      width={350}
-                      height={100}
-                      className="mx-auto"
-                      priority
-                    />
-                  </a>
-                </div>
 
-                <div className='mx-auto my-4'>
-                  <a href="https://x.com/ThePeterMick/status/1824865229282394529" target="_blank">
-                    <Image
-                      src="/testimonial_2.png"
-                      alt="Tweet @ThePeterMick: Super helpful 👌"
-                      width={350}
-                      height={100}
-                      className="mx-auto"
-                      priority
-                    />
-                  </a>
-                </div>
-
-                <div className='mx-auto my-4'>
-                  <a href="https://x.com/shipixen/status/1825614236070085052" target="_blank">
-                    <Image
-                      src="/testimonial_3.png"
-                      alt="Tweet @shipixen: Legendary stuff 🔥"
-                      width={350}
-                      height={100}
-                      className="mx-auto"
-                      priority
-                    />
-                  </a>
-                </div>
-
-              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
