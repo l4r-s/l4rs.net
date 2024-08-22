@@ -14,7 +14,7 @@ export const metadata = {
   date: "2024-08-21",
   url: "https://hilars.dev/chrome-v2-extension-list",
   canonicalUrl: "https://hilars.dev/chrome-v2-extension-list", // Added canonical URL
-  image: "/chrome_extension_list.png",
+  image: "/og_chrome_extension_list.png",
   tags: ["Chrome Extensions", "Manifest V3", "Web Development", "Google Chrome"],
   openGraph: {
     type: "article",
@@ -23,7 +23,7 @@ export const metadata = {
     url: "https://hilars.dev/chrome-v2-extension-list",
     images: [
       {
-        url: "/chrome_extension_list.png",
+        url: "/og_chrome_extension_list.png",
         width: 1200,
         height: 630,
         alt: title,
@@ -36,7 +36,7 @@ export const metadata = {
     description,
     images: [
       {
-        url: "/chrome_extension_list.png",
+        url: "/og_chrome_extension_list.png",
         width: 1200,
         height: 630,
         alt: title,
@@ -89,7 +89,7 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
             alt="Turn Obsolete Extensions into Profitable Goldmines—5,000+ Opportunities Waiting for You!"
             width={800}
             height={1440}
-            className="mx-auto"
+            className="mx-auto my-32"
             priority
           />
           <div className="flex flex-col lg:flex-row justify-center">
