@@ -73,13 +73,13 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
 
   return (
     <div>
-      <a href='https://xshot.me' target='_blank'>
+      {/* <a href='https://xshot.me' target='_blank'>
         <div className="bg-[#ffce42] p-2 mb-6">
           <p className="text-gray-800 text-sm text-center">
             Coming Soon: <span className='font-semibold'>Transform Your X Post into Stunning Images Instantly</span> 🚀
           </p>
         </div>
-      </a>
+      </a> */}
       <div className="min-h-screen flex items-center justify-center">
         <div className="m-4 max-w-8xl w-full">
           <Image
