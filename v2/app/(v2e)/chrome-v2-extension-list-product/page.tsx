@@ -99,7 +99,7 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
                   <span className='font-bold'>Transform Obsolete Extensions into Profitable Goldmines</span> — Unlock <span className='font-bold'>5,000+</span> High-Potential Opportunities Now!
                 </h1>
                 <div className='lg:hidden my-4'>
-                  <BuySection price={price} discount={discount} showPH={true} url={url} />
+                  <BuySection price={price} discount={discount} showPH={true} url={url} referral={customReferrer} />
                 </div>
               </div>
 
@@ -176,11 +176,11 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
             {/* Right Column */}
             <div className="w-full lg:w-1/3 mt-4 lg:mt-0 bg-white lg:max-w-md p-6 shadow-md rounded-lg">
               <div className='hidden lg:block mb-4'>
-                <BuySection showPH={true} url={url} price={price} discount={discount} />
+                <BuySection showPH={true} url={url} price={price} discount={discount} referral={customReferrer} />
               </div>
 
               <div className='lg:hidden mb-4'>
-                <BuySection showPH={false} url={url} price={price} discount={discount} />
+                <BuySection showPH={false} url={url} price={price} discount={discount} referral={customReferrer} />
               </div>
 
               {/* <a href={url} target="_blank">
