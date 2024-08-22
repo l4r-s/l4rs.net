@@ -3,6 +3,7 @@ import './style.css';
 import Image from "next/image";
 import { headers } from 'next/headers';
 import BuySection from './_components/buy-sectoin';
+import posthog from 'posthog-js';
 
 const title = "5,000+ Opportunities Waiting for You!";
 const description = "Capitalize on Chrome's Manifest V2 Deprecation Before the Market Shifts!";
@@ -70,6 +71,7 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
   // Example usage of customReferrer
   const url = `https://builditn0w.gumroad.com/l/chrome-manifest-v2-phaseout/${discountCode}?referrer=${encodeURIComponent(customReferrer)}&wanted=true`;
 
+  posthog.capture('v2-extension-list-viewed', { referrer: customReferrer, discountCode: discountCode })
 
   return (
     <div>

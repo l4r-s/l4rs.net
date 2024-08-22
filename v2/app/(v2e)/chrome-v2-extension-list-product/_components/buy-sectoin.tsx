@@ -1,13 +1,23 @@
-const BuySection = ({ url, showPH, price, discount }: { url: string, showPH: boolean, price: string, discount: string }) => {
+'use client'
+
+import { useRouter } from 'next/navigation';
+import posthog from 'posthog-js';
+
+const BuySection = ({ url, showPH, price, discount, referral }: { url: string, showPH: boolean, price: string, discount: string, referral: string }) => {
+  const router = useRouter();
+
+  const handleBuyClick = () => {
+    posthog.capture('v2-extension-list-buy-click', { referrer: referral, discountCode: discount });
+    router.push(url);
+  };
+
   return (
     <div className='w-full justify-center items-center mx-auto block'>
       <div className="mb-4 mx-auto justify-end">
-        <a href={url} target="_blank">
-          <button className="w-full bg-[#4988f5] text-white p-2 text-2xl rounded-md shadow-lg hover:bg-blue-600 transition duration-300 block">
-            <span className="block text-2xl font-bold">Buy now!</span>
-            <span className="block text-base mt-2">Grab Your Copy Today and Start Building Profitable Extensions! 💸</span>
-          </button>
-        </a>
+        <button onClick={handleBuyClick} className="w-full bg-[#4988f5] text-white p-2 text-2xl rounded-md shadow-lg hover:bg-blue-600 transition duration-300 block">
+          <span className="block text-2xl font-bold">Buy now!</span>
+          <span className="block text-base mt-2">Grab Your Copy Today and Start Building Profitable Extensions! 💸</span>
+        </button>
       </div>
 
       <div className="flex items-start space-x-2 mt-4 mx-auto justify-center">

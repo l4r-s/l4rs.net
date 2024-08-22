@@ -1,6 +1,7 @@
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import "../../globals.css";
+import { CSPostHogProvider } from '../providers'
+import "../globals.css";
 
 export default function V2eLayout({
   children,
@@ -10,11 +11,13 @@ export default function V2eLayout({
   return (
     <html lang="en">
       <body>
-        <div className="min-h-screen">
-          {children}
-          <Analytics />
-          <SpeedInsights />
-        </div>
+        <CSPostHogProvider>
+          <div className="min-h-screen">
+            {children}
+            <Analytics />
+            <SpeedInsights />
+          </div>
+        </CSPostHogProvider>
       </body>
     </html>
   );
