@@ -13,7 +13,7 @@ export const metadata = {
   date: "2024-08-21",
   url: "https://hilars.dev/chrome-v2-extension-list",
   canonicalUrl: "https://hilars.dev/chrome-v2-extension-list", // Added canonical URL
-  image: "/og_v2e_v2.png",
+  image: "/blog_v2_extensions.webp",
   tags: ["Chrome Extensions", "Manifest V3", "Web Development", "Google Chrome"],
   openGraph: {
     type: "article",
@@ -22,7 +22,7 @@ export const metadata = {
     url: "https://hilars.dev/chrome-v2-extension-list",
     images: [
       {
-        url: "/og_v2e_v2.png",
+        url: "/blog_v2_extensions.webp",
         width: 1200,
         height: 630,
         alt: title,
@@ -35,7 +35,7 @@ export const metadata = {
     description,
     images: [
       {
-        url: "/og_v2e_v2.png",
+        url: "/blog_v2_extensions.webp",
         width: 1200,
         height: 630,
         alt: title,
