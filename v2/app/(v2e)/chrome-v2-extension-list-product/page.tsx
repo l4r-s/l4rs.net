@@ -55,7 +55,7 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
   let discountCode = searchParams.d || 'BUILD';
 
   const priceTable = {
-    'BUILD': { price: '$19.99', discount: '50% OFF' },
+    'BUILD': { price: '$14.99', discount: '50% OFF' },
     'BUILD70': { price: '$9', discount: '70% OFF' },
     'AGENCY70': { price: '$9', discount: '70% OFF' },
   }
