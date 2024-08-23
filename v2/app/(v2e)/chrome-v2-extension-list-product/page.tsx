@@ -30,7 +30,7 @@ export const metadata = {
       },
     ],
     locale: "en_US",
-    site_name: "Chrome Extension Opportunities",
+    siteName: "Chrome Extension Opportunities",
   },
   twitter: {
     card: "summary_large_image",
