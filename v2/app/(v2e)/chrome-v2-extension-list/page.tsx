@@ -16,7 +16,7 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
   }
 
   // Get discount code from search params
-  let discountCode = searchParams.d || 'BUILD';
+  let discountCode = searchParams.d || 'BUILD70';
 
   // Ensure the discount exists in the price table, if not use 'BUILD' as default
   const priceTable = {
