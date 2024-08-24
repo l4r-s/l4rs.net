@@ -25,7 +25,7 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
     'AGENCY70': { price: '$9', discount: '70% OFF' },
   };
   if (!priceTable[discountCode as keyof typeof priceTable]) {
-    discountCode = 'BUILD';
+    discountCode = 'BUILD70';
   }
 
   const url = `https://builditn0w.gumroad.com/l/chrome-manifest-v2-phaseout/${discountCode}?referrer=${encodeURIComponent(customReferrer)}`;
