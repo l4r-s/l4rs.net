@@ -16,7 +16,7 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
   }
 
   // Get discount code from search params
-  let discountCode = searchParams.d || 'BUILD70';
+  let discountCode = searchParams.d || 'BUILD';
 
   // Ensure the discount exists in the price table, if not use 'BUILD' as default
   const priceTable = {
@@ -25,7 +25,7 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
     'AGENCY70': { price: '$9', discount: '70% OFF' },
   };
   if (!priceTable[discountCode as keyof typeof priceTable]) {
-    discountCode = 'BUILD70';
+    discountCode = 'BUILD';
   }
 
   const url = `https://builditn0w.gumroad.com/l/chrome-manifest-v2-phaseout/${discountCode}?referrer=${encodeURIComponent(customReferrer)}`;
