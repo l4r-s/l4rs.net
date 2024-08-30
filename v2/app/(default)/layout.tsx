@@ -6,6 +6,7 @@ import { Inter } from "next/font/google";
 import "../globals.css";
 import Sidebar from "@/components/Sidebar";
 import SidebarMobile from "@/components/SidebarMobile";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Script defer src="https://umami.hilars.dev/script.js" data-website-id="78c5044e-c628-4213-952e-9ad2fa9452e9" />
       <body className={inter.className}>
         <CSPostHogProvider>
           <div className="font-sans min-h-screen flex flex-col">
