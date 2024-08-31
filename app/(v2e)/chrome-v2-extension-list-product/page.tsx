@@ -5,6 +5,11 @@ import { headers } from 'next/headers';
 import BuySection from './_components/buy-sectoin';
 import posthog from 'posthog-js';
 
+import ChromeExtensionListImg from "@/public/chrome_extension_list.png"
+import Testimonial1Img from "@/public/testimonial_1.png"
+import Testimonial2Img from "@/public/testimonial_2.png"
+import Testimonial3Img from "@/public/testimonial_3.png"
+
 const title = "5,000+ Opportunities Waiting for You!";
 const description = "Capitalize on Chrome's Manifest V2 Deprecation Before the Market Shifts!";
 export const metadata = {
@@ -87,10 +92,8 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
       <div className="min-h-screen flex items-center justify-center">
         <div className="m-4 max-w-8xl w-full">
           <Image
-            src="/chrome_extension_list.png"
+            src={ChromeExtensionListImg}
             alt="Turn Obsolete Extensions into Profitable Goldmines—5,000+ Opportunities Waiting for You!"
-            width={800}
-            height={1440}
             className="mx-auto my-32"
             priority
           />
@@ -203,12 +206,9 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
                 <div className='mx-auto my-4'>
                   <a href="https://x.com/ThePeterMick/status/1824865229282394529" target="_blank">
                     <Image
-                      src="/testimonial_2.png"
+                      src={Testimonial2Img}
                       alt="Tweet @ThePeterMick: Super helpful 👌"
-                      width={350}
-                      height={100}
                       className="mx-auto"
-                      priority
                     />
                   </a>
                 </div>
@@ -216,12 +216,9 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
                 <div className='mx-auto my-4'>
                   <a href="https://x.com/umairs02/status/1824907298772242575" target="_blank">
                     <Image
-                      src="/testimonial_1.png"
+                      src={Testimonial1Img}
                       alt="Tweet @umairs02: That's an amazing offer for an amazing product!! Just checked it out."
-                      width={350}
-                      height={100}
                       className="mx-auto"
-                      priority
                     />
                   </a>
                 </div>
@@ -229,12 +226,9 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
                 <div className='mx-auto my-4'>
                   <a href="https://x.com/shipixen/status/1825614236070085052" target="_blank">
                     <Image
-                      src="/testimonial_3.png"
+                      src={Testimonial3Img}
                       alt="Tweet @shipixen: Legendary stuff 🔥"
-                      width={350}
-                      height={100}
                       className="mx-auto"
-                      priority
                     />
                   </a>
                 </div>

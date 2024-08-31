@@ -1,5 +1,8 @@
 import React from "react";
 import Image from "next/image";
+import KubernetesImg from "@/public/kubernetes.png"
+import NextJsShortLinkImg from "@/public/blog-nextjs-shortlink.png"
+import ChromeExtensionListImg from "@/public/chrome_extension_list.png"
 
 interface Props {
   title?: string;
@@ -9,7 +12,7 @@ interface Props {
 const posts = [
   {
     title: "How I setup my Kubernetes Cluster",
-    image: "/kubernetes.png",
+    image: KubernetesImg,
     link: "/blog/how-i-setup-my-k3s-kubernetes-cluster",
     description: "See how I setup my Kubernetes Cluster and how I use it to host my sideprojects.",
     date: "Aug 23 2024",
@@ -18,7 +21,7 @@ const posts = [
 
   {
     title: "How to Create Custom Short Links with Referrer Tracking Using Next.js",
-    image: "/blog-nextjs-shortlink.png",
+    image: NextJsShortLinkImg,
     link: "/blog/how-to-create-custom-short-links-with-referrer-tracking-using-next-js",
     description: "Learn how to create custom short links with referrer tracking using Next.js to maintain accurate marketing and traffic data.",
     date: "Aug 18 2024",
@@ -27,7 +30,7 @@ const posts = [
 
   {
     title: "The End of Manifest V2",
-    image: "/chrome_web_store.png",
+    image: ChromeExtensionListImg,
     link: "/blog/the-end-of-manifest-v2-what-you-need-to-know-about-the-chrome-extension-transition",
     description: "What You Need to Know About the Chrome Extension Transition",
     date: "Aug 17 2024",
@@ -43,13 +46,12 @@ const Posts: React.FC<Props> = () => {
         <div className="divider divide-gray-400 mb-20"></div>
 
         {posts.map((post, index) => (
-          <div key={index} className="card card-side bg-base-100 shadow-xl hover:shadow-2xl cursor-pointer my-5">
-            <figure className="max-w-40 min-w-40">
+          <div key={index} className="card lg:card-side bg-base-100 shadow-xl hover:shadow-2xl cursor-pointer my-5">
+            <figure className="lg:max-w-40 lg:min-w-40 max-h-60 min-h-60">
               <Image
                 src={post.image}
                 alt={post.title}
-                width={320}
-                height={320}
+                priority
                 className="object-fill"
               />
             </figure>

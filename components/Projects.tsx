@@ -1,10 +1,14 @@
 import React from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
+import ConfettiImg from "@/public/confetti.png"
+import ChromeExtensionListImg from "@/public/chrome_extension_list.png"
+import XshotImg from "@/public/xshot.png"
+import WeContextifyImg from "@/public/wecontextify.png"
 
 interface ProjectCardProps {
   title: string;
   children: React.ReactNode;
-  image: string;
+  image: StaticImageData;
   link: string;
   callToAction: string;
   badge?: string;
@@ -30,8 +34,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, children, image, link,
             </h2>
           </a>
           {badge &&
-            <div className={`my-auto font-bold p-3 badge ${badge === "Building" ? "badge-primary" : badge === "Active" ? "badge-success" : badge === "New" ? "badge-success" : ""} ml-2`}>
-              {badge === "New" ? <span>{badge} 🔥</span> : badge}
+            <div className={`mb-auto font-bold p-3 badge text-xs lg:text-base flex ${badge === "Building" ? "badge-primary" : badge === "Active" ? "badge-success" : badge === "New" ? "badge-success" : ""} ml-2`}>
+              {badge === "New" ? <span className="flex items-center">{badge}&nbsp;🔥</span> : badge}
             </div>
           }
         </div>
@@ -50,7 +54,7 @@ const Projects: React.FC = () => {
   const projects = [
     {
       title: "Highlight Your Confetti-Powered App! 🥳",
-      image: "/confetti.png",
+      image: ConfettiImg,
       link: "https://confettisaas.com",
       callToAction: "List your app!",
       badge: "New",
@@ -65,7 +69,7 @@ const Projects: React.FC = () => {
 
     {
       title: "5,000+ Opportunities Waiting for You!",
-      image: "/chrome_extension_list.png",
+      image: ChromeExtensionListImg,
       link: "/chrome-v2-extension-list-product",
       callToAction: "Profit now!",
       badge: "Active",
@@ -89,7 +93,7 @@ const Projects: React.FC = () => {
 
     {
       title: "xshot.me",
-      image: "/xshot.png",
+      image: XshotImg,
       link: "https://xshot.me",
       callToAction: "Check it out",
       badge: "Building",
@@ -103,7 +107,7 @@ const Projects: React.FC = () => {
     },
     {
       title: "WeContextify.com",
-      image: "/wecontextify.png",
+      image: WeContextifyImg,
       link: "https://wecontextify.com",
       callToAction: "Check it out",
       badge: "Active",

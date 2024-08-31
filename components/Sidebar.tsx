@@ -18,22 +18,22 @@ const Sidebar: React.FC<Props> = ({ showMenu }) => {
           {showMenu && (
             <ul className="menu menu-lg">
               <li className="font-medium">
-                <Link href="/blog">
+                <a href="/blog">
                   <IconSticker2 />
                   <span className="underline decoration-primary">Blog</span>
-                </Link>
+                </a>
               </li>
               <li className="font-medium">
-                <Link href="/projects">
+                <a href="/projects">
                   <IconStars />
                   <span className="underline decoration-primary">Projects</span>
-                </Link>
+                </a>
               </li>
               <li className="font-medium">
-                <Link href="/contact">
+                <a href="/contact">
                   <IconAddressBook />
                   <span className="underline decoration-primary">Contact</span>
-                </Link>
+                </a>
               </li>
             </ul>
           )}
