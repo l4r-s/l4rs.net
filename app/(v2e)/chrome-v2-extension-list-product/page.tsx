@@ -4,6 +4,7 @@ import Image from "next/image";
 import { headers } from 'next/headers';
 import BuySection from './_components/buy-sectoin';
 import posthog from 'posthog-js';
+import { Metadata } from 'next';
 
 import ChromeExtensionListImg from "@/public/chrome_extension_list.png"
 import Testimonial1Img from "@/public/testimonial_1.png"
@@ -12,15 +13,12 @@ import Testimonial3Img from "@/public/testimonial_3.png"
 
 const title = "5,000+ Opportunities Waiting for You!";
 const description = "Capitalize on Chrome's Manifest V2 Deprecation Before the Market Shifts!";
-export const metadata = {
+export const metadata: Metadata = {
   title,
   description,
-  author: "Lars",
-  date: "2024-08-21",
-  url: "https://hilars.dev/chrome-v2-extension-list",
-  canonicalUrl: "https://hilars.dev/chrome-v2-extension-list", // Added canonical URL
-  image: "/og_chrome_extension_list.png",
-  tags: ["Chrome Extensions", "Manifest V3", "Web Development", "Google Chrome"],
+  alternates: {
+    canonical: "https://hilars.dev/chrome-v2-extension-list",
+  },
   openGraph: {
     type: "article",
     title,
@@ -147,34 +145,68 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
               /> */}
 
               <div className="my-4">
+
+
+                <div className="my-4 mx-auto text-center justify-center flex flex-col items-center">
+                  <ul className="list-disc list-inside mx-auto text-left space-y-2">
+                    <li className='flex items-center space-x-2'>
+                      <svg xmlns="http://www.w3.org/2000/svg" className="text-[#dc4e41] my-auto" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="4" /><line x1="21.17" x2="12" y1="8" y2="8" /><line x1="3.95" x2="8.54" y1="6.06" y2="14" /><line x1="10.88" x2="15.46" y1="21.94" y2="14" /></svg>
+                      <span className='text-2xl font-semibold'>Install Count</span>
+                    </li>
+                    <li className='flex items-center space-x-2'>
+                      <svg xmlns="http://www.w3.org/2000/svg" className="text-[#ffce42] my-auto" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                      <span className='text-2xl font-semibold'>Rating</span>
+                    </li>
+                    <li className='flex items-center space-x-2'>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="text-[#4988f5] my-auto" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h5"/><path d="M17.5 17.5 16 16.3V14"/><circle cx="16" cy="16" r="6"/></svg>
+                      <span className='text-2xl font-semibold'>Last Update Date</span>
+                    </li>
+                    <li className='flex items-center space-x-2'>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="text-[#21a15f] my-auto" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3"/><path d="m16 16-1.9-1.9"/></svg>
+                      <span className='text-2xl font-semibold'>Focused on V2 Extensions</span>
+                    </li>
+                  </ul>
+                </div>
                   <h2 className="text-2xl text-gray-800 mb-1">
                     <span className='font-bold'>Unlock Profitable Extension Opportunities</span>
                   </h2>
                   <h3 className="text-gray-600 text-xl mb-4">
                     Leverage Key Metrics like Install Counts, Ratings, and last Update Date to Spot the Next Big Project!
                   </h3>
-                <div className="my-4 mx-auto text-center justify-center flex flex-col items-center">
-                  <ul className="list-disc list-inside mx-auto text-left space-y-2">
-                    <li className='flex items-center space-x-2'>
-                      <svg xmlns="http://www.w3.org/2000/svg" className="text-[#dc4e41] my-auto" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="4" /><line x1="21.17" x2="12" y1="8" y2="8" /><line x1="3.95" x2="8.54" y1="6.06" y2="14" /><line x1="10.88" x2="15.46" y1="21.94" y2="14" /></svg>
-                      <span className='text-2xl font-semibold'>Install Count</span>
-                    </li>
-                    <li className='flex items-center space-x-2'>
-                      <svg xmlns="http://www.w3.org/2000/svg" className="text-[#ffce42] my-auto" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
-                      <span className='text-2xl font-semibold'>Rating</span>
-                    </li>
-                    <li className='flex items-center space-x-2'>
-                    <svg xmlns="http://www.w3.org/2000/svg" className="text-[#4988f5] my-auto" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h5"/><path d="M17.5 17.5 16 16.3V14"/><circle cx="16" cy="16" r="6"/></svg>
-                      <span className='text-2xl font-semibold'>Last Update Date</span>
-                    </li>
-                    <li className='flex items-center space-x-2'>
-                    <svg xmlns="http://www.w3.org/2000/svg" className="text-[#21a15f] my-auto" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3"/><path d="m16 16-1.9-1.9"/></svg>
-                      <span className='text-2xl font-semibold'>Focused on V2 Extensions</span>
-                    </li>
-                  </ul>
+                {/* <CategorySelector url={url} /> */}
+
+                <div className="justify-center my-16">
+                <div className='mx-auto my-4 max-w-96'>
+                  <a href="https://x.com/ThePeterMick/status/1824865229282394529" target="_blank">
+                    <Image
+                      src={Testimonial2Img}
+                      alt="Tweet @ThePeterMick: Super helpful 👌"
+                      className="mx-auto"
+                    />
+                  </a>
                 </div>
 
-                <CategorySelector url={url} />
+                <div className='mx-auto my-4 max-w-96'>
+                  <a href="https://x.com/umairs02/status/1824907298772242575" target="_blank">
+                    <Image
+                      src={Testimonial1Img}
+                      alt="Tweet @umairs02: That's an amazing offer for an amazing product!! Just checked it out."
+                      className="mx-auto"
+                    />
+                  </a>
+                </div>
+
+                <div className='mx-auto my-4 max-w-96'>
+                  <a href="https://x.com/shipixen/status/1825614236070085052" target="_blank">
+                    <Image
+                      src={Testimonial3Img}
+                      alt="Tweet @shipixen: Legendary stuff 🔥"
+                      className="mx-auto"
+                    />
+                  </a>
+                </div>
+              </div>
+
               </div>
             </div>
 
@@ -202,37 +234,7 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
                 </p>
               </div>
 
-              <div className="justify-center mt-2 mb-16">
-                <div className='mx-auto my-4'>
-                  <a href="https://x.com/ThePeterMick/status/1824865229282394529" target="_blank">
-                    <Image
-                      src={Testimonial2Img}
-                      alt="Tweet @ThePeterMick: Super helpful 👌"
-                      className="mx-auto"
-                    />
-                  </a>
-                </div>
 
-                <div className='mx-auto my-4'>
-                  <a href="https://x.com/umairs02/status/1824907298772242575" target="_blank">
-                    <Image
-                      src={Testimonial1Img}
-                      alt="Tweet @umairs02: That's an amazing offer for an amazing product!! Just checked it out."
-                      className="mx-auto"
-                    />
-                  </a>
-                </div>
-
-                <div className='mx-auto my-4'>
-                  <a href="https://x.com/shipixen/status/1825614236070085052" target="_blank">
-                    <Image
-                      src={Testimonial3Img}
-                      alt="Tweet @shipixen: Legendary stuff 🔥"
-                      className="mx-auto"
-                    />
-                  </a>
-                </div>
-              </div>
               <div className="border-t border-gray-300">
               </div>
 
