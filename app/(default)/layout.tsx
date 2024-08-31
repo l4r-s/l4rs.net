@@ -11,7 +11,7 @@ import UmamiScript from "../_components/umami";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Lars' Blog",
+  title: "There is no place like 127.0.0.1",
   description: "A passionate Software and Systems Engineer specializing in Python, JavaScript, Linux and DevOps.",
 };
 
