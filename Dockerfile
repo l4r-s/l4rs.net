@@ -14,8 +14,6 @@ RUN NEXT_TELEMETRY_DISABLED=1 NODE_ENV=production yarn build
 # Production
 ##
 FROM node:20.10-alpine AS production
-# RUN mkdir -p /sharp \
-#     && yarn add sharp --modules-folder /sharp
 
 WORKDIR /app
 COPY --from=builder /app/.next/standalone ./

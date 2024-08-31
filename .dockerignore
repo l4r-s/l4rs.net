@@ -1,3 +1,7 @@
+gimp
+.github
+.next
+.dockerignore
 node_modules
 .next
 .vscode
