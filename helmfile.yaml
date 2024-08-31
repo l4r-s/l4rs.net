@@ -1,0 +1,13 @@
+helmDefaults:
+  atomic: true
+  wait: true
+
+releases:
+  - name: hilars-dev
+    namespace: hilars-dev
+    chart: ./chart
+    values:
+      - image: registry.l4rs.net/hilars-dev:latest
+      - ingress:
+          url: hilars.dev
+          redirect_wwww: true

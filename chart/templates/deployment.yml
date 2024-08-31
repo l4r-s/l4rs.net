@@ -1,0 +1,45 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}
+  namespace: {{ .Release.Namespace }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: seobot-webhook-{{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: seobot-webhook-{{ .Release.Name }}
+    spec:
+      containers:
+        - name: seobot-webhook
+          image: {{ .Values.image }}
+          ports:
+            - containerPort: 3000
+          env:
+            - name: REPO_NAME
+              value: {{ .Values.githubRepoName }}
+            # - name: WEBHOOK_TOKEN
+            #   value: {{ .Values.webhookToken }}
+            - name: TELEGRAM_CHAT_ID
+              value: "{{ .Values.telegramChatId }}"
+            - name: GITHUB_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: seobot-webhook-secret
+                  key: GITHUB_TOKEN
+            - name: TELEGRAM_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: seobot-webhook-secret
+                  key: TELEGRAM_TOKEN
+          resources:
+            limits:
+              memory: {{ .Values.resources.limits.memory }}
+              cpu: {{ .Values.resources.limits.cpu }}
+            requests:
+              memory: {{ .Values.resources.requests.memory }}
+              cpu: {{ .Values.resources.requests.cpu }}
