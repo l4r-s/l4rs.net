@@ -119,14 +119,6 @@ const BlogPostHowISetupMyK3sKubernetesCluster: React.FC = () => {
             <li><code>nginx-ingress</code>: Deploys the Nginx ingress controller to my cluster and makes it available through a NodePort (with <code>hostNetwork: true</code>) on ports 80/443 on my VPS.</li>
             <li><code>umami</code>: Uses two custom charts—one for deploying the Umami Next.js application and another for the PostgreSQL database. I chose to create my own PostgreSQL chart for simplicity and to add backups to my Nextcloud instance.</li>
           </ul>
-          <p>You can find the full Helmfiles in my GitHub repository:</p>
-          <div className="card bg-base-100 shadow-xl rounded-lg hover:shadow-2xl">
-            <div className="card-body">
-              <a href="https://github.com/l4r-s/kube-infra" target="_blank" rel="noopener noreferrer">
-                <img src="https://opengraph.githubassets.com/1/l4r-s/kube-infra" alt="GitHub Repository for Full Helmfiles" style={{ width: '100%', height: 'auto', borderRadius: '8px', marginTop: '16px' }} />
-              </a>
-            </div>
-          </div>
           
           <h2 className="text-xl">What’s Next?</h2>
           <p>I am super happy with the setup and will start migrating all my side projects to my new cluster. This will enable me to have a thorough CI/CD setup with GitHub Actions.</p>
