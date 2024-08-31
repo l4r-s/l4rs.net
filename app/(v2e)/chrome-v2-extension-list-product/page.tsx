@@ -14,6 +14,7 @@ import Testimonial3Img from "@/public/testimonial_3.png"
 const title = "5,000+ Opportunities Waiting for You!";
 const description = "Capitalize on Chrome's Manifest V2 Deprecation Before the Market Shifts!";
 export const metadata: Metadata = {
+  metadataBase: new URL('https://hilars.dev'),
   title,
   description,
   alternates: {

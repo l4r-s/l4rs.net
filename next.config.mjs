@@ -25,6 +25,5 @@ const nextConfig = {
       },
     ]
   },
-  metadataBase: new URL('https://hilars.dev'),
 }
 export default nextConfig;
