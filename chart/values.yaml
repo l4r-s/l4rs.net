@@ -1,0 +1,13 @@
+image: registry.l4rs.net/hilars-dev:latest
+replicaCount: 1
+resources:
+  limits:
+    memory: "128Mi"
+    cpu: "100m"
+  requests:
+    memory: "64Mi"
+    cpu: "10m"
+ingress:
+  url: hilars.dev
+  redirect_wwww: true
+  certClusterIssuer: "cf"
