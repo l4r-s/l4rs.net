@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic';
 const EmbedGist = dynamic(() => import('@/components/embed-gist'), { ssr: false });
 
 export const metadata = {
+  metadataBase: new URL('https://hilars.dev'),
   title: "How to Create Custom Short Links with Referrer Tracking Using Next.js",
   description: "Learn how to create custom short links with referrer tracking using Next.js to maintain accurate marketing and traffic data.",
   author: "Lars",

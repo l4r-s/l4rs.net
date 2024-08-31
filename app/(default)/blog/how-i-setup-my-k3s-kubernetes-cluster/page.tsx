@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic';
 const EmbedGist = dynamic(() => import('@/components/embed-gist'), { ssr: false });
 
 export const metadata = {
+  metadataBase: new URL('https://hilars.dev'),
   title: "How I setup my Kubernetes Cluster",
   description: "See how I setup my Kubernetes Cluster and how I use it to host my sideprojects.",
   author: "Lars",

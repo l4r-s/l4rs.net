@@ -3,6 +3,7 @@ import Image from "next/image";
 import BlogHeader from "@/components/BlogHeader";
 
 export const metadata = {
+  metadataBase: new URL('https://hilars.dev'),
   title: "The End of Manifest V2: What You Need to Know About the Chrome Extension Transition",
   description: "Learn about the transition from Manifest V2 to Manifest V3 for Chrome extensions, the reasons behind it, and what it means for developers.",
   author: "Lars",
