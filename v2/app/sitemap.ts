@@ -34,10 +34,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
 
     {
+      url: 'https://hilars.dev/blog/how-i-setup-my-k3s-kubernetes-cluster',
+      lastModified: '2024-08-23',
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+
+    {
       url: 'https://hilars.dev/blog/the-end-of-manifest-v2-what-you-need-to-know-about-the-chrome-extension-transition',
       lastModified: '2024-08-17',
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+
+    {
+      url: 'https://hilars.dev/blog/how-to-create-custom-short-links-with-referrer-tracking-using-next-js',
+      lastModified: '2024-08-18',
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+
    ]
 }

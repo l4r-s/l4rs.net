@@ -6,6 +6,35 @@ interface Props {
   theme?: string;
 }
 
+const posts = [
+  {
+    title: "How I setup my Kubernetes Cluster",
+    image: "/kubernetes.png",
+    link: "/blog/how-i-setup-my-k3s-kubernetes-cluster",
+    description: "See how I setup my Kubernetes Cluster and how I use it to host my sideprojects.",
+    date: "Aug 23 2024",
+    buttonText: "Read"
+  },
+
+  {
+    title: "How to Create Custom Short Links with Referrer Tracking Using Next.js",
+    image: "/blog-nextjs-shortlink.png",
+    link: "/blog/how-to-create-custom-short-links-with-referrer-tracking-using-next-js",
+    description: "Learn how to create custom short links with referrer tracking using Next.js to maintain accurate marketing and traffic data.",
+    date: "Aug 18 2024",
+    buttonText: "Read"
+  },
+
+  {
+    title: "The End of Manifest V2",
+    image: "/chrome_web_store.png",
+    link: "/blog/the-end-of-manifest-v2-what-you-need-to-know-about-the-chrome-extension-transition",
+    description: "What You Need to Know About the Chrome Extension Transition",
+    date: "Aug 17 2024",
+    buttonText: "Read"
+  }
+];
+
 const Posts: React.FC<Props> = () => {
   return (
     <div>
@@ -13,80 +42,35 @@ const Posts: React.FC<Props> = () => {
         <h1 className="text-4xl uppercase text-center">Latest Blog Posts</h1>
         <div className="divider divide-gray-400 mb-20"></div>
 
-        <div className="card card-side bg-base-100 shadow-xl hover:shadow-2xl cursor-pointer my-5">
-          <figure>
-            <Image
-              src="/blog-nextjs-shortlink.png"
-              alt="How to Create Custom Short Links with Referrer Tracking Using Next.js"
-              width={250}
-              height={250}
-              className="w-40 md:w-60 lg:w-80 overflow-hidden"
-            />
-          </figure>
-          <div className="card-body">
-            <a href="/blog/how-to-create-custom-short-links-with-referrer-tracking-using-next-js">
-              <h2 className="card-title link link-hover">
-                How to Create Custom Short Links with Referrer Tracking Using Next.js
-              </h2>
-            </a>
-            <p>
-              Learn how to create custom short links with referrer tracking using Next.js to maintain accurate marketing and traffic data.
-            </p>
-            <div className="card-actions text-gray-400 mt-5">Aug 18 2024</div>
-            <div className="card-actions justify-end">
-              <a href="/blog/how-to-create-custom-short-links-with-referrer-tracking-using-next-js">
-                <button className="btn btn-primary">Read</button>
+        {posts.map((post, index) => (
+          <div key={index} className="card card-side bg-base-100 shadow-xl hover:shadow-2xl cursor-pointer my-5">
+            <figure className="max-w-40 min-w-40">
+              <Image
+                src={post.image}
+                alt={post.title}
+                width={320}
+                height={320}
+                className="object-fill"
+              />
+            </figure>
+            <div className="card-body">
+              <a href={post.link}>
+                <h2 className="card-title link link-hover">
+                  {post.title}
+                </h2>
               </a>
+              <p>{post.description}</p>
+              <div className="card-actions text-gray-400 mt-5">{post.date}</div>
+              <div className="card-actions justify-end">
+                <a href={post.link}>
+                  <button className="btn btn-primary">{post.buttonText}</button>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div className="card card-side bg-base-100 shadow-xl hover:shadow-2xl cursor-pointer my-5">
-          <figure>
-            <Image
-              src="/chrome_web_store.png"
-              alt="The End of Manifest V2: What You Need to Know About the Chrome Extension Transition"
-              width={250}
-              height={250}
-              className="w-40 md:w-60 lg:w-80 overflow-hidden"
-            />
-          </figure>
-          <div className="card-body">
-            <a href="/blog/the-end-of-manifest-v2-what-you-need-to-know-about-the-chrome-extension-transition">
-              <h2 className="card-title link link-hover">
-                The End of Manifest V2
-              </h2>
-            </a>
-            <p>
-              What You Need to Know About the Chrome Extension Transition
-            </p>
-            <div className="card-actions text-gray-400 mt-5">Aug 17 2024</div>
-            <div className="card-actions justify-end">
-              <a href="/blog/the-end-of-manifest-v2-what-you-need-to-know-about-the-chrome-extension-transition">
-                <button className="btn btn-primary">Read The End of Manifest V2</button>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* <div className="card card-side bg-base-100 shadow-xl hover:shadow-2xl cursor-pointer my-5">
-          <figure>
-            <img
-              src="https://media-exp1.licdn.com/dms/image/D5612AQFG4GGVZ1-LlQ/article-cover_image-shrink_600_2000/0/1667324699780?e=2147483647&v=beta&t=MERZD-vIso8L-dS2am_KbCo9dr4yiLIfSA4K_csxepo"
-              alt="GCP Cloud run"
-              className="w-40 md:w-60 lg:w-80 overflow-hidden"
-            />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title">GCP Cloud Run deployment with Python</h2>
-            <p>
-              How I manage my Cloud run deployments in every region with Python!
-            </p>
-            <div className="card-actions text-gray-300 mt-5">Feb 17 2024</div>
-          </div>
-        </div> */}
+        ))}
       </div>
-    </div >
+    </div>
   );
 };
 

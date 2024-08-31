@@ -1,7 +1,16 @@
 import React from "react";
 import Image from "next/image";
 
-const ProjectCard = ({ title, children, image, link, callToAction }: { title: string, children: React.ReactNode, image: string, link: string, callToAction: string }) => {
+interface ProjectCardProps {
+  title: string;
+  children: React.ReactNode;
+  image: string;
+  link: string;
+  callToAction: string;
+  badge?: string;
+}
+
+const ProjectCard: React.FC<ProjectCardProps> = ({ title, children, image, link, callToAction, badge }) => {
   return (
     <div className="card bg-base-100 w-5/6 shadow-xl mx-auto my-12">
       <figure>
@@ -14,9 +23,18 @@ const ProjectCard = ({ title, children, image, link, callToAction }: { title: st
         />
       </figure>
       <div className="card-body">
-        <a href={link} target="_blank">
-          <h2 className="card-title link link-hover">{title}</h2>
-        </a>
+        <div className="flex">
+          <a href={link} target="_blank">
+            <h2 className="card-title link link-hover">
+              {title}
+            </h2>
+          </a>
+          {badge &&
+            <div className={`my-auto font-bold p-3 badge ${badge === "Building" ? "badge-primary" : badge === "Active" ? "badge-success" : badge === "New" ? "badge-success" : ""} ml-2`}>
+              {badge === "New" ? <span>{badge} 🔥</span> : badge}
+            </div>
+          }
+        </div>
         {children}
         <div className="card-actions justify-end">
           <a href={link} target="_blank">
@@ -31,10 +49,26 @@ const ProjectCard = ({ title, children, image, link, callToAction }: { title: st
 const Projects: React.FC = () => {
   const projects = [
     {
+      title: "Highlight Your Confetti-Powered App! 🥳",
+      image: "/confetti.png",
+      link: "https://confettisaas.com",
+      callToAction: "List your app!",
+      badge: "New",
+      children: (
+        <React.Fragment>
+          <p className="mt-2">
+            Every SaaS product should use Confetti to brighten up their users' day!
+          </p>
+        </React.Fragment>
+      ),
+    },
+
+    {
       title: "5,000+ Opportunities Waiting for You!",
       image: "/chrome_extension_list.png",
       link: "/chrome-v2-extension-list-product",
       callToAction: "Profit now!",
+      badge: "Active",
       children: (
         <React.Fragment>
           <p className="mt-2">
@@ -52,27 +86,36 @@ const Projects: React.FC = () => {
         </React.Fragment>
       ),
     },
+
     {
       title: "xshot.me",
       image: "/xshot.png",
       link: "https://xshot.me",
       callToAction: "Check it out",
-      children: <p>Create perfect Image from any X Tweet.</p>,
+      badge: "Building",
+      children: (
+        <React.Fragment>
+          <div className="mt-0">
+            <p>Create perfect Image from any X Tweet.</p>
+          </div>
+        </React.Fragment>
+      ),
     },
     {
       title: "WeContextify.com",
       image: "/wecontextify.png",
       link: "https://wecontextify.com",
       callToAction: "Check it out",
+      badge: "Active",
       children: <p>Generate stunning, contextual aware Images</p>,
     },
-    {
-      title: "ImageGenPro.com",
-      image: "/imagegenpro.png",
-      link: "https://imagegenpro.com",
-      callToAction: "Check it out",
-      children: <p>Image generation Tools.</p>,
-    },
+    // {
+    //   title: "ImageGenPro.com",
+    //   image: "/imagegenpro.png",
+    //   link: "https://imagegenpro.com",
+    //   callToAction: "Check it out",
+    //   children: <p>Image generation Tools.</p>,
+    // },
   ];
 
   return (
