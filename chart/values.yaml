@@ -2,11 +2,11 @@ image: registry.l4rs.net/hilars-dev:latest
 replicaCount: 1
 resources:
   limits:
-    memory: "128Mi"
+    memory: "2048Mi"
     cpu: "3"
   requests:
     memory: "64Mi"
-    cpu: "10m"
+    cpu: "5m"
 ingress:
   url: hilars.dev
   redirect_wwww: true
