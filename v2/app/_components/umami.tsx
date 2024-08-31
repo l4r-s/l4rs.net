@@ -1,10 +1,6 @@
 import Script from "next/script";
 
-interface UmamiScriptProps {
-  websiteId: string;
-}
-
-const UmamiScript: React.FC<UmamiScriptProps> = ({ websiteId }) => {
+const UmamiScript: React.FC<{ websiteId: string }> = ({ websiteId }) => {
   if (process.env.NODE_ENV !== 'development') {
     return (
       <Script
