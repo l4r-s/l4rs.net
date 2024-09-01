@@ -17,7 +17,7 @@ const Welcome: React.FC = () => {
         <p>
           <b className="text-primary prose-2xl">Hi!</b>, I&apos;m Lars.
         </p>
-        <p>A passionate Software and Systems Engineer specializing in Python, JavaScript, Linux and DevOps.</p>
+        <p>A passionate Software and Systems Engineer specialized in DevOps, Systems Engineering, Python, JavaScript, Linux and Automation.</p>
         {hashTagEnabled && (
         <p className="mt-3 italic text-center">
           <b className="text-primary">#</b>python{" "}
