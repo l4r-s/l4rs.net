@@ -83,7 +83,8 @@ jobs:
       - name: Deploy to Kubernetes using Helmfile
         run: |
           RELEASE_NAME="hilars-dev-pr-${{ github.event.pull_request.number }}" helmfile apply \
-            --set image=registry.l4rs.net/hilars-dev:${{ github.sha }} \
+            --set image=registry.l4rs.net/hilars-dev:latest \
+            --namespace hilars-dev \
             --set ingress.url="hilars-dev-pr-${{ github.event.pull_request.number }}.k8s.l4rs.net" \
             --set ingress.redirect_wwww=false --log-level debug
 
