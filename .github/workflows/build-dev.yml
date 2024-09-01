@@ -6,7 +6,7 @@ permissions:
   actions: write
 
 on:
-  pull_request:
+  pull_request_target:
     types:
       - opened
       - synchronize
@@ -19,7 +19,14 @@ jobs:
   # Image build
   ###
   build:
-    if: github.event.action != 'closed'
+    # ensure that build is only triggered when PR is opened by maintainer or dependabot
+    if: >
+      github.event.action != 'closed' &&
+      (github.repository_owner == github.event.pull_request.head.repo.owner.login ||
+      (github.actor == 'dependabot[bot]' &&
+      github.event.sender.type == 'Bot' &&
+      github.event.sender.login == 'dependabot[bot]'))
+
     runs-on: ubuntu-latest
 
     steps:
