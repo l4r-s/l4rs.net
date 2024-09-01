@@ -112,7 +112,6 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
                       <Image
                         src={Testimonial2Img}
                         alt="Tweet @ThePeterMick: Super helpful 👌"
-                        className="mx-auto"
                       />
                   </div>
 
@@ -120,7 +119,6 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
                       <Image
                         src={Testimonial1Img}
                         alt="Tweet @umairs02: That's an amazing offer for an amazing product!! Just checked it out."
-                        className="mx-auto"
                       />
                   </div>
 
@@ -128,7 +126,6 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
                       <Image
                         src={Testimonial3Img}
                         alt="Tweet @shipixen: Legendary stuff 🔥"
-                        className="mx-auto"
                       />
                   </div>
                 </div>
