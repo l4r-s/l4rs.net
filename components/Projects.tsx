@@ -2,7 +2,7 @@ import React from "react";
 import Image, { StaticImageData } from "next/image";
 import ConfettiImg from "@/public/confetti.png"
 import ChromeExtensionListImg from "@/public/chrome_extension_list.png"
-import XshotImg from "@/public/xshot.png"
+import XshotImg from "@/public/xshot_og_v3.png"
 import WeContextifyImg from "@/public/wecontextify.png"
 
 interface ProjectCardProps {
