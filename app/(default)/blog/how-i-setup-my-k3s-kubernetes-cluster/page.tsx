@@ -9,7 +9,7 @@ export const metadata = {
   title: "How I setup my Kubernetes Cluster",
   description: "See how I setup my Kubernetes Cluster and how I use it to host my sideprojects.",
   author: "Lars",
-  date: "2024-08-23",
+  date: "2024-08-29",
   url: "https://hilars.dev/blog/how-i-setup-my-k3s-kubernetes-cluster",
   image: "/api/og?title=How+I+setup+my+Kubernetes+Cluster",
   tags: ["Kubernetes", "K3s", "K3s Kubernetes", "Kubernetes Cluster", "Kubernetes Setup", "Kubernetes Tutorial", "Kubernetes Guide"],
@@ -48,7 +48,7 @@ const BlogPostHowISetupMyK3sKubernetesCluster: React.FC = () => {
       <BlogHeader
         title="How I setup my Kubernetes Cluster"
         subtitle="Learn how I setup my Kubernetes Cluster and how I use it to host my sideprojects."
-        date="Aug 23 2024"
+        date="Aug 29 2024"
       // crossPostUrl="https://medium.com/@buildItN0w/how-to-create-custom-short-links-with-referrer-tracking-using-next-js-ffca6a1d1e79"
       // crossPostText="Medium"
       />

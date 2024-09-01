@@ -15,7 +15,7 @@ const posts = [
     image: KubernetesImg,
     link: "/blog/how-i-setup-my-k3s-kubernetes-cluster",
     description: "See how I setup my Kubernetes Cluster and how I use it to host my sideprojects.",
-    date: "Aug 23 2024",
+    date: "Aug 29 2024",
     buttonText: "Read"
   },
 
