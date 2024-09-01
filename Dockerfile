@@ -19,7 +19,7 @@ FROM node:20.10-alpine AS production
 RUN addgroup -S -g 1001 app && adduser -S -u 1001 -G app app
 USER app
 
-WORKDIR /app --chown=app:app
+WORKDIR /app
 COPY --from=builder --chown=app:app /app/.next/standalone ./
 COPY --from=builder --chown=app:app /app/public ./public
 COPY --from=builder --chown=app:app /app/.next/static ./.next/static
