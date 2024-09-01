@@ -15,6 +15,10 @@ RUN NEXT_TELEMETRY_DISABLED=1 NODE_ENV=production yarn build
 ##
 FROM node:20.10-alpine AS production
 
+# Add a user and set permissions
+RUN addgroup -S appgroup && adduser -S appuser -G appgroup
+USER appuser
+
 WORKDIR /app
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/public ./public
