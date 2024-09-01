@@ -16,13 +16,13 @@ RUN NEXT_TELEMETRY_DISABLED=1 NODE_ENV=production yarn build
 FROM node:20.10-alpine AS production
 
 # Add a user and set permissions
-RUN addgroup -S appgroup && adduser -S appuser -G appgroup
-USER appuser
+RUN addgroup -S -g 1001 app && adduser -S -u 1001 -G app app
+USER app
 
-WORKDIR /app
-COPY --from=builder /app/.next/standalone ./
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/.next/static ./.next/static
+WORKDIR /app --chown=app:app
+COPY --from=builder --chown=app:app /app/.next/standalone ./
+COPY --from=builder --chown=app:app /app/public ./public
+COPY --from=builder --chown=app:app /app/.next/static ./.next/static
 
 EXPOSE 3000
 CMD ["node", "server.js"]
