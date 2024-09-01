@@ -3,7 +3,7 @@ helmDefaults:
   wait: true
 
 releases:
-  - name: {{ env "RELEASE_NAME" | default "hilars-dev" }}
+  - name: '{{ env "RELEASE_NAME" | default "hilars-dev" }}'
     namespace: hilars-dev
     chart: ./chart
     values:
