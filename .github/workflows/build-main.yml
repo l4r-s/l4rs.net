@@ -1,4 +1,4 @@
-name: Build, Push Docker Image and Deploy to K8s
+name: Build Main
 
 on:
   push:
