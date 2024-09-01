@@ -3,6 +3,7 @@
 import { useRouter } from 'next/navigation';
 import posthog from 'posthog-js';
 
+
 const BuySection = ({ url, showPH, price, discount, referral }: { url: string, showPH: boolean, price: string, discount: string, referral: string }) => {
   const router = useRouter();
 

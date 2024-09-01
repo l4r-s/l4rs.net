@@ -80,22 +80,22 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
   posthog.capture('v2-extension-list-viewed', { referrer: customReferrer, discountCode: discountCode })
 
   return (
-    <div>
+    <div className="pb-16">
       <div className="min-h-screen flex items-center justify-center">
-        <div className="m-4 max-w-8xl w-full">
+        <div className="mt-4 max-w-8xl w-full z-10">
           <Image
             src={ChromeExtensionListImg}
             alt="Turn Obsolete Extensions into Profitable Goldmines—5,000+ Opportunities Waiting for You!"
-            className="mx-auto mb-32 md:max-w-xl lg:max-w-2xl"
+            className="mx-auto mb-8 md:max-w-xl lg:max-w-2xl"
             priority
           />
-          <div className="flex flex-col lg:flex-row justify-center">
+          <div className="flex flex-col lg:flex-row justify-center z-10">
             <div className="lg:w-3/6 w-full mt-2 px-8 mx-2 bg-white shadow-lg rounded-lg">
               <div className="flex flex-col lg:flex-row mb-8">
                 {/* <h1 className="text-3xl text-gray-800 text-center lg:text-left">
                   <span className='font-bold'>Transform Obsolete Extensions into Profitable Goldmines</span> — Unlock <span className='font-bold'>5,000+</span> High-Potential Opportunities Now!
                 </h1> */}
-                  <h1 className="text-3xl text-gray-800 text-center">
+                  <h1 className="text-3xl text-gray-800 text-center mt-4">
                     Get Exclusive Access to a Curated List of <span className="font-bold">5,000+</span> V2 Chrome Extensions ready for Rebuilding and Monetizing!
                   </h1>
  

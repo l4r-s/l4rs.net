@@ -13,6 +13,8 @@
     "@vercel/speed-insights": "^1.0.12",
     "next": "14.2.6",
     "posthog-js": "^1.157.2",
+    "react-confetti": "^6.1.0",
+    "react-confetti-explosion": "^2.1.2",
     "react-embed-gist": "^1.0.22",
     "sharp": "0.33.5"
   },

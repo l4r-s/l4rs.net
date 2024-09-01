@@ -3,6 +3,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import { CSPostHogProvider } from '../providers'
 import "../globals.css";
 import UmamiScript from "../_components/umami";
+import ConfettiComponent from "../_components/confett";
 
 export default function V2eLayout({
   children,
@@ -15,7 +16,8 @@ export default function V2eLayout({
       <body>
         <CSPostHogProvider>
           <div className="min-h-screen">
-            {children}
+            <ConfettiComponent />
+              {children}
             <Analytics />
             <SpeedInsights />
           </div>
