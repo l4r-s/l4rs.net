@@ -87,14 +87,12 @@ jobs:
             --set ingress.url=hilars-dev-pr-${{ github.event.pull_request.number }}.k8s.l4rs.net \
             --set ingress.redirect_wwww=false
 
-      - name: Add comment to PR
-        uses: peter-evans/comment@v2
+      - name: Comment PR
+        uses: thollander/actions-comment-pull-request@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          issue-number: ${{ github.event.pull_request.number }}
-          body: |
+          message: |
             The deployment for this PR is available at: https://hilars-dev-pr-${{ github.event.pull_request.number }}.k8s.l4rs.net
-
+          pr_number: ${{ github.event.pull_request.number }}
 
   ###
   # Delete Deployment on PR Close/Merge
