@@ -107,7 +107,8 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
               <h2 className="text-2xl font-bold text-gray-800 text-center mt-16 mb-8">
                   What people are saying 👇
               </h2>
-              <div className="carousel mb-16 lg:w-2/3 mx-auto text-center flex justify-center">
+              <div className="flex justify-center">
+              <div className="carousel carousel-center mb-16 lg:w-2/3 mx-auto">
                   <div className="carousel-item mx-4 my-auto lg:max-w-96 md:max-w-84 max-w-52">
                       <Image
                         src={Testimonial2Img}
@@ -128,6 +129,7 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
                         alt="Tweet @shipixen: Legendary stuff 🔥"
                       />
                   </div>
+                </div>
                 </div>
 
               <p className="text-lg text-gray-600">
