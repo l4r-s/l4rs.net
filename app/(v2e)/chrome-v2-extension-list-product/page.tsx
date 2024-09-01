@@ -95,42 +95,42 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
                 {/* <h1 className="text-3xl text-gray-800 text-center lg:text-left">
                   <span className='font-bold'>Transform Obsolete Extensions into Profitable Goldmines</span> — Unlock <span className='font-bold'>5,000+</span> High-Potential Opportunities Now!
                 </h1> */}
-                  <h1 className="text-3xl text-gray-800 text-center mt-4">
-                    Get Exclusive Access to a Curated List of <span className="font-bold">5,000+</span> V2 Chrome Extensions ready for Rebuilding and Monetizing!
-                  </h1>
- 
+                <h1 className="text-3xl text-gray-800 text-center mt-4">
+                  Get Exclusive Access to a Curated List of <span className="font-bold">5,000+</span> V2 Chrome Extensions ready for Rebuilding and Monetizing!
+                </h1>
+
                 <div className='lg:hidden mb-4 mt-12'>
                   <BuySection price={price} discount={discount} showPH={true} url={url} referral={customReferrer} />
                 </div>
               </div>
-             
+
               <h2 className="text-2xl font-bold text-gray-800 text-center mt-16 mb-8">
-                  What people are saying 👇
+                What people are saying 👇
               </h2>
               <div className="flex justify-center">
-              <div className="carousel carousel-center mb-16 lg:w-2/3 mx-auto">
+                <div className="carousel carousel-center mb-16 lg:w-2/3 mx-auto">
                   <div className="carousel-item mx-4 my-auto lg:max-w-96 md:max-w-84 max-w-52">
-                      <Image
-                        src={Testimonial2Img}
-                        alt="Tweet @ThePeterMick: Super helpful 👌"
-                      />
+                    <Image
+                      src={Testimonial2Img}
+                      alt="Tweet @ThePeterMick: Super helpful 👌"
+                    />
                   </div>
 
                   <div className="carousel-item mx-4 my-auto lg:max-w-96 md:max-w-84 max-w-52">
-                      <Image
-                        src={Testimonial1Img}
-                        alt="Tweet @umairs02: That's an amazing offer for an amazing product!! Just checked it out."
-                      />
+                    <Image
+                      src={Testimonial1Img}
+                      alt="Tweet @umairs02: That's an amazing offer for an amazing product!! Just checked it out."
+                    />
                   </div>
 
                   <div className="carousel-item mx-4 my-auto lg:max-w-96 md:max-w-84 max-w-52">
-                      <Image
-                        src={Testimonial3Img}
-                        alt="Tweet @shipixen: Legendary stuff 🔥"
-                      />
+                    <Image
+                      src={Testimonial3Img}
+                      alt="Tweet @shipixen: Legendary stuff 🔥"
+                    />
                   </div>
                 </div>
-                </div>
+              </div>
 
               <p className="text-lg text-gray-600">
                 Chrome’s Manifest V2 is Deprecated—Thousands of Extensions Are Now at Risk of Becoming Obsolete. Seize This Rare Opportunity to Make Money and Save Time finding your next big idea!
@@ -138,11 +138,11 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
 
               <div className="my-8 text-left">
                 <div className="rounded-md mb-2">
-                 <p className="text-lg text-gray-600">
-                  In our List, each Extension Comes with Key Data like Ratings, Install Counts, and Last Updated Dates. Making it easy to identify high-potential extensions for rebuilding and monetizing.
-                  Chrome extensions using Manifest V2 will soon become obsolete, creating a huge gap in the market. Now is the time to capitalize on this transition and find your next big idea!
-                </p>
-              </div>
+                  <p className="text-lg text-gray-600">
+                    In our List, each Extension Comes with Key Data like Ratings, Install Counts, and Last Updated Dates. Making it easy to identify high-potential extensions for rebuilding and monetizing.
+                    Chrome extensions using Manifest V2 will soon become obsolete, creating a huge gap in the market. Now is the time to capitalize on this transition and find your next big idea!
+                  </p>
+                </div>
               </div>
 
               <p className="text-lg text-gray-600 mb-8">
@@ -318,6 +318,16 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
             </div>
           </div>
         </div>
+      </div>
+      <div className="mt-8 text-center block text-sm">
+        <p>
+          Curious about the confetti sparkles?
+        </p>
+        <p>
+          <a href="https://ConfettiSaaS.com" target="_blank" className="text-lg font-semibold text-blue-500 hover:underline">
+            Learn more at ConfettiSaaS.com
+          </a>
+        </p>
       </div>
     </div >
   );
