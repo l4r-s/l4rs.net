@@ -42,7 +42,7 @@ const Posts: React.FC<Props> = () => {
   return (
     <div>
       <div className="min-h-screen container my-20 lg:my-28">
-        <h1 className="text-4xl uppercase text-center">Latest Blog Posts</h1>
+        <h1 className="text-4xl uppercase text-center">TEST1 - Latest Blog Posts</h1>
         <div className="divider divide-gray-400 mb-20"></div>
 
         {posts.map((post, index) => (
