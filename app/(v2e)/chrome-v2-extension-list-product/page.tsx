@@ -6,7 +6,7 @@ import BuySection from './_components/buy-sectoin';
 import posthog from 'posthog-js';
 import { Metadata } from 'next';
 
-import ChromeExtensionListImg from "@/public/chrome_extension_list.png"
+import ChromeExtensionListImg from "@/public/og_chrome_extension_list.png"
 import Testimonial1Img from "@/public/testimonial_1.png"
 import Testimonial2Img from "@/public/testimonial_2.png"
 import Testimonial3Img from "@/public/testimonial_3.png"
@@ -81,134 +81,116 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
 
   return (
     <div>
-      {/* <a href='https://xshot.me' target='_blank'>
-        <div className="bg-[#ffce42] p-2 mb-6">
-          <p className="text-gray-800 text-sm text-center">
-            Coming Soon: <span className='font-semibold'>Transform Your X Post into Stunning Images Instantly</span> 🚀
-          </p>
-        </div>
-      </a> */}
       <div className="min-h-screen flex items-center justify-center">
         <div className="m-4 max-w-8xl w-full">
           <Image
             src={ChromeExtensionListImg}
             alt="Turn Obsolete Extensions into Profitable Goldmines—5,000+ Opportunities Waiting for You!"
-            className="mx-auto my-32"
+            className="mx-auto mb-32 md:max-w-xl lg:max-w-2xl"
             priority
           />
           <div className="flex flex-col lg:flex-row justify-center">
             <div className="lg:w-3/6 w-full mt-2 px-8 mx-2 bg-white shadow-lg rounded-lg">
               <div className="flex flex-col lg:flex-row mb-8">
-                <h1 className="text-3xl text-gray-800 text-center lg:text-left">
+                {/* <h1 className="text-3xl text-gray-800 text-center lg:text-left">
                   <span className='font-bold'>Transform Obsolete Extensions into Profitable Goldmines</span> — Unlock <span className='font-bold'>5,000+</span> High-Potential Opportunities Now!
-                </h1>
-                <div className='lg:hidden my-4'>
+                </h1> */}
+                  <h1 className="text-3xl text-gray-800 text-center">
+                    Get Exclusive Access to a Curated List of <span className="font-bold">5,000+</span> V2 Chrome Extensions ready for Rebuilding and Monetizing!
+                  </h1>
+ 
+                <div className='lg:hidden mb-4 mt-12'>
                   <BuySection price={price} discount={discount} showPH={true} url={url} referral={customReferrer} />
                 </div>
               </div>
+             
+              <h2 className="text-2xl font-bold text-gray-800 text-center mt-16 mb-8">
+                  What people are saying 👇
+              </h2>
+              <div className="carousel mb-16 lg:w-2/3 mx-auto text-center flex justify-center">
+                  <div className="carousel-item mx-4 my-auto lg:max-w-96 md:max-w-84 max-w-52">
+                      <Image
+                        src={Testimonial2Img}
+                        alt="Tweet @ThePeterMick: Super helpful 👌"
+                        className="mx-auto"
+                      />
+                  </div>
 
-              {/* <h2 className="text-xl font-bold text-gray-800 mb-4">
-                Capitalize on Chrome's Manifest V2 Deprecation Before the Market Shifts!
-              </h2> */}
+                  <div className="carousel-item mx-4 my-auto lg:max-w-96 md:max-w-84 max-w-52">
+                      <Image
+                        src={Testimonial1Img}
+                        alt="Tweet @umairs02: That's an amazing offer for an amazing product!! Just checked it out."
+                        className="mx-auto"
+                      />
+                  </div>
+
+                  <div className="carousel-item mx-4 my-auto lg:max-w-96 md:max-w-84 max-w-52">
+                      <Image
+                        src={Testimonial3Img}
+                        alt="Tweet @shipixen: Legendary stuff 🔥"
+                        className="mx-auto"
+                      />
+                  </div>
+                </div>
+
               <p className="text-lg text-gray-600">
-              Chrome’s Manifest V2 is Deprecated—Thousands of Extensions Are Now at Risk of Becoming Obsolete. Seize This Rare Opportunity!
+                Chrome’s Manifest V2 is Deprecated—Thousands of Extensions Are Now at Risk of Becoming Obsolete. Seize This Rare Opportunity to Make Money and Save Time finding your next big idea!
               </p>
-              {/* <p className="text-lg text-gray-600 mb-6">
-                Thousands of extensions will soon stop working. Unlock a golden opportunity!
-              </p> */}
 
               <div className="my-8 text-left">
                 <div className="rounded-md mb-2">
-                  <p className="text-xl text-gray-800 font-semibold">
-                    Get Exclusive Access to a Curated List of 5,000+ V2 Extensions Ripe for Rebuilding and Monetizing.
-                  </p>
-                  <p className="text-xl text-gray-600">
-                    Each Extension Comes with Key Data like Ratings, Install Counts, and Last Updated Dates.
-                  </p>
-                </div>
-                <p className="text-lg text-gray-600">
+                 <p className="text-lg text-gray-600">
+                  In our List, each Extension Comes with Key Data like Ratings, Install Counts, and Last Updated Dates. Making it easy to identify high-potential extensions for rebuilding and monetizing.
+                  Chrome extensions using Manifest V2 will soon become obsolete, creating a huge gap in the market. Now is the time to capitalize on this transition and find your next big idea!
                 </p>
-              <p className="text-gray-800 text-lg">
-                Chrome extensions using Manifest V2 will soon become obsolete, creating a huge gap in the market.
+              </div>
+              </div>
+
+              <p className="text-lg text-gray-600 mb-8">
+                Chrome extensions still using Manifest V2 will soon lose feature badges and already display a warning banner on the Chrome Web Store, indicating potential incompatibility. This is the perfect opportunity to rebuild these extensions with Manifest V3 and cater to the existing user base, positioning yourself as their savior.
               </p>
-              <p className="text-gray-800 text-lg">
-                Be the first to capitalize on this transition and find your next big idea!
+
+              <p className="text-lg text-gray-600 mb-8">
+                By purchasing, you gain access to an exclusive list of over 5,000 V2 Chrome extensions in CSV format, ready for you to analyze and discover your next big opportunity!
               </p>
-              </div>
-{/* 
-              <Image
-                src="/ph-2.1.png"
-                alt="Turn Obsolete Extensions into Profitable Goldmines—5,000+ Opportunities Waiting for You!"
-                width={800}
-                height={1440}
-                className="mx-auto"
-                priority
-              /> */}
 
-              <div className="my-4">
-
-
-                <div className="my-4 mx-auto text-center justify-center flex flex-col items-center">
-                  <ul className="list-disc list-inside mx-auto text-left space-y-2">
-                    <li className='flex items-center space-x-2'>
-                      <svg xmlns="http://www.w3.org/2000/svg" className="text-[#dc4e41] my-auto" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="4" /><line x1="21.17" x2="12" y1="8" y2="8" /><line x1="3.95" x2="8.54" y1="6.06" y2="14" /><line x1="10.88" x2="15.46" y1="21.94" y2="14" /></svg>
-                      <span className='text-2xl font-semibold'>Install Count</span>
-                    </li>
-                    <li className='flex items-center space-x-2'>
-                      <svg xmlns="http://www.w3.org/2000/svg" className="text-[#ffce42] my-auto" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
-                      <span className='text-2xl font-semibold'>Rating</span>
-                    </li>
-                    <li className='flex items-center space-x-2'>
-                    <svg xmlns="http://www.w3.org/2000/svg" className="text-[#4988f5] my-auto" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h5"/><path d="M17.5 17.5 16 16.3V14"/><circle cx="16" cy="16" r="6"/></svg>
-                      <span className='text-2xl font-semibold'>Last Update Date</span>
-                    </li>
-                    <li className='flex items-center space-x-2'>
-                    <svg xmlns="http://www.w3.org/2000/svg" className="text-[#21a15f] my-auto" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3"/><path d="m16 16-1.9-1.9"/></svg>
-                      <span className='text-2xl font-semibold'>Focused on V2 Extensions</span>
-                    </li>
-                  </ul>
-                </div>
-                  <h2 className="text-2xl text-gray-800 mb-1">
-                    <span className='font-bold'>Unlock Profitable Extension Opportunities</span>
-                  </h2>
-                  <h3 className="text-gray-600 text-xl mb-4">
-                    Leverage Key Metrics like Install Counts, Ratings, and last Update Date to Spot the Next Big Project!
-                  </h3>
-                {/* <CategorySelector url={url} /> */}
-
-                <div className="justify-center my-16">
-                <div className='mx-auto my-4 max-w-96'>
-                  <a href="https://x.com/ThePeterMick/status/1824865229282394529" target="_blank">
-                    <Image
-                      src={Testimonial2Img}
-                      alt="Tweet @ThePeterMick: Super helpful 👌"
-                      className="mx-auto"
-                    />
-                  </a>
-                </div>
-
-                <div className='mx-auto my-4 max-w-96'>
-                  <a href="https://x.com/umairs02/status/1824907298772242575" target="_blank">
-                    <Image
-                      src={Testimonial1Img}
-                      alt="Tweet @umairs02: That's an amazing offer for an amazing product!! Just checked it out."
-                      className="mx-auto"
-                    />
-                  </a>
-                </div>
-
-                <div className='mx-auto my-4 max-w-96'>
-                  <a href="https://x.com/shipixen/status/1825614236070085052" target="_blank">
-                    <Image
-                      src={Testimonial3Img}
-                      alt="Tweet @shipixen: Legendary stuff 🔥"
-                      className="mx-auto"
-                    />
-                  </a>
-                </div>
+              <div className="mt-8 mb-8 hidden lg:block max-w-96 mx-auto">
+                <BuySection price={price} discount={discount} showPH={true} url={url} referral={customReferrer} />
               </div>
 
-              </div>
+              {/* <div className="my-4">
+                <div className="card bg-base-100 w-96 my-4 mx-auto text-center justify-center flex flex-col items-center rounded-xl border-2 border-gray-100 shadow-2xl">
+                  <div className="card-body">
+                    <ul className="list-disc list-inside mx-auto text-left space-y-2">
+                      <li className='flex items-center space-x-2'>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="text-[#dc4e41] my-auto" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="4" /><line x1="21.17" x2="12" y1="8" y2="8" /><line x1="3.95" x2="8.54" y1="6.06" y2="14" /><line x1="10.88" x2="15.46" y1="21.94" y2="14" /></svg>
+                        <span className='text-2xl font-semibold'>Install Count</span>
+                      </li>
+                      <li className='flex items-center space-x-2'>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="text-[#ffce42] my-auto" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                        <span className='text-2xl font-semibold'>Rating</span>
+                      </li>
+                      <li className='flex items-center space-x-2'>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="text-[#4988f5] my-auto" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h5"/><path d="M17.5 17.5 16 16.3V14"/><circle cx="16" cy="16" r="6"/></svg>
+                        <span className='text-2xl font-semibold'>Last Update Date</span>
+                      </li>
+                      <li className='flex items-center space-x-2'>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="text-[#21a15f] my-auto" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3"/><path d="m16 16-1.9-1.9"/></svg>
+                        <span className='text-2xl font-semibold'>Focused on V2 Extensions</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <h2 className="text-2xl text-gray-800 mb-1">
+                  <span className='font-bold'>Unlock Profitable Extension Opportunities</span>
+                </h2>
+                <h3 className="text-gray-600 text-xl mb-4">
+                  Leverage Key Metrics like Install Counts, Ratings, and Last Update Date to Spot the Next Big Project!
+                </h3>
+
+
+              </div> */}
             </div>
 
             {/* Right Column */}
@@ -221,26 +203,15 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
                 <BuySection showPH={false} url={url} price={price} discount={discount} referral={customReferrer} />
               </div>
 
-              {/* <a href={url} target="_blank">
-                <button className="w-full bg-[#4988f5] text-white py-2 rounded-md hover:bg-blue-600 transition duration-300 mb-12 font-bold text-xl p-8 lg:hidden">
-                  <span className="font-bold block">Don't miss out</span>
-                  <span className="font-normal block">Unlock the full list now and start building profitable extensions today! 🚀</span>
-                </button>
-              </a> */}
-
-              {/* Description */}
               <div className="bg-gray-100 p-4 rounded-md mb-6">
                 <p className="text-gray-700">
                   A curated list of 5,000+ Chrome extensions still using the deprecated V2 Manifest. Includes ratings, install counts, and last updated dates to help you easily identify high-potential extensions for rebuilding and monetizing.
                 </p>
               </div>
 
-
               <div className="border-t border-gray-300">
               </div>
 
-
-              {/* Info Sections */}
               <div className="border-t border-gray-300">
                 <div className="py-4 border-b border-gray-300">
                   <p className="font-bold text-gray-800">Rating</p>
@@ -345,8 +316,6 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
                   <span className="text-sm text-gray-600">0%</span>
                 </div>
               </div>
-
-
             </div>
           </div>
         </div>

@@ -16,7 +16,7 @@ const BuySection = ({ url, showPH, price, discount, referral }: { url: string, s
       <div className="mb-4 mx-auto justify-end">
         <button onClick={handleBuyClick} className="w-full bg-[#4988f5] text-white p-2 text-2xl rounded-md shadow-lg hover:bg-blue-600 transition duration-300 block">
           <span className="block text-2xl font-bold">Buy now!</span>
-          <span className="block text-base mt-2">Grab Your Copy Today and Start Building Profitable Extensions! 💸</span>
+          {/* <span className="block text-base mt-2">Grab Your Copy Today and Start Building Profitable Extensions! 💸</span> */}
         </button>
       </div>
 
