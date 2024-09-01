@@ -7,6 +7,11 @@ const nextConfig = {
         source: '/v2e',  // The alias URL
         destination: '/chrome-v2-extension-list',  // The actual page
       },
+      {
+        source: '/v2el',  // The alias URL
+        destination: '/chrome-v2-extension-list-product',  // The actual page
+      },
+
        {
         source: '/v2e1',  // The alias URL
         destination: '/chrome-v2-extension-list',  // The actual page
