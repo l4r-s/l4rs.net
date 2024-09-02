@@ -18,15 +18,15 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
   // Get discount code from search params
   let discountCode = searchParams.d || '';
 
-  // Ensure the discount exists in the price table, if not use 'BUILD' as default
-  const priceTable = {
-    'BUILD': { price: '$19.99', discount: '50% OFF' },
-    'BUILD70': { price: '$9', discount: '70% OFF' },
-    'AGENCY70': { price: '$9', discount: '70% OFF' },
-  };
-  if (!priceTable[discountCode as keyof typeof priceTable]) {
-    discountCode = '';
-  }
+  // // Ensure the discount exists in the price table, if not use 'BUILD' as default
+  // const priceTable = {
+  //   'BUILD': { price: '$19.99', discount: '50% OFF' },
+  //   'BUILD70': { price: '$9', discount: '70% OFF' },
+  //   'AGENCY70': { price: '$9', discount: '70% OFF' },
+  // };
+  // if (!priceTable[discountCode as keyof typeof priceTable]) {
+  //   discountCode = '';
+  // }
 
   const url = `https://builditn0w.gumroad.com/l/chrome-manifest-v2-phaseout/${discountCode}?referrer=${encodeURIComponent(customReferrer)}`;
   redirect(url);
