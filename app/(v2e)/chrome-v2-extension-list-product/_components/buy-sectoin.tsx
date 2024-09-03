@@ -1,26 +1,9 @@
-'use client'
-
-import { useRouter } from 'next/navigation';
-import posthog from 'posthog-js';
-
+import React from 'react';
+import BuyButton from './buy-button';
 
 const BuySection = ({ url, showPH, price, discount, referral }: { url: string, showPH: boolean, price: string, discount: string, referral: string }) => {
-  const router = useRouter();
-
-  const handleBuyClick = () => {
-    posthog.capture('v2-extension-list-buy-click', { referrer: referral, discountCode: discount });
-    router.push(url);
-  };
-
   return (
     <div className='w-full justify-center items-center mx-auto block'>
-      <div className="mb-4 mx-auto justify-end">
-        <button onClick={handleBuyClick} className="w-full bg-[#4988f5] text-white p-2 text-2xl rounded-md shadow-lg hover:bg-blue-600 transition duration-300 block">
-          <span className="block text-2xl font-bold">Buy now!</span>
-          {/* <span className="block text-base mt-2">Grab Your Copy Today and Start Building Profitable Extensions! 💸</span> */}
-        </button>
-      </div>
-
       <div className="flex items-start space-x-2 mt-4 mx-auto justify-center">
         <div className="flex items-start space-x-2">
           <div className="flex flex-col items-start">
@@ -39,7 +22,9 @@ const BuySection = ({ url, showPH, price, discount, referral }: { url: string, s
           </div>
         </div>
       </div>
-      
+
+      <BuyButton url={url} />
+
       <div className="mt-4 mx-auto justify-end">
         {/* <a href={url} target="_blank">
           <button className="w-full bg-[#4988f5] text-white py-2 rounded-md shadow-lg hover:bg-blue-600 transition duration-300 block">
@@ -47,7 +32,7 @@ const BuySection = ({ url, showPH, price, discount, referral }: { url: string, s
           </button>
         </a> */}
         {showPH && (
-          <div className="flex mx-auto justify-center mt-2">
+          <div className="flex mx-auto justify-center my-6 lg:my-14">
             <a href="https://www.producthunt.com/posts/v2-chrome-extension-list?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-v2-chrome-extension-list" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=481039&theme=light" alt="V2 Chrome Extension List - Discover outdated Chrome extensions that need to be rebuilt | Product Hunt" style={{ width: '250px', height: '54px' }} /></a>
           </div>
         )}

@@ -3,7 +3,6 @@ import './style.css';
 import Image from "next/image";
 import { headers } from 'next/headers';
 import BuySection from './_components/buy-sectoin';
-import posthog from 'posthog-js';
 import { Metadata } from 'next';
 
 import ChromeExtensionListImg from "@/public/og_chrome_extension_list.png"
@@ -58,10 +57,11 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
 
   // Get referrer from search params
   let customReferrer = searchParams.r || referrer;
-  let discountCode = searchParams.d || 'BUILD';
+  let discountCode = searchParams.d || 'BUILD20';
 
   const priceTable = {
     'BUILD': { price: '$14.99', discount: '50% OFF' },
+    'BUILD20': { price: '$23.99', discount: '20% OFF' },
     'BUILD70': { price: '$9', discount: '70% OFF' },
     'AGENCY70': { price: '$9', discount: '70% OFF' },
   }
@@ -76,8 +76,6 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
 
   // Example usage of customReferrer
   const url = `https://builditn0w.gumroad.com/l/chrome-manifest-v2-phaseout/${discountCode}?referrer=${encodeURIComponent(customReferrer)}&wanted=true`;
-
-  posthog.capture('v2-extension-list-viewed', { referrer: customReferrer, discountCode: discountCode })
 
   return (
     <div className="pb-16">
@@ -132,29 +130,25 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
                 </div>
               </div>
 
-              <p className="text-lg text-gray-600">
-                Chrome’s Manifest V2 is Deprecated—Thousands of Extensions Are Now at Risk of Becoming Obsolete. Seize This Rare Opportunity to Make Money and Save Time finding your next big idea!
+              <p className="text-lg text-gray-600 my-4">
+              With Chrome's Manifest V2 being deprecated, countless extensions are at risk of disappearing, leaving a massive gap in the market.
+              This is your rare opportunity to make money and save time by identifying high-potential extensions that are ripe for rebuilding and monetizing.
               </p>
 
-              <div className="my-8 text-left">
-                <div className="rounded-md mb-2">
-                  <p className="text-lg text-gray-600">
-                    In our List, each Extension Comes with Key Data like Ratings, Install Counts, and Last Updated Dates. Making it easy to identify high-potential extensions for rebuilding and monetizing.
-                    Chrome extensions using Manifest V2 will soon become obsolete, creating a huge gap in the market. Now is the time to capitalize on this transition and find your next big idea!
-                  </p>
-                </div>
-              </div>
-
-              <p className="text-lg text-gray-600 mb-8">
-                Chrome extensions still using Manifest V2 will soon lose feature badges and already display a warning banner on the Chrome Web Store, indicating potential incompatibility. This is the perfect opportunity to rebuild these extensions with Manifest V3 and cater to the existing user base, positioning yourself as their savior.
+              <p className="text-lg text-gray-600 my-4">
+              The exclusive list I’ve created provides key data for each extension—like <span className='font-bold'>ratings, install counts, and last updated dates</span>—making
+              it effortless to pinpoint extensions that can be transformed into profitable ventures. As these V2 extensions become obsolete,
+              you can step in and avoid the effort of starting from scratch, while also becoming a savior to their existing user base by rebuilding them with Manifest V3.
               </p>
 
-              <p className="text-lg text-gray-600 mb-8">
-                By purchasing, you gain access to an exclusive list of over 5,000 V2 Chrome extensions in CSV format, ready for you to analyze and discover your next big opportunity!
+              <p className="text-lg text-gray-600 my-4 mb-8">
+              By purchasing, you’ll gain access to an exclusive CSV list of over 5,000 V2 Chrome extensions. This ready-to-use resource will allow you to seize the moment,
+              escape the competition, and discover your next big opportunity to profit!
               </p>
 
-              <div className="mt-8 mb-8 hidden lg:block max-w-96 mx-auto">
-                <BuySection price={price} discount={discount} showPH={true} url={url} referral={customReferrer} />
+
+              <div className="my-16 lg:my-8 hidden lg:block max-w-96 mx-auto">
+                <BuySection price={price} discount={discount} showPH={false} url={url} referral={customReferrer} />
               </div>
 
               {/* <div className="my-4">
@@ -321,11 +315,11 @@ export default function V2ExtensionList({ searchParams }: { searchParams: { [key
       </div>
       <div className="mt-8 text-center block text-sm">
         <p>
-          Curious about the confetti sparkles?
+          Did you notice the confetti effect?
         </p>
         <p>
           <a href="https://ConfettiSaaS.com" target="_blank" className="text-lg font-semibold text-blue-500 hover:underline">
-            Learn more at ConfettiSaaS.com
+            Discover more at ConfettiSaaS.com
           </a>
         </p>
       </div>
