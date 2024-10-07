@@ -1,6 +1,7 @@
 import React from "react";
 import Image, { StaticImageData } from "next/image";
 import ConfettiImg from "@/public/confetti.png"
+import VPSStuffImg from "@/public/vps-stuff.png"
 import ChromeExtensionListImg from "@/public/chrome_extension_list.png"
 import XshotImg from "@/public/xshot_og_v3.png"
 import WeContextifyImg from "@/public/wecontextify.png"
@@ -53,11 +54,26 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, children, image, link,
 const Projects: React.FC = () => {
   const projects = [
     {
+      title: "Monitor your VPS with ease 🚀",
+      image: VPSStuffImg,
+      link: "https://vps-stuff.com",
+      callToAction: "Check it out",
+      badge: "New",
+      children: (
+        <React.Fragment>
+          <p className="mt-2">
+            No more complex setup. Install a single agent and start monitoring CPU, memory, disk, and network traffic in seconds.
+          </p>
+        </React.Fragment>
+      ),
+    },
+
+    {
       title: "Highlight Your Confetti-Powered App! 🥳",
       image: ConfettiImg,
       link: "https://confettisaas.com",
       callToAction: "List your app!",
-      badge: "New",
+      badge: "Active",
       children: (
         <React.Fragment>
           <p className="mt-2">
@@ -113,6 +129,7 @@ const Projects: React.FC = () => {
       badge: "Active",
       children: <p>Generate stunning, contextual aware Images</p>,
     },
+
     // {
     //   title: "ImageGenPro.com",
     //   image: "/imagegenpro.png",
