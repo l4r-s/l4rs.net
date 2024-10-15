@@ -4,7 +4,7 @@ import Posts from "@/components/Posts";
 export default function HomePage() {
   return (
     <div>
-      <Home />
+      {/* <Home /> */}
       <Posts />
     </div>
   );

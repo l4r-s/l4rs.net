@@ -3,13 +3,22 @@ import Image from "next/image";
 import KubernetesImg from "@/public/kubernetes.png"
 import NextJsShortLinkImg from "@/public/blog-nextjs-shortlink.png"
 import ChromeExtensionListImg from "@/public/chrome_extension_list.png"
-
+import MyOwnVercelImg from "@/public/blog/my-own-vercel-how-i-deploy-this-website/pr-comment.png"
 interface Props {
   title?: string;
   theme?: string;
 }
 
 const posts = [
+  {
+    title: "My Own Vercel - How I deploy this website",
+    image: MyOwnVercelImg,
+    link: "/blog/my-own-vercel-how-i-deploy-this-website",
+    description: "Learn how I made my own Vercel-like preview deployments for this website.",
+    date: "Oct 16 2024",
+    buttonText: "Read"
+  },
+
   {
     title: "How I setup my Kubernetes Cluster",
     image: KubernetesImg,
