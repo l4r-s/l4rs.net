@@ -5,6 +5,7 @@ import VPSStuffImg from "@/public/vps-stuff.png"
 import ChromeExtensionListImg from "@/public/chrome_extension_list.png"
 import XshotImg from "@/public/xshot_og_v3.png"
 import WeContextifyImg from "@/public/wecontextify.png"
+import StoppuhrTimerImg from "@/public/stoppuhr-timer.de.png"
 
 interface ProjectCardProps {
   title: string;
@@ -128,6 +129,15 @@ const Projects: React.FC = () => {
       callToAction: "Check it out",
       badge: "Active",
       children: <p>Generate stunning, contextual aware Images</p>,
+    },
+
+    {
+      title: "Stoppuhr-timer.de",
+      image: StoppuhrTimerImg,
+      link: "https://stoppuhr-timer.de",
+      callToAction: "Check it out",
+      badge: "Active",
+      children: <p>A simple stopwatch, timer and countdown for free use</p>,
     },
 
     // {
