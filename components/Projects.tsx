@@ -6,6 +6,8 @@ import ChromeExtensionListImg from "@/public/chrome_extension_list.png"
 import XshotImg from "@/public/xshot_og_v3.png"
 import WeContextifyImg from "@/public/wecontextify.png"
 import StoppuhrTimerImg from "@/public/stoppuhr-timer.de.png"
+import RealtimeBlue from "@/public/realtime-blue.png"
+import PostCapture from "@/public/postcapture-com.png"
 
 interface ProjectCardProps {
   title: string;
@@ -36,8 +38,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, children, image, link,
             </h2>
           </a>
           {badge &&
-            <div className={`mb-auto font-bold p-3 badge text-xs lg:text-base flex ${badge === "Building" ? "badge-primary" : badge === "Active" ? "badge-success" : badge === "New" ? "badge-success" : ""} ml-2`}>
-              {badge === "New" ? <span className="flex items-center">{badge}&nbsp;🔥</span> : badge}
+            <div className={`mb-auto font-bold p-3 badge text-xs lg:text-base flex ml-2 ${badge === "Building" ? "badge-primary" : badge === "Active" ? "badge-success" : badge === "New" ? "badge-success" : badge === "Decommissioned" ? "badge-error" : badge === "Rebranded" ? "badge-warning" : ""}`}>
+              {badge === "New" && <span className="flex items-center">{badge}&nbsp;🔥</span>}
+              {badge === "Building" && <span>{badge}</span>}
+              {badge === "Active" && <span>{badge}</span>}
+              {badge === "Decommissioned" && <span>{badge}</span>}
+              {badge === "Rebranded" && <span>{badge}</span>}
             </div>
           }
         </div>
@@ -55,11 +61,44 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, children, image, link,
 const Projects: React.FC = () => {
   const projects = [
     {
+      title: "realtime.blue",
+      image: RealtimeBlue,
+      link: "https://realtime.blue",
+      callToAction: "Check it out",
+      badge: "New",
+      children: (
+        <React.Fragment>
+          <p className="mt-2">
+            Track and Celebrate Your Bluesky Growth in Real-Time
+          </p>
+        </React.Fragment>
+      ),
+    },
+
+    {
+      title: "PostCapture.io",
+      image: PostCapture,
+      link: "https://postcapture.com",
+      callToAction: "Check it out",
+      badge: "New",
+      children: (
+        <React.Fragment>
+          <p className="mt-2">
+            Capture Your Posts in Stunning Detail
+          </p>
+          <p className="text-sm">
+            Transform your Bluesky and X posts into beautiful, shareable screenshots with PostCapture.
+          </p>
+        </React.Fragment>
+      ),
+    },
+
+    {
       title: "Monitor your VPS with ease 🚀",
       image: VPSStuffImg,
       link: "https://vps-stuff.com",
       callToAction: "Check it out",
-      badge: "New",
+      badge: "Building",
       children: (
         <React.Fragment>
           <p className="mt-2">
@@ -113,7 +152,7 @@ const Projects: React.FC = () => {
       image: XshotImg,
       link: "https://xshot.me",
       callToAction: "Check it out",
-      badge: "Building",
+      badge: "Rebranded",
       children: (
         <React.Fragment>
           <div className="mt-0">
@@ -127,7 +166,7 @@ const Projects: React.FC = () => {
       image: WeContextifyImg,
       link: "https://wecontextify.com",
       callToAction: "Check it out",
-      badge: "Active",
+      badge: "Decommissioned",
       children: <p>Generate stunning, contextual aware Images</p>,
     },
 
