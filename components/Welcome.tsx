@@ -14,8 +14,8 @@ const Welcome: React.FC = () => {
             <AvatarFallback>L</AvatarFallback>
           </Avatar>
           <div className="font-bold text-xl text-primary flex flex-col items-center">
-            <span className="text-primary">Hi!</span>
-            <span className="text-primary">I'm Lars 👋</span>
+            <span className="text-xs lg:text-base">Hi!</span>
+            <span className="text-xs lg:text-base">I'm Lars 👋</span>
           </div>
         </a>
       </div>
