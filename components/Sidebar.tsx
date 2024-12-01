@@ -11,37 +11,37 @@ interface Props {
 
 const Sidebar: React.FC<Props> = ({ showMenu }) => {
   return (
-    <div className="min-h-screen flex flex-col">
-      <div className="flex-grow p-4 bg-base-100 text-base-content overflow-auto">
+    <aside className="min-h-screen flex flex-col bg-gradient-to-b from-gray-100 to-gray-200 shadow-lg">
+      <div className="flex-grow p-6 text-base-content overflow-auto">
         <Welcome />
-        <div className="flex flex-col mt-16">
+        <nav className="flex flex-col mt-12">
           {showMenu && (
-            <ul className="menu menu-lg">
-              <li className="font-medium">
-                <a href="/blog">
+            <ul className="menu menu-lg space-y-4">
+              <li className="font-semibold text-lg">
+                <Link href="/blog" className="flex items-center space-x-2 hover:text-primary transition-colors duration-300">
                   <IconSticker2 />
                   <span className="underline decoration-primary">Blog</span>
-                </a>
+                </Link>
               </li>
-              <li className="font-medium">
-                <a href="/projects">
+              <li className="font-semibold text-lg">
+                <Link href="/projects" className="flex items-center space-x-2 hover:text-primary transition-colors duration-300">
                   <IconStars />
                   <span className="underline decoration-primary">Projects</span>
-                </a>
+                </Link>
               </li>
-              <li className="font-medium">
-                <a href="/contact">
+              <li className="font-semibold text-lg">
+                <Link href="/contact" className="flex items-center space-x-2 hover:text-primary transition-colors duration-300">
                   <IconAddressBook />
                   <span className="underline decoration-primary">Contact</span>
-                </a>
+                </Link>
               </li>
             </ul>
           )}
           <Social />
-        </div>
+        </nav>
       </div>
       <Footer />
-    </div>
+    </aside>
   );
 };
 
