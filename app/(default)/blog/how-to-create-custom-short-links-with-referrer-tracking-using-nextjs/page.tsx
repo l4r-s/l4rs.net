@@ -1,6 +1,7 @@
 import React from "react";
 import BlogHeader from "@/components/BlogHeader";
 import dynamic from 'next/dynamic';
+import NextJsShortLinkImg from "@/public/blog-nextjs-shortlink.png";
 
 const EmbedGist = dynamic(() => import('@/components/embed-gist'), { ssr: false });
 
@@ -51,6 +52,7 @@ const BlogPostHowToCreateCustomShortLinksWithReferrerTrackingUsingNextJs: React.
         date="Aug 17 2024"
         crossPostUrl="https://medium.com/@buildItN0w/how-to-create-custom-short-links-with-referrer-tracking-using-next-js-ffca6a1d1e79"
         crossPostText="Medium"
+        image={NextJsShortLinkImg}
       />
 
       <div className="divider divide-gray-400 mb-6 mt-0"></div>

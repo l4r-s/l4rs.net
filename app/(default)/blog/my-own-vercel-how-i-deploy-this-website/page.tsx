@@ -3,6 +3,8 @@ import BlogHeader from "@/components/BlogHeader";
 import dynamic from 'next/dynamic';
 import { ArrowRight, ArrowDown } from "lucide-react"
 import Image from "next/image";
+import MyOwnVercelImg from "@/public/blog/my-own-vercel-how-i-deploy-this-website/pr-comment.png"
+
 const EmbedGist = dynamic(() => import('@/components/embed-gist'), { ssr: false });
 
 export const metadata = {
@@ -72,6 +74,7 @@ const BlogPostMyOwnVercelHowIDeployThisWebsite: React.FC = () => {
       <BlogHeader
         title="My Own Vercel: How I Deploy This Website"
         subtitle="Learn how I made my own Vercel-like preview deployments for this website."
+        image={MyOwnVercelImg}
         date="Aug 29 2024"
       />
 
@@ -109,7 +112,9 @@ const BlogPostMyOwnVercelHowIDeployThisWebsite: React.FC = () => {
             <li>Copy only the necessary production files into the final image.</li>
           </ol>
           <p>This approach results in a much smaller image—about <strong>214MB</strong>, which is reasonable for production.</p>
-          <Image src="/blog/my-own-vercel-how-i-deploy-this-website/docker-image-size.png" alt="Docker Image Size" width={1000} height={1000} className="w-full" />
+          <div className="w-full overflow-hidden rounded-lg mb-6">
+            <Image src="/blog/my-own-vercel-how-i-deploy-this-website/docker-image-size.png" alt="Docker Image Size" width={1000} height={1000} className="w-full h-auto object-contain rounded-lg" />
+          </div>
           <p>Here’s the <strong>Dockerfile</strong> I use:</p>
           <EmbedGist gistId="l4r-s/75cd730a6064fbbf03f3edec69cb10f1" file="Dockerfile" />
 
@@ -137,7 +142,9 @@ const BlogPostMyOwnVercelHowIDeployThisWebsite: React.FC = () => {
             <li>The image is pushed to my private registry.</li>
             <li>The site is deployed with a unique release name and URL based on the PR number with the help of environment variables in the helmfile.</li>
             <li>Github Actions adds a comment to the PR with the deployment URL.
-              <Image src="/blog/my-own-vercel-how-i-deploy-this-website/pr-comment.png" alt="Github PR Comment" width={1000} height={1000} className="w-full" />
+              <div className="w-full overflow-hidden rounded-lg mb-6">
+                <Image src="/blog/my-own-vercel-how-i-deploy-this-website/pr-comment.png" alt="Github PR Comment" width={1000} height={1000} className="w-full h-auto object-contain rounded-lg" />
+              </div>
             </li>
           </ol>
           <p>Here’s how it looks in the <strong>GitHub Actions</strong> workflow:</p>

@@ -1,6 +1,7 @@
 import React from "react";
 import BlogHeader from "@/components/BlogHeader";
 import dynamic from 'next/dynamic';
+import KubernetesImg from "@/public/kubernetes.png";
 
 const EmbedGist = dynamic(() => import('@/components/embed-gist'), { ssr: false });
 
@@ -49,11 +50,10 @@ const BlogPostHowISetupMyK3sKubernetesCluster: React.FC = () => {
         title="How I setup my Kubernetes Cluster"
         subtitle="Learn how I setup my Kubernetes Cluster and how I use it to host my sideprojects."
         date="Aug 29 2024"
+        image={KubernetesImg}
       // crossPostUrl="https://medium.com/@buildItN0w/how-to-create-custom-short-links-with-referrer-tracking-using-next-js-ffca6a1d1e79"
       // crossPostText="Medium"
       />
-
-      <div className="divider divide-gray-400 mb-6 mt-0"></div>
 
       <div className="prose lg:prose-xl text-sm md:text-base text-left mx-auto">
         <div>

@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import BlogHeader from "@/components/BlogHeader";
+import ChromeExtensionListImg from "@/public/chrome_extension_list.png";
 
 export const metadata = {
   metadataBase: new URL('https://hilars.dev'),
@@ -49,6 +50,7 @@ const BlogPost: React.FC = () => {
         date="Aug 17 2024"
         crossPostUrl="https://medium.com/@buildItN0w/the-end-of-manifest-v2-what-you-need-to-know-about-the-chrome-extension-transition-c2f1b8a75b05"
         crossPostText="Medium"
+        image={ChromeExtensionListImg}
       />
 
       <div className="divider divide-gray-400 mb-6 mt-0"></div>
