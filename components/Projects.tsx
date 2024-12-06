@@ -48,7 +48,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, children, image, link,
             </CardTitle>
           </a>
           {badge && (
-            <div className={`badge text-xs lg:text-base shadow-lg p-3 ${badgeClasses[badge as keyof typeof badgeClasses]}`}>
+            <div className={`badge text-xs lg:text-base shadow-sm p-3 ${badgeClasses[badge as keyof typeof badgeClasses]}`}>
               {badge === "New" && <span className="flex items-center">{badge}&nbsp;🔥</span>}
               {badge !== "New" && badge}
             </div>
@@ -82,7 +82,7 @@ const Projects: React.FC = () => {
       ),
     },
     {
-      title: "PostCapture.io",
+      title: "PostCapture.com",
       image: PostCapture,
       link: "https://postcapture.com",
       callToAction: "Check it out",
