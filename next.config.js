@@ -30,6 +30,10 @@ const nextConfig = {
           source: '/blog/how-to-create-custom-short-links-with-referrer-tracking-using-next-js',
           destination: '/blog/how-to-create-custom-short-links-with-referrer-tracking-using-nextjs',
         },
+        {
+          source: '/blog/my-own-vercel-how-i-deploy-this-websit',
+          destination: '/blog/my-own-vercel-how-i-deploy-this-website',
+        }
       ]
   },
 };

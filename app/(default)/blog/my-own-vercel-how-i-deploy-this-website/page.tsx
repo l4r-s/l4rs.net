@@ -9,6 +9,9 @@ const EmbedGist = dynamic(() => import('@/components/embed-gist'), { ssr: false 
 
 export const metadata = {
   metadataBase: new URL('https://hilars.dev'),
+  alternates: {
+    canonical: '/blog/my-own-vercel-how-i-deploy-this-website',
+  },
   title: "My Own Vercel: How I Deploy This Website",
   description: "Learn how I made my own Vercel-like preview deployments for this website.",
   author: "Lars",
