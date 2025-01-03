@@ -8,7 +8,8 @@ import WeContextifyImg from "@/public/wecontextify.png";
 import StoppuhrTimerImg from "@/public/stoppuhr-timer.de.png";
 import RealtimeBlue from "@/public/realtime-blue.png";
 import PostCapture from "@/public/postcapture-com.png";
-import { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent } from "./ui/card";
+import YearProgress from "@/public/yearprogress-blue.png";
+import { Card, CardFooter, CardTitle, CardDescription, CardContent } from "./ui/card";
 
 interface ProjectCardProps {
   title: string;
@@ -70,18 +71,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, children, image, link,
 const Projects: React.FC = () => {
   const projects = [
     {
-      title: "realtime.blue",
-      image: RealtimeBlue,
-      link: "https://realtime.blue",
-      callToAction: "Check it out",
-      badge: "New",
-      children: (
-        <p className="mt-2">
-          Track and Celebrate Your Bluesky Growth in Real-Time
-        </p>
-      ),
-    },
-    {
       title: "PostCapture.com",
       image: PostCapture,
       link: "https://postcapture.com",
@@ -99,14 +88,14 @@ const Projects: React.FC = () => {
       ),
     },
     {
-      title: "Monitor your VPS with ease 🚀",
-      image: VPSStuffImg,
-      link: "https://vps-stuff.com",
+      title: "realtime.blue",
+      image: RealtimeBlue,
+      link: "https://realtime.blue",
       callToAction: "Check it out",
-      badge: "Building",
+      badge: "New",
       children: (
         <p className="mt-2">
-          No more complex setup. Install a single agent and start monitoring CPU, memory, disk, and network traffic in seconds.
+          Track and Celebrate Your Bluesky Growth in Real-Time
         </p>
       ),
     },
@@ -119,6 +108,35 @@ const Projects: React.FC = () => {
       children: (
         <p className="mt-2">
           Every SaaS product should use Confetti to brighten up their users' day!
+        </p>
+      ),
+    },
+    {
+      title: "YearProgress.blue 🤖",
+      image: YearProgress,
+      link: "https://yearprogress.blue",
+      callToAction: "Keep track",
+      badge: "New",
+      children: (
+        <>
+          <p className="mt-2">
+            Bluesky Year Progress Bot
+          </p>
+          <p className="text-sm">
+            Small little bot telling you how much of the year is left with cool visuals!
+          </p>
+        </>
+      ),
+    },
+    {
+      title: "Monitor your VPS with ease 🚀",
+      image: VPSStuffImg,
+      link: "https://vps-stuff.com",
+      callToAction: "Check it out",
+      badge: "Waitlist",
+      children: (
+        <p className="mt-2">
+          No more complex setup. Install a single agent and start monitoring CPU, memory, disk, and network traffic in seconds.
         </p>
       ),
     },
