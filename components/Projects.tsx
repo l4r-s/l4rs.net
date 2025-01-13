@@ -143,7 +143,7 @@ const Projects: React.FC = () => {
     {
       title: "5,000+ Opportunities Waiting for You!",
       image: ChromeExtensionListImg,
-      link: "/chrome-v2-extension-list-product",
+      link: "/v2ej",
       callToAction: "Profit now!",
       badge: "Active",
       children: (

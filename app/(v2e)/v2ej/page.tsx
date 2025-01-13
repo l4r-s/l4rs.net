@@ -1,0 +1,33 @@
+import { headers } from 'next/headers';
+import { redirect } from 'next/navigation';
+
+export default function Page({ searchParams }: { searchParams: { [key: string]: string } }) {
+  const reqHeaders = headers();
+
+  // get referrer from headers this is the url of the page that the user was on before they were redirected to this page
+  const referrer = reqHeaders.get('referer') || 'https://hilars.dev/v2ej';
+
+  // get referrer from search params (?r=myreferrer), this overrides the referrer from headers if it exists
+  let customReferrer = searchParams.r || referrer;
+
+  // Gumroad referrer must start with http:// or https:// but can be anything
+  if (!customReferrer.startsWith('http://') && !customReferrer.startsWith('https://')) {
+    customReferrer = `https://${customReferrer}`;
+  }
+
+  // Get discount code from search params
+  let discountCode = searchParams.d || 'BUILD';
+
+  // // Ensure the discount exists in the price table, if not use 'BUILD' as default
+  // const priceTable = {
+  //   'BUILD': { price: '$19.99', discount: '50% OFF' },
+  //   'BUILD70': { price: '$9', discount: '70% OFF' },
+  //   'AGENCY70': { price: '$9', discount: '70% OFF' },
+  // };
+  // if (!priceTable[discountCode as keyof typeof priceTable]) {
+  //   discountCode = '';
+  // }
+
+  const url = `https://builditn0w.gumroad.com/l/january-25-chrome-manifest-v2-phaseout/${discountCode}?referrer=${encodeURIComponent(customReferrer)}`;
+  redirect(url);
+}
